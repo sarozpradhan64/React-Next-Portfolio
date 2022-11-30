@@ -1,14 +1,14 @@
 import Head from "next/head";
 import Image from "next/image";
-import About1 from '../public/img/about-1.jpg'
-import About2 from '../public/img/about-2.jpg'
+import About1 from "../public/img/about-1.jpg";
+import About2 from "../public/img/about-2.jpg";
 import Link from "next/link";
 export default function Home() {
   return (
     <>
-    <Head>
-      <title>Saroj Pradhan</title>
-    </Head>
+      <Head>
+        <title>Saroj Pradhan</title>
+      </Head>
       <div>
         {" "}
         <body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="51">
@@ -16,7 +16,11 @@ export default function Home() {
             className="navbar navbar-expand-lg bg-white navbar-light fixed-top shadow py-lg-0 px-4 px-lg-5 wow fadeIn"
             data-wow-delay="0.1s"
           >
-            <a  rel="noreferrer" href="index.html" className="navbar-brand d-block d-lg-none">
+            <a
+              rel="noreferrer"
+              href="index.html"
+              className="navbar-brand d-block d-lg-none"
+            >
               <h1 className="text-primary fw-bold m-0">ProMan</h1>
             </a>
             <button
@@ -32,30 +36,50 @@ export default function Home() {
               id="navbarCollapse"
             >
               <div className="navbar-nav ms-auto py-0">
-                <a  rel="noreferrer" href="#home" className="nav-item nav-link active">
+                <a
+                  rel="noreferrer"
+                  href="#home"
+                  className="nav-item nav-link active"
+                >
                   Home
                 </a>
-                <a  rel="noreferrer" href="#about" className="nav-item nav-link">
+                <a rel="noreferrer" href="#about" className="nav-item nav-link">
                   About
                 </a>
-                <a  rel="noreferrer" href="#skill" className="nav-item nav-link">
+                <a rel="noreferrer" href="#skill" className="nav-item nav-link">
                   Skills
                 </a>
-                <a  rel="noreferrer" href="#service" className="nav-item nav-link">
+                <a
+                  rel="noreferrer"
+                  href="#service"
+                  className="nav-item nav-link"
+                >
                   Services
                 </a>
               </div>
               <div className="navbar-nav me-auto py-0">
-                <a  rel="noreferrer" href="#project" className="nav-item nav-link">
+                <a
+                  rel="noreferrer"
+                  href="#project"
+                  className="nav-item nav-link"
+                >
                   Projects
                 </a>
-                <a  rel="noreferrer" href="#team" className="nav-item nav-link">
+                <a rel="noreferrer" href="#team" className="nav-item nav-link">
                   Team
                 </a>
-                <a  rel="noreferrer" href="#testimonial" className="nav-item nav-link">
+                <a
+                  rel="noreferrer"
+                  href="#testimonial"
+                  className="nav-item nav-link"
+                >
                   Testimonial
                 </a>
-                <a  rel="noreferrer" href="#contact" className="nav-item nav-link">
+                <a
+                  rel="noreferrer"
+                  href="#contact"
+                  className="nav-item nav-link"
+                >
                   Contact
                 </a>
               </div>
@@ -76,7 +100,8 @@ export default function Home() {
                     Designer, Apps Developer
                   </div>
                   <div className="d-flex align-items-center pt-5">
-                    <a  rel="noreferrer"
+                    <a
+                      rel="noreferrer"
                       href="#contact"
                       className="btn btn-primary py-3 px-4 me-5"
                     >
@@ -126,7 +151,6 @@ export default function Home() {
                         className="img-fluid rounded"
                         src={About2}
                         alt="about 2"
-                      
                       />
                     </div>
                   </div>
@@ -163,7 +187,10 @@ export default function Home() {
                 data-wow-delay="0.1s"
               >
                 <div className="col-lg-4 col-md-6 portfolio-item second">
-                  <div className="portfolio-img  rounded overflow-hidden" style={{height:'100%'}}>
+                  <div
+                    className="portfolio-img  rounded overflow-hidden"
+                    style={{ height: "100%" }}
+                  >
                     <Image
                       className="img-fluid"
                       src="/img/project-4.jpg"
@@ -171,14 +198,17 @@ export default function Home() {
                       layout="fill"
                     />
                     <div className="portfolio-btn">
-                      <a  rel="noreferrer" target={'_blank'}
+                      <a
+                        rel="noreferrer"
+                        target={"_blank"}
                         className="btn btn-lg-square btn-outline-secondary border-2 mx-1"
                         href="/img/project-4.jpg"
                         data-lightbox="portfolio"
                       >
                         <i className="fa fa-eye"></i>
                       </a>
-                      <a  rel="noreferrer"
+                      <a
+                        rel="noreferrer"
                         className="btn btn-lg-square btn-outline-secondary border-2 mx-1"
                         href="https://gyannhub.com"
                       >
@@ -196,14 +226,17 @@ export default function Home() {
                       layout="fill"
                     />
                     <div className="portfolio-btn">
-                      <a  rel="noreferrer"
+                      <a
+                        rel="noreferrer"
                         className="btn btn-lg-square btn-outline-secondary border-2 mx-1"
                         href="/img/project-5.jpg"
                         data-lightbox="portfolio"
                       >
                         <i className="fa fa-eye"></i>
                       </a>
-                      <a  rel="noreferrer" target={'_blank'}
+                      <a
+                        rel="noreferrer"
+                        target={"_blank"}
                         className="btn btn-lg-square btn-outline-secondary border-2 mx-1"
                         href="https://blazecodes.com"
                       >
@@ -243,21 +276,24 @@ export default function Home() {
                     {/* <a  rel="noreferrer" className="btn btn-square btn-primary me-2" href="">
                       <i className="fab fa-twitter"></i>
                     </a> */}
-                    <a  rel="noreferrer"
+                    <a
+                      rel="noreferrer"
                       className="btn btn-square btn-primary me-2"
                       href="https://github.com/sarozpradhan64"
                       target={"_blank"}
                     >
                       <i className="fab fa-github"></i>
                     </a>
-                    <a  rel="noreferrer"
+                    <a
+                      rel="noreferrer"
                       className="btn btn-square btn-primary me-2"
                       href="https://facebook.com/srz.prdhn"
                       target={"_blank"}
                     >
                       <i className="fab fa-facebook-f"></i>
                     </a>
-                    <a  rel="noreferrer"
+                    <a
+                      rel="noreferrer"
                       className="btn btn-square btn-primary me-2"
                       href="https://www.linkedin.com/in/saroj-pradhan-4628831a1/"
                     >
@@ -269,7 +305,14 @@ export default function Home() {
                   className="col-lg-7 col-md-6 wow fadeInUp"
                   data-wow-delay="0.5s"
                 >
-                  <form method="post" name="contact-form" netlify>
+                  <form
+                    method="post"
+                    name="contact-form"
+                    data-netlify="true"
+                    netlify-honeypot="bot-field"
+                    data-netlify-recaptcha="true"
+                  >
+                    <input name="bot-field" hidden/>
                     <div className="row g-3">
                       <div className="col-md-6">
                         <div className="form-floating">
@@ -315,6 +358,7 @@ export default function Home() {
                           <label htmlFor="message">Message</label>
                         </div>
                       </div>
+                      <div data-netlify-recaptcha="true"></div>
                       <div className="col-12">
                         <button
                           className="btn btn-primary py-3 px-5"
@@ -342,7 +386,8 @@ export default function Home() {
             </div>
           </div>
 
-          <a  rel="noreferrer"
+          <a
+            rel="noreferrer"
             href="#"
             className="btn btn-lg btn-primary btn-lg-square back-to-top"
           >
