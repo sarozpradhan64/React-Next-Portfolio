@@ -268,7 +268,7 @@ export default function Home() {
                   <hr className="w-100" />
                   <p className="mb-2">Mail me:</p>
                   <h3 className="fw-bold text-white">
-                    sarozpradhan64@gmail.com
+                   <a href="mailto:sarozpradhan64@gmail.com">sarozpradhan64@gmail.com</a>
                   </h3>
                   <hr className="w-100" />
                   <p className="mb-2">Follow me:</p>
