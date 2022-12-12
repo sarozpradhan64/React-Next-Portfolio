@@ -113,13 +113,23 @@ p{
 #home {
     margin-bottom: 2rem;
     min-height:100vh;
-    background: linear-gradient(rgb(0,0,0,.3),rgb(0,0,0,.3)),url(/img/cover.jpg);
+    /* background: linear-gradient(rgb(0,0,0,.3),rgb(0,0,0,.3)),url(/img/cover.jpg); */
     background-position: center;
     background-size: cover;
     display: flex;
     align-items: center;
 }
-
+.home-cover{
+    position:absolute;
+    top:0px;
+    bottom:0px;
+    left: 0px;
+    right:0px;
+}
+.home-container {
+    position: absolute;
+    z-index: 10;
+}
 .typed-cursor {
     font-size: 30px;
     color: var(--dark);

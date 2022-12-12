@@ -87,7 +87,8 @@ export default function Home() {
           </nav>
 
           <div className="container-fluid bg-light my-6 mt-0" id="home">
-            <div className="container">
+            <div className="home-cover"><Image src={"/img/cover.jpg"} fill alt="Saroj Pradhan portfolio cover image" style={{objectFit:'cover'}}/></div>
+            <div className="container home-container">
               <div className="row g-5 align-items-center">
                 <div className="col-lg-6 py-6 pb-0 pt-lg-0">
                   <h3 className="text-primary mb-3 fw-bold">Hi 👋,I&apos;m</h3>
@@ -122,7 +123,7 @@ export default function Home() {
                   </div>
                   <p className="mb-4">
                     I am Web developer with experience in PHP/Laravel and
-                    Python/Django. As for frontend, I&apos;d prefer Reactjs.
+                    Python/Django. And for frontend, I&apos;d prefer Reactjs.
                   </p>
                   <p className="mb-3">
                     <i className="far fa-check-circle text-primary me-3"></i>
