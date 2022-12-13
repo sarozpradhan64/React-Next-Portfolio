@@ -12,7 +12,9 @@ body{
 p{
     color:gray
 }
-
+.debug{
+    border:2px solid red
+}
 .back-to-top {
     position: fixed;
     display: none;
@@ -84,12 +86,12 @@ p{
 
 
 /*** Navbar ***/
-.navbar.fixed-top {
+/* .navbar.fixed-top {
     display: none;
     transition: .5s;
-}
+} */
 
-.navbar .navbar-nav .nav-link {
+/* .navbar .navbar-nav .nav-link {
     padding: 20px 15px;
     color: var(--dark);
     font-size: 18px;
@@ -100,20 +102,19 @@ p{
 .navbar .navbar-nav .nav-link:hover,
 .navbar .navbar-nav .nav-link.active {
     color: var(--primary);
-}
+} */
 
-@media (max-width: 991.98px) {
+/* @media (max-width: 991.98px) {
     .navbar .navbar-nav .nav-link  {
         padding: 10px 0;
     }
-}
+} */
 
 
 /*** Header ***/
 #home {
     margin-bottom: 2rem;
     min-height:100vh;
-    /* background: linear-gradient(rgb(0,0,0,.3),rgb(0,0,0,.3)),url(/img/cover.jpg); */
     background-position: center;
     background-size: cover;
     display: flex;
@@ -129,6 +130,10 @@ p{
 .home-container {
     position: absolute;
     z-index: 10;
+    width: 80vw;
+    left:10vw;
+    top:50%;
+    transform:translateY(-50%) ;
 }
 .typed-cursor {
     font-size: 30px;
