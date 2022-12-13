@@ -12,6 +12,29 @@ body{
 p{
     color:gray
 }
+
+/* custom scrollbar  */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: rgb(17, 24, 39);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #607197;
+    border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #314163;
+}
+
 .debug{
     border:2px solid red
 }
