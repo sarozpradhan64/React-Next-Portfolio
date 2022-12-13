@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Link from "next/link";
 import React from "react";
+import Meta from "./Meta";
 
 export default function SrzLayout({ children }) {
   const links = [
@@ -9,14 +10,16 @@ export default function SrzLayout({ children }) {
   ];
   return (
     <div>
-      <Head>
-        <title>Saroj Pradhan</title>
-      </Head>
+      <Meta />
       <nav
         className="fixed-top py-4 px-4 px-5 d-flex justify-content-between"
         data-wow-delay="0.1s"
       >
-        <div className=""><Link href={"/"} className="h1 fw-bold text-primary">SRZ</Link></div>
+        <div className="">
+          <Link href={"/"} className="h1 fw-bold text-primary">
+            SRZ
+          </Link>
+        </div>
 
         {/* nav */}
         <div>
