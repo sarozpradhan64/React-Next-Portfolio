@@ -28,13 +28,12 @@ export default function works() {
                 </div> */}
               </div>
               <div
-                className="row g-4 portfolio-container wow fadeInUp"
+                className="row g-4 portfolio-container"
                 data-wow-delay="0.1s"
               >
-                <div className="col-lg-4 col-md-6 portfolio-item second">
+                <div className="col-lg-4 col-md-6 portfolio-item">
                   <div
                     className="portfolio-img  rounded overflow-hidden"
-                    style={{ height: "100%" }}
                   >
                     <Image
                       className="img-fluid"

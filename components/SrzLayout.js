@@ -2,12 +2,10 @@ import Head from "next/head";
 import Link from "next/link";
 import React from "react";
 import Meta from "./Meta";
-
-export default function SrzLayout({ children }) {
-  const links = [
-    { title: "works", href: "/works", icon: "" },
-    { title: "contact", href: "/contact", icon: "" },
-  ];
+import data from "../src/data";
+export default function SrzLayout({ children, isContactPage = false }) {
+  const socials = data.socials;
+  const links = data.routes;
   return (
     <div>
       <Meta />
@@ -36,6 +34,7 @@ export default function SrzLayout({ children }) {
       </nav>
 
       <div className="py-6">{children}</div>
+
       {/* footer  */}
       <div className="container-fluid bg-dark text-white py-4">
         <div className="container">
@@ -45,6 +44,23 @@ export default function SrzLayout({ children }) {
                 Saroj Pradhan
               </Link>
             </div>
+
+            {/* hide these in contact page  */}
+            {!isContactPage && (
+              <div className="col-md-6 d-flex justify-content-md-end justify-content-center text-center text-md-start mb-3 mb-md-0">
+                {socials.map((social, index) => (
+                  <a
+                    key={index}
+                    rel="noreferrer"
+                    className="btn mx-1 btn-primary"
+                    href={social.href}
+                    target={"_blank"}
+                  >
+                    {social.icon}
+                  </a>
+                ))}
+              </div>
+            )}
           </div>
         </div>
       </div>
