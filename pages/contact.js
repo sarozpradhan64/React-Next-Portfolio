@@ -31,8 +31,9 @@ export default function contact() {
               <hr className="w-100" />
               <p className="mb-2">Follow me:</p>
               <div className="d-flex pt-2">
-                {socials.map((social) => (
+                {socials.map((social,index) => (
                   <a
+                  key={index}
                     rel="noreferrer"
                     className="btn btn-square btn-primary me-2"
                     href={social.href}
