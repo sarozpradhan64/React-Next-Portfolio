@@ -16,7 +16,7 @@ export default function contact() {
           </div>
           <div className="row g-5">
             <div
-              className="col-lg-5 col-md-6 wow fadeInUp"
+              className="col-lg-6 col-md-6 wow fadeInUp"
               data-wow-delay="0.1s"
             >
               <p className="mb-2">Address:</p>
@@ -32,9 +32,9 @@ export default function contact() {
               <p className="mb-2">Follow me:</p>
               {/* social medias */}
               <div className="d-flex pt-2">
-                {socials.map((social,index) => (
+                {socials.map((social, index) => (
                   <a
-                  key={index}
+                    key={index}
                     rel="noreferrer"
                     className="btn btn-square btn-primary me-2 fs-5"
                     href={social.href}
@@ -46,17 +46,18 @@ export default function contact() {
               </div>
             </div>
             <div
-              className="col-lg-7 col-md-6 wow fadeInUp"
+              className="col-lg-6 col-md-6 wow fadeInUp"
               data-wow-delay="0.5s"
             >
               <form
-                method="post"
+                method="POST"
                 name="contact-form"
+                netlify
                 data-netlify="true"
                 netlify-honeypot="bot-field"
                 data-netlify-recaptcha="true"
               >
-                <input name="bot-field" hidden />
+                <input type="hidden" name="bot" value="contact-form" />
                 <div className="row g-3">
                   <div className="col-md-6">
                     <div className="form-floating">

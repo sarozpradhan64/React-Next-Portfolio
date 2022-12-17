@@ -9,9 +9,7 @@ export default function works({ works }) {
     <SrzLayout>
       <div className="container-xxl" id="project">
         <div className="container">
-          <div
-            className="row g-5 mb-5 align-items-center"
-          >
+          <div className="row g-5 mb-5 align-items-center">
             <div className="col-lg-6">
               <h1 className="display-5 mb-0 text-white">My Works</h1>
             </div>
@@ -37,7 +35,7 @@ export default function works({ works }) {
                     className="img-fluid"
                     src={work.image}
                     alt="gyannhub"
-                    layout="fill"
+                    fill
                   />
                   <div className="portfolio-btn">
                     <Link
@@ -50,6 +48,7 @@ export default function works({ works }) {
                     <a
                       rel="noreferrer"
                       className="btn btn-lg-square btn-outline-secondary border-2 mx-1"
+                      target={"_blank"}
                       href="https://gyannhub.com"
                     >
                       <i className="fa fa-link"></i>
@@ -59,34 +58,6 @@ export default function works({ works }) {
               </div>
             ))}
 
-            {/* <div className="col-lg-4 col-md-6 portfolio-item first">
-              <div className="portfolio-img rounded overflow-hidden">
-                <Image
-                  className="img-fluid"
-                  src="/img/project-5.jpg"
-                  alt="blazecodes"
-                  layout="fill"
-                />
-                <div className="portfolio-btn">
-                  <a
-                    rel="noreferrer"
-                    className="btn btn-lg-square btn-outline-secondary border-2 mx-1"
-                    href="/img/project-5.jpg"
-                    data-lightbox="portfolio"
-                  >
-                    <i className="fa fa-eye"></i>
-                  </a>
-                  <a
-                    rel="noreferrer"
-                    target={"_blank"}
-                    className="btn btn-lg-square btn-outline-secondary border-2 mx-1"
-                    href="https://blazecodes.com"
-                  >
-                    <i className="fa fa-link"></i>
-                  </a>
-                </div>
-              </div>
-            </div> */}
           </div>
         </div>
       </div>

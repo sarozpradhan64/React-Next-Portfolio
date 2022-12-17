@@ -17,7 +17,7 @@ export default function workDetail({ work }) {
             <div class="col-lg-6 position-relative">
               <Image
                 src={work.image}
-                alt={`saroj pradhan work ${work.title}`}
+                alt={`saroj pradhan's work ${work.title}`}
                 class="img-fluid  w-100 object-cover"
                 fill
               />
@@ -26,9 +26,9 @@ export default function workDetail({ work }) {
             <div class="col-lg-6 my-3">
               <div class="project-info">
                 <h3 class="mb-4 text-white">{work.title}</h3>
-                <p>{work.description}</p>
+                <p className="text-justify">{work.description}</p>
 
-                <p>{work.task}</p>
+                <p className="text-justify">{work.task}</p>
 
                 <div class="row mt-4">
                   <div class="col-lg-6">
