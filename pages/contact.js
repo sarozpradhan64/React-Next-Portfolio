@@ -54,6 +54,7 @@ export default function contact() {
                 name="contact-form"
                 data-netlify="true"
               >
+                <input type="hidden" name="bot" value="contact-form" />
                 <div className="row g-3">
                   <div className="col-md-6">
                     <div className="form-floating">
