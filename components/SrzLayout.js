@@ -52,7 +52,7 @@ export default function SrzLayout({ children, isContactPage = false }) {
                   <a
                     key={index}
                     rel="noreferrer"
-                    className="btn mx-1 btn-primary"
+                    className="btn btn-square btn-primary mx-1 fs-5"
                     href={social.href}
                     target={"_blank"}
                   >

@@ -11,8 +11,6 @@ export default function Home() {
       <div>
         {" "}
         <body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="51">
-       
-
           <div className="container-fluid my-6 mt-0" id="home">
             <div className="home-cover">
               <Image

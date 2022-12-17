@@ -23,10 +23,36 @@ const data = {
     },
   ],
 
-  routes:[
-    {title:'works', href:'/works'},
-    {title:'contact', href:'/contact'}
-  ]
+  routes: [
+    { title: "works", href: "/works" },
+    { title: "contact", href: "/contact" },
+  ],
+  works: [
+    {
+      title: "Gyannhub",
+      slug: "gyannhub",
+      type: "website",
+      year: "2022",
+      href: "https://gyannhub.com",
+      source: "https://github.com",
+      image: "gyannhubImg",
+      description: "Quiz note application",
+      role: "FullStack",
+      task: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Volutpat taciti lacinia per semper vestibulum potenti lacinia at ullamcorper enim. Suspendisse ante sodales luctus lacinia purus in lobortis habitasse dapibus neque. Nulla ipsum amet mollis metus bibendum pulvinar ridiculus malesuada porta placerat.",
+    },
+    {
+      title: "BlazeCodes",
+      slug: "blazecodes",
+      type: "website",
+      year: "2022",
+      href: "https://blazecodes.com",
+      source: "https://github.com",
+      image: "blazecodesImg",
+      description: "blog application",
+      role: "FullStack",
+      task: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Volutpat taciti lacinia per semper vestibulum potenti lacinia at ullamcorper enim. Suspendisse ante sodales luctus lacinia purus in lobortis habitasse dapibus neque. Nulla ipsum amet mollis metus bibendum pulvinar ridiculus malesuada porta placerat.",
+    },
+  ],
 };
 
 export default data;
