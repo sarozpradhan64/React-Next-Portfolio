@@ -51,6 +51,7 @@ export default function contact() {
             >
               <form
                 method="POST"
+                action="/"
                 name="contact-form"
                 netlify
                 data-netlify="true"
