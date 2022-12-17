@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image"
 import SrzLayout from "../../components/SrzLayout";
 
 export default function workDetail({ work }) {
@@ -13,11 +14,12 @@ export default function workDetail({ work }) {
             </div>
           </div>
           <div class="row">
-            <div class="col-lg-6">
-              <img
+            <div class="col-lg-6 position-relative">
+              <Image
                 src={work.image}
                 alt={`saroj pradhan work ${work.title}`}
-                class="img-fluid  w-100"
+                class="img-fluid  w-100 object-cover"
+                fill
               />
             </div>
 

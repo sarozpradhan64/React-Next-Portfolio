@@ -31,7 +31,7 @@ export default function works({ works }) {
           </div>
           <div className="row g-4" data-wow-delay="0.1s">
             {works.map((work, index) => (
-              <div className="col-lg-4 col-md-6 portfolio-item">
+              <div key={index} className="col-lg-4 col-md-6 portfolio-item">
                 <div className="portfolio-img  rounded overflow-hidden">
                   <Image
                     className="img-fluid"
