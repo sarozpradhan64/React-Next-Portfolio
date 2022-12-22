@@ -7,6 +7,11 @@ const data = {
       icon: <i className="fab fa-github"></i>,
     },
     {
+      title:"dev.to",
+      href:'https://dev.to/sarozpradhan64',
+      icon: <i class="fa-brands fa-dev"></i>,
+    },
+    {
       title: "facebook",
       href: "https://facebook.com/srz.prdhn",
       icon: <i className="fab fa-facebook-f"></i>,
