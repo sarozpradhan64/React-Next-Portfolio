@@ -1,5 +1,5 @@
 import React from "react";
-import Image from "next/image"
+import Image from "next/image";
 import SrzLayout from "../../components/SrzLayout";
 
 export default function workDetail({ work }) {
@@ -14,7 +14,10 @@ export default function workDetail({ work }) {
             </div>
           </div>
           <div class="row">
-            <div class="col-lg-6 position-relative">
+            <div
+              class="col-lg-6 position-relative"
+              style={{ minHeight: "60vh" }}
+            >
               <Image
                 src={work.image}
                 alt={`saroj pradhan's work ${work.title}`}
@@ -23,7 +26,7 @@ export default function workDetail({ work }) {
               />
             </div>
 
-            <div class="col-lg-6 my-3">
+            <div class="col-lg-6 my-3 ps-md-4">
               <div class="project-info">
                 <h3 class="mb-4 text-white">{work.title}</h3>
                 <p className="text-justify">{work.description}</p>
@@ -58,10 +61,20 @@ export default function workDetail({ work }) {
                       href={work.href}
                       target="_blank"
                       rel="noreferrer"
-                      class="btn btn-primary py-3 px-5"
+                      class="btn btn-primary py-3 px-5 mx-md-2 my-2"
                     >
                       View Project
                     </a>
+                    {work.source !== "" && (
+                      <a
+                        href={work.source}
+                        target="_blank"
+                        rel="noreferrer"
+                        class="btn btn-danger py-3 px-5 mx-md-2 my-2"
+                      >
+                        Source Code
+                      </a>
+                    )}
                   </div>
                 </div>
               </div>

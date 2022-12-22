@@ -1,7 +1,6 @@
 import React from "react";
 import SrzLayout from "../components/SrzLayout";
 import Image from "next/image";
-import data from "../src/data";
 import Link from "next/link";
 export default function works({ works }) {
   console.log(works);
@@ -32,7 +31,7 @@ export default function works({ works }) {
               <div key={index} className="col-lg-4 col-md-6 portfolio-item">
                 <div className="portfolio-img  rounded overflow-hidden">
                   <Image
-                    className="img-fluid"
+                    className="img-fluid object-cover"
                     src={work.image}
                     alt="gyannhub"
                     fill
@@ -66,7 +65,6 @@ export default function works({ works }) {
 }
 export async function getStaticProps() {
   const { works } = await import("../src/workData.json");
-
   return {
     props: { works },
   };
