@@ -3,7 +3,6 @@ import SrzLayout from "../components/SrzLayout";
 import Image from "next/image";
 import Link from "next/link";
 export default function works({ works }) {
-  console.log(works);
   return (
     <SrzLayout>
       <div className="container-xxl" id="project">

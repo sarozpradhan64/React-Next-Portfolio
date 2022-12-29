@@ -2,11 +2,10 @@ import React from "react";
 import Image from "next/image";
 import SrzLayout from "../../components/SrzLayout";
 import metas from "../../src/metaData";
-import { useRouter } from "next/router";
+
 import Link from "next/link";
 export default function workDetail({ work }) {
-  console.log(work);
-  const router = useRouter();
+
   const handleShare = async function () {
     try {
       await navigator.share({
