@@ -26,7 +26,7 @@ export default function workDetail({ work }) {
           <div className="row g-5 mb-5 align-items-center">
             <div className="col-md-12 d-flex align-items-center">
               <Link href="/works">
-                <button className="btn btn-primary btn-lg me-3">Go Back</button>
+                <button className="btn btn-primary btn-lg me-5">Go Back</button>
               </Link>
               <h1 className="display-5 mb-0 text-white">{work.title}</h1>
             </div>
@@ -52,7 +52,7 @@ export default function workDetail({ work }) {
                 <p className="text-justify">{work.task}</p>
 
                 <div class="row mt-4">
-                  <div class="col-lg-6">
+                  <div class="col-md-6">
                     <div class="info">
                       <h5 class="mb-0 text-white">Role</h5>
                       <p>{work.role}</p>
@@ -64,7 +64,7 @@ export default function workDetail({ work }) {
                     </div>
                   </div>
 
-                  <div class="col-lg-6">
+                  <div class="col-md-6">
                     <div class="info">
                       <h5 class="mb-0 text-white">Type</h5>
                       <p>{work.type}</p>

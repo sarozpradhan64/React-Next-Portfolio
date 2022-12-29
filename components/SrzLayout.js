@@ -3,6 +3,7 @@ import Link from "next/link";
 import React from "react";
 import Meta from "./Meta";
 import data from "../src/data";
+import metas from "../src/metaData";
 export default function SrzLayout({ children, isContactPage = false }) {
   const socials = data.socials;
   const links = data.routes;
@@ -10,8 +11,7 @@ export default function SrzLayout({ children, isContactPage = false }) {
     <div>
       <Meta />
       <nav
-        className="fixed-top py-4 px-4 px-5 d-flex justify-content-between"
-        data-wow-delay="0.1s"
+        className="navbar py-4 px-4 px-5 d-flex justify-content-between"
       >
         <div className="">
           <Link href={"/"} className="h1 fw-bold text-primary">
@@ -33,7 +33,7 @@ export default function SrzLayout({ children, isContactPage = false }) {
         </div>
       </nav>
 
-      <div className="py-6">{children}</div>
+      <div className="" style={{padding:'150px 0px'}}>{children}</div>
 
       {/* footer  */}
       <div className="container-fluid bg-dark text-white py-4">
@@ -41,7 +41,7 @@ export default function SrzLayout({ children, isContactPage = false }) {
           <div className="row">
             <div className="col-md-6 text-center text-md-start mb-3 mb-md-0">
               <Link className="border-bottom text-secondary" href="/">
-                Saroj Pradhan
+                {metas.user.name}
               </Link>
             </div>
 
