@@ -1,15 +1,33 @@
 import React from "react";
 import Image from "next/image";
 import SrzLayout from "../../components/SrzLayout";
-
+import metas from "../../src/metaData";
+import { useRouter } from "next/router";
+import Link from "next/link";
 export default function workDetail({ work }) {
   console.log(work);
+  const router = useRouter();
+  const handleShare = async function () {
+    try {
+      await navigator.share({
+        title: `${metas.user.name} | Project - ${work.title} `,
+        url: work.slug,
+      });
+      // console.log("Data was shared successfully");
+    } catch (err) {
+      alert("Your device doesnot support this feature");
+      // console.error("Share failed:", err.message);
+    }
+  };
   return (
     <SrzLayout>
       <div className="container-xxl" id="project">
         <div className="container">
           <div className="row g-5 mb-5 align-items-center">
-            <div className="col-lg-6">
+            <div className="col-md-12 d-flex align-items-center">
+              <Link href="/works">
+                <button className="btn btn-primary btn-lg me-3">Go Back</button>
+              </Link>
               <h1 className="display-5 mb-0 text-white">{work.title}</h1>
             </div>
           </div>
@@ -53,6 +71,10 @@ export default function workDetail({ work }) {
                     </div>
                     <div class="info">
                       <h5 className="mb-0 text-white">Share</h5>
+                      <i
+                        class="fa-solid fa-share-nodes fs-3 pointer"
+                        onClick={() => handleShare()}
+                      ></i>
                     </div>
                   </div>
 

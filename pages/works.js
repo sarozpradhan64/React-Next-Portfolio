@@ -36,9 +36,12 @@ export default function works({ works }) {
                     alt="gyannhub"
                     fill
                   />
-                  <div className="portfolio-btn">
+                  <div className="portfolio-btn position-relative">
+                    <Link href={`/work/${work.slug}`}>
+                      {" "}
+                      <h3 className="portfolio-hover-title">{work.title}</h3>
+                    </Link>
                     <Link
-                      rel="noreferrer"
                       className="btn btn-lg-square btn-outline-secondary border-2 mx-1"
                       href={`/work/${work.slug}`}
                     >
@@ -48,7 +51,7 @@ export default function works({ works }) {
                       rel="noreferrer"
                       className="btn btn-lg-square btn-outline-secondary border-2 mx-1"
                       target={"_blank"}
-                      href="https://gyannhub.com"
+                      href={work.href}
                     >
                       <i className="fa fa-link"></i>
                     </a>
@@ -56,7 +59,6 @@ export default function works({ works }) {
                 </div>
               </div>
             ))}
-
           </div>
         </div>
       </div>
