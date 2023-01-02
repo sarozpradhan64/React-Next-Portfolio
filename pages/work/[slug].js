@@ -47,9 +47,6 @@ export default function workDetail({ work }) {
               <div class="project-info">
                 <h3 class="mb-4 text-white">{work.title}</h3>
                 <p className="text-justify">{work.description}</p>
-
-                <p className="text-justify">{work.task}</p>
-
                 <div class="row mt-4">
                   <div class="col-md-6">
                     <div class="info">
@@ -69,15 +66,12 @@ export default function workDetail({ work }) {
                       <p>{work.type}</p>
                     </div>
                     <div class="info">
-                      <h5 className="mb-0 text-white">Share</h5>
-                      <i
-                        class="fa-solid fa-share-nodes fs-3 pointer"
-                        onClick={() => handleShare()}
-                      ></i>
+                      <h5 className="mb-0 text-white">Tech Stack</h5>
+                     <p>{work.stack}</p>
                     </div>
                   </div>
 
-                  <div class="mt-4">
+                  <div class="mt-4 d-flex justify-content-between align-items-center">
                     <a
                       href={work.href}
                       target="_blank"
@@ -96,6 +90,10 @@ export default function workDetail({ work }) {
                         Source Code
                       </a>
                     )}
+                     <i
+                        class="fa-solid fa-share-nodes fs-2 pointer"
+                        onClick={() => handleShare()}
+                      ></i>
                   </div>
                 </div>
               </div>

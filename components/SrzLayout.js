@@ -13,9 +13,9 @@ export default function SrzLayout({ children, isContactPage = false }) {
       <nav
         className="navbar py-4 px-4 px-5 d-flex justify-content-between"
       >
-        <div className="">
-          <Link href={"/"} className="h1 fw-bold text-primary">
-            SRZ
+        <div>
+          <Link href={"/"}>
+            <h2 className="logo-title h1 fw-bold text-primary">SRZ.</h2>
           </Link>
         </div>
 
