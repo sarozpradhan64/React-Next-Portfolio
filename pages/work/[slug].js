@@ -5,7 +5,6 @@ import metas from "../../src/metaData";
 
 import Link from "next/link";
 export default function workDetail({ work }) {
-
   const handleShare = async function () {
     try {
       await navigator.share({
@@ -20,75 +19,91 @@ export default function workDetail({ work }) {
   };
   return (
     <SrzLayout title={work.title}>
-          <div class="row">
-            <div
-              class="col-lg-6 position-relative"
-              style={{ minHeight: "60vh" }}
-            >
-              <Image
-                src={work.image}
-                alt={`saroj pradhan's work ${work.title}`}
-                class="img-fluid  w-100 object-cover"
-                fill
-              />
+      <div className="row">
+        <div
+          className="col-lg-5 col-md-6"
+          // style={{ minHeight: "60vh" }}
+        >
+          <div className="position-relative" style={{ minHeight: "60vh" }}>
+            <Image
+              src={work.image}
+              alt={`saroj pradhan's work ${work.title}`}
+              className="img-fluid  w-100 object-cover"
+              fill
+            />
+          </div>
+
+          {/* detail list  */}
+          <div className="row mt-4">
+            <div className="col-md-6">
+              <div className="info">
+                <h5 className="mb-2 text-white">Role</h5>
+                <p>{work.role}</p>
+              </div>
+
+              <div className="info">
+                <h5 className="mb-2 text-white">Year</h5>
+                <p>{work.year}</p>
+              </div>
             </div>
 
-            <div class="col-lg-6 my-3 ps-md-4">
-              <div class="project-info">
-                <h3 class="mb-4 text-white">{work.title}</h3>
-                <p className="text-justify">{work.description}</p>
-                <div class="row mt-4">
-                  <div class="col-md-6">
-                    <div class="info">
-                      <h5 class="mb-0 text-white">Role</h5>
-                      <p>{work.role}</p>
-                    </div>
-
-                    <div class="info">
-                      <h5 class="mb-0 text-white">Year</h5>
-                      <p>{work.year}</p>
-                    </div>
-                  </div>
-
-                  <div class="col-md-6">
-                    <div class="info">
-                      <h5 class="mb-0 text-white">Type</h5>
-                      <p>{work.type}</p>
-                    </div>
-                    <div class="info">
-                      <h5 className="mb-0 text-white">Tech Stack</h5>
-                     <p>{work.stack}</p>
-                    </div>
-                  </div>
-
-                  <div class="mt-4 d-flex justify-content-between align-items-center">
-                    <a
-                      href={work.href}
-                      target="_blank"
-                      rel="noreferrer"
-                      class="btn btn-primary py-3 px-5 mx-md-2 my-2"
-                    >
-                      View Project
-                    </a>
-                    {work.source !== "" && (
-                      <a
-                        href={work.source}
-                        target="_blank"
-                        rel="noreferrer"
-                        class="btn btn-danger py-3 px-5 mx-md-2 my-2"
-                      >
-                        Source Code
-                      </a>
-                    )}
-                     <i
-                        class="fa-solid fa-share-nodes fs-2 pointer"
-                        onClick={() => handleShare()}
-                      ></i>
-                  </div>
-                </div>
+            <div className="col-md-6">
+              <div className="info">
+                <h5 className="mb-2 text-white">Type</h5>
+                <p>{work.type}</p>
+              </div>
+              <div className="info">
+                <h5 className="mb-2 text-white">Tech Stack</h5>
+                <p>{work.stack}</p>
               </div>
             </div>
           </div>
+        </div>
+
+        <div className="col-lg-7 col-md-6 my-3 ps-md-4">
+          <div className="project-info">
+            <p className="text-justify">{work.description}</p>
+            <div className="mt-4 d-flex align-items-center">
+              <a
+                href={work.href}
+                target="_blank"
+                rel="noreferrer"
+                className="mx-md-2 my-2"
+              >
+                <i class="me-1 fa-solid fa-arrow-up-right-from-square"></i>
+                View Project
+              </a>
+
+              {work.source !== "" && (
+                <a
+                  href={work.source}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="mx-md-2 my-2"
+                >
+                  <i class="me-1 fa-solid fa-code"></i>
+                  Source Code
+                </a>
+              )}
+
+              <a
+                href={""}
+                onClick={() => handleShare()}
+                target="_blank"
+                rel="noreferrer"
+                className="mx-md-2 my-2"
+              >
+                <i
+                  className="me-1 fa-solid fa-share-nodes pointer"
+                  onClick={() => handleShare()}
+                ></i>
+                Share
+              </a>
+
+            </div>
+          </div>
+        </div>
+      </div>
     </SrzLayout>
   );
 }
