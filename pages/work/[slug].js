@@ -91,7 +91,7 @@ export default function workDetail({ work }) {
                 onClick={() => handleShare()}
                 target="_blank"
                 rel="noreferrer"
-                className="mx-md-2 my-2"
+                className="mx-3 my-2"
               >
                 <i
                   className="me-1 fa-solid fa-share-nodes pointer"

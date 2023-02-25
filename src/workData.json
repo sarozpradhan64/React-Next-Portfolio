@@ -23,6 +23,18 @@
       "description": "Blaze Codes is a blog application that allows users to create and publish blog posts, articles, and tutorials on a wide range of topics related to web development, programming, and the latest technology. It provides a simple and easy-to-use interface for creating and editing blog content, and allows users to customize the appearance of their blogs. With this application, users can share their knowledge and experience with the web development, programming, and technology communities, and engage with other users through comments and discussions. It is an ideal platform for developers, programmers, and tech enthusiasts to share their insights, ideas, and expertise with a global audience.",
       "role": "FullStack",
       "stack": "Laravel, React, Inertiajs, Tailwind"
+    },
+    {
+      "title": "TodoApp",
+      "slug": "todo-app",
+      "type": "Web App",
+      "year": "2020",
+      "href": "https://sarojtodoapp.netlify.app/",
+      "source": "https://github.com/sarozpradhan64/React-Todoapp",
+      "image": "/works/todoapp.jpg",
+      "description": "It is a static todo listing app which is composed of local storage feature. Also it has filteration option according to complete and uncompleted task",
+      "role": "Frontend",
+      "stack": "React"
     }
   ]
 }

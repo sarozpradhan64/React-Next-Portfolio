@@ -89,6 +89,7 @@ export default function Works({ works }) {
     </SrzLayout>
   );
 }
+
 export async function getStaticProps() {
   const { works } = await import("../src/workData.json");
   return {

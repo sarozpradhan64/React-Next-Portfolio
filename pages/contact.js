@@ -5,10 +5,6 @@ export default function contact() {
   const socials = data.socials;
   return (
     <SrzLayout isContactPage={true} title="Let work together">
-      <div className="container-xxl">
-        <div className="container">
-
-
           <div className="row g-5">
             <div
               className="col-lg-6 col-md-6 wow fadeInUp"
@@ -105,8 +101,6 @@ export default function contact() {
               </form> */}
             </div>
           </div>
-        </div>
-      </div>
     </SrzLayout>
   );
 }

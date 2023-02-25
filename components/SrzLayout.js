@@ -10,7 +10,7 @@ export default function SrzLayout({ children, title, isContactPage = false }) {
   return (
     <div>
       <Meta />
-      <nav className="navbar py-4 px-4 px-5 d-flex justify-content-between">
+      <nav className="navbar py-2 px-4 px-5 d-flex justify-content-between">
         <div>
           <Link href={"/"}>
             <h2 className="logo-title h1 fw-bold text-primary">SRZ.</h2>
@@ -18,7 +18,7 @@ export default function SrzLayout({ children, title, isContactPage = false }) {
         </div>
 
         {/* nav */}
-        <div>
+        <div className="d-md-block d-none">
           {links.map((link, index) => (
             <Link
               href={link.href}
@@ -29,6 +29,20 @@ export default function SrzLayout({ children, title, isContactPage = false }) {
             </Link>
           ))}
         </div>
+
+        {/* mobile nav */}
+        <div className="d-md-none d-flex justify-content-center position-fixed start-0 end-0 bottom-0 bg-primary py-3">
+          {links.map((link, index) => (
+            <Link
+              href={link.href}
+              key={index}
+              className="text-white px-3 py-2 mx-1 border border-default rounded-pill"
+            >
+              {link.title.toUpperCase()}
+            </Link>
+          ))}
+        </div>
+        {/* mobile nav end  */}
       </nav>
 
       {/* children content  */}
@@ -49,7 +63,7 @@ export default function SrzLayout({ children, title, isContactPage = false }) {
       {/* children content end  */}
 
       {/* footer  */}
-      <div className="container-fluid bg-dark text-white py-4">
+      <div className="container-fluid bg-dark text-white py-4 mb-md-0 mb-5">
         <div className="container">
           <div className="row">
             <div className="col-md-6 text-center text-md-start mb-3 mb-md-0">
