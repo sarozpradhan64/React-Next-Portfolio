@@ -1,5 +1,7 @@
 /********** Template CSS **********/
 @import url('https://fonts.googleapis.com/css2?family=Caramel&family=Righteous&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
 :root {
   --primary: #6244c5;
   --secondary: #ffc448;
@@ -9,6 +11,7 @@
 
 body {
   background-color: var(--dark) !important;
+  font-family:'Poppins', sans-serif;
 }
 p {
   color: gray;
