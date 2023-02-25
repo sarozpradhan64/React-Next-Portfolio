@@ -4,15 +4,13 @@ import React from "react";
 import Meta from "./Meta";
 import data from "../src/data";
 import metas from "../src/metaData";
-export default function SrzLayout({ children, isContactPage = false }) {
+export default function SrzLayout({ children, title, isContactPage = false }) {
   const socials = data.socials;
   const links = data.routes;
   return (
     <div>
       <Meta />
-      <nav
-        className="navbar py-4 px-4 px-5 d-flex justify-content-between"
-      >
+      <nav className="navbar py-4 px-4 px-5 d-flex justify-content-between">
         <div>
           <Link href={"/"}>
             <h2 className="logo-title h1 fw-bold text-primary">SRZ.</h2>
@@ -25,7 +23,7 @@ export default function SrzLayout({ children, isContactPage = false }) {
             <Link
               href={link.href}
               key={index}
-              className="text-white px-4 py-2 bg-primary mx-2 rounded-pill"
+              className="text-white px-3 py-2 mx-2 rounded-pill"
             >
               {link.title.toUpperCase()}
             </Link>
@@ -33,7 +31,22 @@ export default function SrzLayout({ children, isContactPage = false }) {
         </div>
       </nav>
 
-      <div className="" style={{padding:'150px 0px'}}>{children}</div>
+      {/* children content  */}
+      <div className="" style={{ padding: "100px 0px" }}>
+        <div className="container">
+          {/*  page title  */}
+          {title && (
+            <div className="mb-4">
+              <h1 className="display-5 mb-0 text-white">
+                <i class="fa-solid fa-caret-right"></i> {title}
+              </h1>
+            </div>
+          )}
+          {/* page title end  */}
+          {children}
+        </div>
+      </div>
+      {/* children content end  */}
 
       {/* footer  */}
       <div className="container-fluid bg-dark text-white py-4">

@@ -19,17 +19,7 @@ export default function workDetail({ work }) {
     }
   };
   return (
-    <SrzLayout>
-      <div className="container-xxl" id="project">
-        <div className="container">
-          <div className="row g-5 mb-5 align-items-center">
-            <div className="col-md-12 d-flex align-items-center">
-              <Link href="/works">
-                <button className="btn btn-primary btn-lg me-5">Go Back</button>
-              </Link>
-              <h1 className="display-5 mb-0 text-white">{work.title}</h1>
-            </div>
-          </div>
+    <SrzLayout title={work.title}>
           <div class="row">
             <div
               class="col-lg-6 position-relative"
@@ -99,8 +89,6 @@ export default function workDetail({ work }) {
               </div>
             </div>
           </div>
-        </div>
-      </div>
     </SrzLayout>
   );
 }

@@ -10,7 +10,7 @@ export default function Home() {
   return (
     <SrzLayout>
       <div>
-          <div className="container-fluid " id="home">
+          <div className="container-fluid" id="home">
             <div className="home-cover">
               <Image
                 src={"/img/cover.jpg"}

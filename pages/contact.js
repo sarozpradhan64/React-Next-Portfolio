@@ -4,16 +4,11 @@ import data from "../src/data";
 export default function contact() {
   const socials = data.socials;
   return (
-    <SrzLayout isContactPage={true}>
-      <div className="container-xxl" id="contact">
+    <SrzLayout isContactPage={true} title="Let work together">
+      <div className="container-xxl">
         <div className="container">
-          <div className="row g-5 mb-5 wow fadeInUp" data-wow-delay="0.1s">
-            <div className="col-lg-6">
-              <h1 className="display-5 mb-0 text-white">
-                Let&apos;s Work Together
-              </h1>
-            </div>
-          </div>
+
+
           <div className="row g-5">
             <div
               className="col-lg-6 col-md-6 wow fadeInUp"
@@ -49,7 +44,7 @@ export default function contact() {
               className="col-lg-6 col-md-6 wow fadeInUp"
               data-wow-delay="0.5s"
             >
-              <form
+              {/* <form
                 method="POST"
                 name="contact-form"
                 data-netlify="true"
@@ -107,7 +102,7 @@ export default function contact() {
                     </button>
                   </div>
                 </div>
-              </form>
+              </form> */}
             </div>
           </div>
         </div>

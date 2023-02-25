@@ -30,13 +30,15 @@ const data = {
 
   routes: [
     { title: "works", href: "/works" },
+    { title: "tools", href: "/tools" },
+    { title: "blogs", href: "/blogs" },
     { title: "contact", href: "/contact" },
   ],
   works: [
     {
       title: "Gyannhub",
       slug: "gyannhub",
-      type: "website",
+      type: "Web App",
       year: "2022",
       href: "https://gyannhub.com",
       source: "https://github.com",
