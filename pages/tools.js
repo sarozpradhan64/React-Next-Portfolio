@@ -18,7 +18,7 @@ export default function tools({tools}) {
                   fill
                 />
                 <div className="portfolio-btn position-relative">
-                  <a rel="noreferrer" href={`/work/${work.href}`} target="_blank">
+                  <a rel="noreferrer" href={work.href} target="_blank">
                     {" "}
                     <h3 className="portfolio-hover-title">{work.title}</h3>
                   </a>
@@ -36,7 +36,7 @@ export default function tools({tools}) {
             </div>
           ))
         ) : (
-          <h3 className="text-white">No works yet</h3>
+          <h3 className="text-white">No tools yet</h3>
         )}
     </SrzLayout>
   );
