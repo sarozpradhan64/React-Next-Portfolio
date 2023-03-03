@@ -31,14 +31,17 @@ export default function SrzLayout({ children, title, isContactPage = false }) {
         </div>
 
         {/* mobile nav */}
-        <div className="d-md-none d-flex justify-content-center position-fixed start-0 end-0 bottom-0 bg-primary py-3">
+        <div className="d-md-none d-flex justify-content-around position-fixed start-0 end-0 bottom-0 bg-primary py-1">
           {links.map((link, index) => (
             <Link
               href={link.href}
               key={index}
-              className="text-white px-3 py-2 mx-1 border border-default rounded-pill"
+              className="text-white d-flex flex-column justify-content-between align-items-center
+               mx-1"
             >
-              {link.title.toUpperCase()}
+             <div className="fs-5">{link.icon}</div>
+
+              <span style={{'fontSize':'12px'}}>{link.title.toUpperCase()}</span>
             </Link>
           ))}
         </div>

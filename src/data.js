@@ -7,8 +7,8 @@ const data = {
       icon: <i className="fab fa-github"></i>,
     },
     {
-      title:"dev.to",
-      href:'https://dev.to/sarozpradhan64',
+      title: "dev.to",
+      href: "https://dev.to/sarozpradhan64",
       icon: <i class="fa-brands fa-dev"></i>,
     },
     {
@@ -29,10 +29,28 @@ const data = {
   ],
 
   routes: [
-    { title: "works", href: "/works" },
-    { title: "tools", href: "/tools" },
-    { title: "blogs", href: "/blogs" },
-    { title: "contact", href: "/contact" },
+    {
+      title: "home",
+      href: "/",
+      icon: <i class="fa-solid fa-home"></i>,
+    },
+    
+    {
+      title: "works",
+      href: "/works",
+      icon: <i class="fa-solid fa-briefcase"></i>,
+    },
+    { title: "tools", href: "/tools", icon: <i class="fa-solid fa-fire"></i> },
+    {
+      title: "blogs",
+      href: "/blogs",
+      icon: <i class="fa-solid fa-note-sticky"></i>,
+    },
+    {
+      title: "contact",
+      href: "/contact",
+      icon: <i class="fa-solid fa-address-book"></i>,
+    },
   ],
   works: [
     {

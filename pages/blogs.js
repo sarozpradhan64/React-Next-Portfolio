@@ -10,25 +10,19 @@ export default function blogs({ posts }) {
       <div className="row g-4" data-wow-delay="0.1s">
         {posts.length >= 1 ? (
           posts.map((post, index) => (
-            <div key={index} className="col-lg-4 col-md-6 mb-md-3">
+            <div key={index} className="col-lg-4 col-md-6">
               <div
                 className="rounded position-relative"
                 style={{ minHeight: "250px" }}
               >
-                <a
-                  href={`https://blazecodes.com/post/${post.slug}`}
-                  target="_blank"
-                  rel={"noreferrer"}
-                >
-                  <Image
-                    className="img-fluid object-cover"
-                    src={`https://blazecodes.com${post.thumbnail}`}
-                    alt={post.title}
-                    fill
-                  />
-                </a>
+                <Image
+                  className="img-fluid object-cover"
+                  src={`https://blazecodes.com${post.thumbnail}`}
+                  alt={post.title}
+                  fill
+                />
               </div>
-              <div className="mt-2">
+              <div className="mt-3">
                 <p>{post.category.title}</p>
                 <a
                   href={`https://blazecodes.com/post/${post.slug}`}
@@ -36,13 +30,13 @@ export default function blogs({ posts }) {
                   rel={"noreferrer"}
                 >
                   {" "}
-                  <h3 className="text-white">{post.title}</h3>
+                  <h4 className="text-white">{post.title}</h4>
                 </a>
                 <a
                   href={`https://blazecodes.com/post/${post.slug}`}
                   target="_blank"
                   rel={"noreferrer"}
-                  class="fs-4"
+                  className="fs-5"
                 >
                   Read
                 </a>
