@@ -16,7 +16,9 @@ body {
 p {
   color: gray;
 }
-
+img{
+  border-radius: 8px;
+}
 /* custom scrollbar  */
 ::-webkit-scrollbar {
   width: 8px;
