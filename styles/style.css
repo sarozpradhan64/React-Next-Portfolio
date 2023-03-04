@@ -58,8 +58,8 @@ img{
 .back-to-top {
   position: fixed;
   display: none;
-  right: 45px;
-  bottom: 45px;
+  right: 40px;
+  bottom: 80px;
   z-index: 99;
 }
 .my-6 {

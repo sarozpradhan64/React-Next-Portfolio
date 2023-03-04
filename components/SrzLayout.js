@@ -4,6 +4,7 @@ import React from "react";
 import Meta from "./Meta";
 import data from "../src/data";
 import metas from "../src/metaData";
+import ScrollToTop from "./ScrollToTop";
 export default function SrzLayout({ children, title, isContactPage = false }) {
   const socials = data.socials;
   const links = data.routes;
@@ -95,13 +96,8 @@ export default function SrzLayout({ children, title, isContactPage = false }) {
         </div>
       </div>
 
-      <a
-        rel="noreferrer"
-        href="#"
-        className="btn btn-lg btn-primary btn-lg-square back-to-top"
-      >
-        <i className="bi bi-arrow-up"></i>
-      </a>
+      <ScrollToTop/>
+        
     </div>
   );
 }
