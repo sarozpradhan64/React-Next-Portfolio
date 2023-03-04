@@ -7,7 +7,7 @@ export default function blogs({ posts }) {
   console.log(posts);
   return (
     <SrzLayout title="Blogs">
-      <div className="row g-4" data-wow-delay="0.1s">
+      <div className="row g-md-5" data-wow-delay="0.1s">
         {posts.length >= 1 ? (
           posts.map((post, index) => (
             <div key={index} className="col-lg-4 col-md-6">
@@ -15,15 +15,22 @@ export default function blogs({ posts }) {
                 className="rounded position-relative"
                 style={{ minHeight: "250px" }}
               >
-                <Image
-                  className="img-fluid object-cover"
-                  src={`https://blazecodes.com${post.thumbnail}`}
-                  alt={post.title}
-                  fill
-                />
+                <a
+                  href={`https://blazecodes.com/post/${post.slug}`}
+                  target="_blank"
+                  rel={"noreferrer"}
+                >
+                  {" "}
+                  <Image
+                    className="img-fluid object-cover"
+                    src={`https://blazecodes.com${post.thumbnail}`}
+                    alt={post.title}
+                    fill
+                  />
+                </a>
               </div>
               <div className="mt-3">
-                <p>{post.category.title}</p>
+                <span>{post.category.title}</span>
                 <a
                   href={`https://blazecodes.com/post/${post.slug}`}
                   target="_blank"
