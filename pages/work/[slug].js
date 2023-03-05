@@ -70,7 +70,7 @@ export default function workDetail({ work }) {
                 rel="noreferrer"
                 className="mx-md-2 my-2"
               >
-                <i class="me-1 fa-solid fa-arrow-up-right-from-square"></i>
+                <i className="me-1 fa-solid fa-arrow-up-right-from-square"></i>
                 View Project
               </a>
 
@@ -81,7 +81,7 @@ export default function workDetail({ work }) {
                   rel="noreferrer"
                   className="mx-md-2 my-2"
                 >
-                  <i class="me-1 fa-solid fa-code"></i>
+                  <i className="me-1 fa-solid fa-code"></i>
                   Source Code
                 </a>
               )}
@@ -99,7 +99,6 @@ export default function workDetail({ work }) {
                 ></i>
                 Share
               </a>
-
             </div>
           </div>
         </div>

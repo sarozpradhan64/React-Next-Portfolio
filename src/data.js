@@ -9,7 +9,7 @@ const data = {
     {
       title: "dev.to",
       href: "https://dev.to/sarozpradhan64",
-      icon: <i class="fa-brands fa-dev"></i>,
+      icon: <i className="fa-brands fa-dev"></i>,
     },
     {
       title: "facebook",
@@ -32,24 +32,28 @@ const data = {
     {
       title: "home",
       href: "/",
-      icon: <i class="fa-solid fa-home"></i>,
+      icon: <i className="fa-solid fa-home"></i>,
     },
-    
+
     {
       title: "works",
       href: "/works",
-      icon: <i class="fa-solid fa-briefcase"></i>,
+      icon: <i className="fa-solid fa-briefcase"></i>,
     },
-    { title: "tools", href: "/tools", icon: <i class="fa-solid fa-fire"></i> },
+    {
+      title: "tools",
+      href: "/tools",
+      icon: <i className="fa-solid fa-fire"></i>,
+    },
     {
       title: "blogs",
       href: "/blogs",
-      icon: <i class="fa-solid fa-note-sticky"></i>,
+      icon: <i className="fa-solid fa-note-sticky"></i>,
     },
     {
       title: "contact",
       href: "/contact",
-      icon: <i class="fa-solid fa-address-book"></i>,
+      icon: <i className="fa-solid fa-address-book"></i>,
     },
   ],
   works: [

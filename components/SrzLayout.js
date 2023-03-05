@@ -40,9 +40,11 @@ export default function SrzLayout({ children, title, isContactPage = false }) {
               className="text-white d-flex flex-column justify-content-between align-items-center
                mx-1"
             >
-             <div className="fs-5">{link.icon}</div>
+              <div className="fs-5">{link.icon}</div>
 
-              <span style={{'fontSize':'12px'}}>{link.title.toUpperCase()}</span>
+              <span style={{ fontSize: "12px" }}>
+                {link.title.toUpperCase()}
+              </span>
             </Link>
           ))}
         </div>
@@ -56,7 +58,7 @@ export default function SrzLayout({ children, title, isContactPage = false }) {
           {title && (
             <div className="mb-4">
               <h1 className="display-5 mb-0 text-white">
-                <i class="fa-solid fa-caret-right"></i> {title}
+                <i className="fa-solid fa-caret-right"></i> {title}
               </h1>
             </div>
           )}
@@ -96,8 +98,7 @@ export default function SrzLayout({ children, title, isContactPage = false }) {
         </div>
       </div>
 
-      <ScrollToTop/>
-        
+      <ScrollToTop />
     </div>
   );
 }
