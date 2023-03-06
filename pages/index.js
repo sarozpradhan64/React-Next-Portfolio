@@ -16,7 +16,7 @@ export default function Home() {
                 src={"/img/cover.jpg"}
                 fill
                 className="home-cover-image"
-                alt={`${metas.name} portfolio cover image`}
+                alt={`${metas.user.name} portfolio cover image`}
                 style={{ objectFit: "cover" }}
               />
             </div>
