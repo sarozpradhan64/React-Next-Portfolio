@@ -123,6 +123,18 @@ img{
 }
 
 /*** Navbar ***/
+
+.nav-item {
+  background: 
+      linear-gradient(var(--primary) 0 0) 
+      bottom /var(--d, 0) 3px 
+      no-repeat;
+  transition:0.5s;
+}
+.nav-item:hover {
+  --d: 100%;
+}
+
 /* .navbar.fixed-top {
     display: none;
     transition: .5s;

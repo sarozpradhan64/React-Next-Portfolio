@@ -24,7 +24,7 @@ export default function SrzLayout({ children, title, isContactPage = false }) {
             <Link
               href={link.href}
               key={index}
-              className="text-white px-3 py-2 mx-2 rounded-pill"
+              className="nav-item text-white px-3 py-2 mx-2x"
             >
               {link.title.toUpperCase()}
             </Link>
