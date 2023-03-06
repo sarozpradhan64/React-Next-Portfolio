@@ -15,7 +15,8 @@ export default function Home() {
               <Image
                 src={"/img/cover.jpg"}
                 fill
-                alt="Saroj Pradhan portfolio cover image"
+                className="home-cover-image"
+                alt={`${metas.name} portfolio cover image`}
                 style={{ objectFit: "cover" }}
               />
             </div>
