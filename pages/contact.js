@@ -8,7 +8,7 @@ import profile from "../public/img/profile.svg";
 export default function contact() {
   const socials = data.socials;
   return (
-    <SrzLayout isContactPage={true} title="Let work together">
+    <SrzLayout isContactPage={true} title="Lets work together">
       <div className="row g-5">
         <div className="col-lg-6 col-md-6">
           <p className="mb-2">Address:</p>
