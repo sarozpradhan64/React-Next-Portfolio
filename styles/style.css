@@ -134,13 +134,20 @@ img{
 .nav-item:hover {
   --d: 100%;
 }
+.active-nav-item{
+  background: 
+  linear-gradient(var(--secondary) 0 0) 
+  bottom /100% 3px 
+  no-repeat;
+}
 .mobile-nav-item{
   transition: .5s ease-in-out;
 }
 
-.mobile-nav-item:hover{
+.active-mobile-nav-item{
   background-color: var(--secondary);
   color: var(--primary);
+  transition: .5s ease-in-out;
 }
 /* .navbar.fixed-top {
     display: none;

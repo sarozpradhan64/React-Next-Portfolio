@@ -5,9 +5,14 @@ import Meta from "./Meta";
 import data from "../src/data";
 import metas from "../src/metaData";
 import ScrollToTop from "./ScrollToTop";
+import { useRouter } from "next/router";
+
+
 export default function SrzLayout({ children, title, isContactPage = false }) {
   const socials = data.socials;
   const links = data.routes;
+
+  const router = useRouter();
   return (
     <div>
       <Meta />
@@ -24,7 +29,7 @@ export default function SrzLayout({ children, title, isContactPage = false }) {
             <Link
               href={link.href}
               key={index}
-              className="nav-item text-white px-3 py-2 mx-2x"
+              className={`${router.pathname == link.href ? 'active-nav-item':''} nav-item text-white px-3 py-2 mx-2x`}
             >
               {link.title.toUpperCase()}
             </Link>
@@ -37,8 +42,8 @@ export default function SrzLayout({ children, title, isContactPage = false }) {
             <Link
               href={link.href}
               key={index}
-              className="mobile-nav-item text-white d-flex py-1 px-3 flex-column justify-content-between align-items-center
-               mx-1"
+              className={`${router.pathname == link.href ? 'active-mobile-nav-item':''} mobile-nav-item text-white d-flex py-1 px-3 flex-column justify-content-between align-items-center
+               mx-1`}
             >
               <div className="fs-5">{link.icon}</div>
 
