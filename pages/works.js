@@ -19,7 +19,7 @@ export default function Works({ works }) {
   // console.log(active)
   return (
     <SrzLayout title="Works">
-      <div className="text-lg-end mb-5">
+      <div className="mb-5">
         <ul className="list-inline mx-n3 mb-0" id="portfolio-flters">
           <li
             className={`mx-3 mb-2 ${active === "All" ? "active" : "text-white"}`}
