@@ -145,8 +145,8 @@ img{
 }
 
 .active-mobile-nav-item{
-  background-color: var(--secondary);
-  color: var(--primary);
+  background-color: var(--primary);
+  filter:brightness(0.85);
   transition: .5s ease-in-out;
 }
 /* .navbar.fixed-top {
