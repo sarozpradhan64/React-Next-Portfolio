@@ -35,11 +35,16 @@ export default function workDetail({ work }) {
         </div>
 
         <div className="col-lg-7 col-md-6 my-3 ps-md-4">
+          <div className="mb-3">
+            <Link className="pointer" href={"/works"}>
+              <i class="fa-solid fa-arrow-left-long me-2"></i>Go Back
+            </Link>
+          </div>
           <div className="project-info">
             <p className="text-justify">{work.description}</p>
 
             {/* detail list  */}
-            <div className="row mt-5">
+            <div className="row mt-4">
               <div className="col-md-2">
                 <h5 className="mb-2 text-white">Type</h5>
                 <p>{work.type}</p>
@@ -65,7 +70,7 @@ export default function workDetail({ work }) {
                 href={work.href}
                 target="_blank"
                 rel="noreferrer"
-                className="mx-md-2 my-2"
+                className="mx-md-2"
               >
                 <i className="me-1 fa-solid fa-arrow-up-right-from-square"></i>
                 View Project
@@ -76,7 +81,7 @@ export default function workDetail({ work }) {
                   href={work.source}
                   target="_blank"
                   rel="noreferrer"
-                  className="mx-md-2 my-2"
+                  className="mx-md-2"
                 >
                   <i className="me-1 fa-solid fa-code"></i>
                   Source Code
@@ -88,7 +93,7 @@ export default function workDetail({ work }) {
                 onClick={() => handleShare()}
                 target="_blank"
                 rel="noreferrer"
-                className="mx-3 my-2"
+                className="mx-3"
               >
                 <i
                   className="me-1 fa-solid fa-share-nodes pointer"
