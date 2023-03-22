@@ -32,38 +32,35 @@ export default function workDetail({ work }) {
               fill
             />
           </div>
-
-          {/* detail list  */}
-          <div className="row mt-4">
-            <div className="col-md-6">
-              <div className="info">
-                <h5 className="mb-2 text-white">Role</h5>
-                <p>{work.role}</p>
-              </div>
-
-              <div className="info">
-                <h5 className="mb-2 text-white">Year</h5>
-                <p>{work.year}</p>
-              </div>
-            </div>
-
-            <div className="col-md-6">
-              <div className="info">
-                <h5 className="mb-2 text-white">Type</h5>
-                <p>{work.type}</p>
-              </div>
-              <div className="info">
-                <h5 className="mb-2 text-white">Tech Stack</h5>
-                <p>{work.stack}</p>
-              </div>
-            </div>
-          </div>
         </div>
 
         <div className="col-lg-7 col-md-6 my-3 ps-md-4">
           <div className="project-info">
             <p className="text-justify">{work.description}</p>
-            <div className="mt-4 d-flex align-items-center">
+
+            {/* detail list  */}
+            <div className="row mt-5">
+              <div className="col-md-2">
+                <h5 className="mb-2 text-white">Type</h5>
+                <p>{work.type}</p>
+              </div>
+              <div className="col-md-4">
+                <h5 className="mb-2 text-white">Role</h5>
+                <p>{work.role}</p>
+              </div>
+
+              <div className="col-md-4">
+                <h5 className="mb-2 text-white">Tech Stack</h5>
+                <p>{work.stack}</p>
+              </div>
+
+              <div className="col-md-2">
+                <h5 className="mb-2 text-white">Year</h5>
+                <p>{work.year}</p>
+              </div>
+            </div>
+
+            <div className="mt-3 d-flex align-items-center">
               <a
                 href={work.href}
                 target="_blank"
