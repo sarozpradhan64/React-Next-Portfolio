@@ -22,25 +22,33 @@ export default function Works({ works }) {
       <div className="mb-5">
         <ul className="list-inline mx-n3 mb-0" id="portfolio-flters">
           <li
-            className={`mx-3 mb-2 ${active === "All" ? "active" : "text-white"}`}
+            className={`mx-3 mb-2 ${
+              active === "All" ? "active" : "text-white"
+            }`}
             onClick={() => handleFilter("All")}
           >
             All Projects
           </li>
           <li
-            className={`mx-3 mb-2 ${active === "UI/UX" ? "active" : "text-white"}`}
+            className={`mx-3 mb-2 ${
+              active === "UI/UX" ? "active" : "text-white"
+            }`}
             onClick={() => handleFilter("UI/UX")}
           >
             UI/UX Design
           </li>
           <li
-            className={`mx-3 mb-2 ${active === "Web App" ? "active" : "text-white"}`}
+            className={`mx-3 mb-2 ${
+              active === "Web App" ? "active" : "text-white"
+            }`}
             onClick={() => handleFilter("Web App")}
           >
             Web App
           </li>
           <li
-            className={`mx-3 mb-2 ${active === "Mobile App" ? "active" : "text-white"}`}
+            className={`mx-3 mb-2 ${
+              active === "Mobile App" ? "active" : "text-white"
+            }`}
             onClick={() => handleFilter("Mobile App")}
           >
             Mobile App
@@ -48,7 +56,7 @@ export default function Works({ works }) {
         </ul>
       </div>
 
-      <div className="row g-4" data-wow-delay="0.1s">
+      <div className="row g-md-5" data-wow-delay="0.1s">
         {myWorks.length >= 1 ? (
           myWorks.map((work, index) => (
             <div key={index} className="col-lg-4 col-md-6 portfolio-item">
@@ -63,21 +71,8 @@ export default function Works({ works }) {
                   <Link href={`/work/${work.slug}`}>
                     {" "}
                     <h3 className="portfolio-hover-title">{work.title}</h3>
+                    <p className="text-center text-white">View Details</p>
                   </Link>
-                  <Link
-                    className="btn btn-lg-square btn-outline-secondary border-2 mx-1"
-                    href={`/work/${work.slug}`}
-                  >
-                    <i className="fa fa-eye"></i>
-                  </Link>
-                  <a
-                    rel="noreferrer"
-                    className="btn btn-lg-square btn-outline-secondary border-2 mx-1"
-                    target={"_blank"}
-                    href={work.href}
-                  >
-                    <i className="fa fa-link"></i>
-                  </a>
                 </div>
               </div>
             </div>

@@ -1,6 +1,6 @@
 /********** Template CSS **********/
-@import url('https://fonts.googleapis.com/css2?family=Caramel&family=Righteous&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Caramel&family=Righteous&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 
 :root {
   --primary: #6244c5;
@@ -11,12 +11,12 @@
 
 body {
   background-color: var(--dark) !important;
-  font-family:'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 p {
   color: gray;
 }
-img{
+img {
   border-radius: 8px;
 }
 /* custom scrollbar  */
@@ -48,7 +48,7 @@ img{
 .text-justify {
   text-align: justify;
 }
-.pointer{
+.pointer {
   cursor: pointer;
 }
 
@@ -125,29 +125,24 @@ img{
 /*** Navbar ***/
 
 .nav-item {
-  background: 
-      linear-gradient(var(--primary) 0 0) 
-      bottom /var(--d, 0) 3px 
-      no-repeat;
-  transition:0.5s;
+  background: linear-gradient(var(--primary) 0 0) bottom / var(--d, 0) 3px
+    no-repeat;
+  transition: 0.5s;
 }
 .nav-item:hover {
   --d: 100%;
 }
-.active-nav-item{
-  background: 
-  linear-gradient(var(--secondary) 0 0) 
-  bottom /100% 3px 
-  no-repeat;
+.active-nav-item {
+  background: linear-gradient(var(--secondary) 0 0) bottom / 100% 3px no-repeat;
 }
-.mobile-nav-item{
-  transition: .5s ease-in-out;
+.mobile-nav-item {
+  transition: 0.5s ease-in-out;
 }
 
-.active-mobile-nav-item{
+.active-mobile-nav-item {
   background-color: var(--primary);
-  filter:brightness(0.85);
-  transition: .5s ease-in-out;
+  filter: brightness(0.85);
+  transition: 0.5s ease-in-out;
 }
 /* .navbar.fixed-top {
     display: none;
@@ -172,8 +167,8 @@ img{
         padding: 10px 0;
     }
 } */
-.logo-title{
-  font-family: 'Righteous', cursive !important;
+.logo-title {
+  font-family: "Righteous", cursive !important;
   font-size: 40px;
 }
 
@@ -274,9 +269,9 @@ img{
   }
 }
 
-.navbar{
+.navbar {
   position: absolute;
-  top:0;
+  top: 0;
   z-index: 10;
   width: 100%;
 }
@@ -321,7 +316,7 @@ img{
 
 .portfolio-img {
   position: relative;
-  height: 350px;
+  height: 250px;
   width: auto;
 }
 
@@ -333,8 +328,8 @@ img{
   left: 0;
   background: rgba(98, 68, 197, 0.9);
   display: flex;
-  align-items: flex-end;
-  justify-content: flex-start;
+  align-items: center;
+  justify-content: center;
   padding: 30px;
   padding-bottom: 100px !important;
   opacity: 0;
@@ -346,12 +341,16 @@ img{
   padding-bottom: 30px !important;
 }
 
-.portfolio-hover-title{
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color:white;
+.portfolio-hover-title {
+  color: white;
   font-size: 40px;
   font-weight: bold;
+}
+
+.portfolio-hover-view {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
 }

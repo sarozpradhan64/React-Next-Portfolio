@@ -19,10 +19,34 @@
       "year": "2022",
       "href": "https://blazecodes.com",
       "source": "",
-      "image": "/works/blazecodes.jpg",
+      "image": "/works/blazecodes.png",
       "description": "Blaze Codes is a blog application that allows users to create and publish blog posts, articles, and tutorials on a wide range of topics related to web development, programming, and the latest technology. It provides a simple and easy-to-use interface for creating and editing blog content, and allows users to customize the appearance of their blogs. With this application, users can share their knowledge and experience with the web development, programming, and technology communities, and engage with other users through comments and discussions. It is an ideal platform for developers, programmers, and tech enthusiasts to share their insights, ideas, and expertise with a global audience.",
       "role": "FullStack Developer",
       "stack": "Laravel, React, Inertiajs, Tailwind"
+    },
+    {
+      "title": "Pasa International",
+      "slug": "pasa-international",
+      "type": "Web App",
+      "year": "2022",
+      "href": "https://pasainternational.com.np",
+      "source": "",
+      "image": "/works/pasa.png",
+      "description": "Pasa International Pvt. Ltd. is a manpower recruitment agency located at Kupondole, Nepal. Pasa is one of the best consulting agency in the country.",
+      "role": "FullStack Developer",
+      "stack": "Laravel, Bootstrap"
+    },
+    {
+      "title": "Good Neighbours",
+      "slug": "good-neighbours-nepal",
+      "type": "Web App",
+      "year": "2023",
+      "href": "https://goodneighboursnepal.org",
+      "source": "",
+      "image": "/works/good.png",
+      "description": "Good Neighbors Nepal (GNN) is a non-government organization, established in 2002 at Kathmandu",
+      "role": "Backend Developer",
+      "stack": "Django, Bootstrap"
     },
     {
       "title": "TodoApp",
