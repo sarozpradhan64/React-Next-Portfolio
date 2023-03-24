@@ -59,8 +59,19 @@ export default function blogs({ posts }) {
 }
 
 export async function getStaticProps() {
-  var res = await fetch(`https://blazecodes.com/api/posts`);
-  const posts = await res.json();
+  let posts = [];
+  try {
+    var res = await fetch(`https://blazecodes.com/api/posts`);
+    posts = await res.json();
+  } catch (e) {
+    posts = [
+      {
+        title: "Fetch Error",
+        thumbnail: "/fail",
+        category: { title: "fetch error" },
+      },
+    ];
+  }
 
   return {
     props: {

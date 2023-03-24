@@ -56,7 +56,7 @@ export default function Works({ works }) {
         </ul>
       </div>
 
-      <div className="row g-md-5" data-wow-delay="0.1s">
+      <div className="row gx-md-5 gy-md-5 gy-4" data-wow-delay="0.1s">
         {myWorks.length >= 1 ? (
           myWorks.map((work, index) => (
             <div key={index} className="col-lg-4 col-md-6 portfolio-item">
