@@ -79,7 +79,7 @@ export default function SrzLayout({ children, title, isContactPage = false }) {
           <div className="row">
             <div className="col-md-6 text-center text-md-start mb-3 mb-md-0">
               <Link className="border-bottom text-secondary" href="/">
-                {metas.user.name}
+                {metas.user.name} 
               </Link>
             </div>
 
