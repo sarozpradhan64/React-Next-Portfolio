@@ -1,3 +1,15 @@
+import data from "./data";
+// get github username 
+const getGithubLink = function(){
+  let githubLink = null;
+  data.socials.forEach((social)=>{
+    if(social.title.toLowerCase()==='github' && social.href !== undefined){
+     githubLink = social.href;
+    }
+  });
+  return githubLink;
+}
+console.log(getGithubLink);
 const metas = {
   google_analytics_id: "G-1618WEC7X4",
   user: {
@@ -11,6 +23,13 @@ const metas = {
     latest technologies and best practices in web development, and I am able to apply my
      knowledge to solve complex problems and build high-quality web solutions.`,
   },
+  title:'Saroj Pradhan',
+  description: `Looking for a skilled web developer with expertise in Laravel, Django, React,
+   and Node.js? Check out my portfolio website! As a freelancer, I've developed custom web 
+   applications and websites that meet the unique needs of my clients.
+   Explore my portfolio and let's work together to bring your ideas to life!"`,
+   imageSrc: `${getGithubLink && getGithubLink+'.png'}`,
+   keyword:'web developer, software developer, freelancer, nepal, freelancer in kathmandu, web developer in kathmandu'
 };
 
 export default metas;
