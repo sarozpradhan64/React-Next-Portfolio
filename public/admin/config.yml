@@ -82,46 +82,46 @@ collections:
 
   - name: "Works"
     label: "Works"
-    file: "src/workData.json"
-    slug: "{{slug}}"
-    identifier_field: slug
-    summary: "{{title}}"
-    fields:
-      - label: "Slug"
-        name: "slug"
-        widget: "string"
-      - label: "Title"
-        name: "title"
-        widget: "string"
-      - label: "Year"
-        name: "year"
-        widget: "string"
-      - label: Author
-        name: "author"
-        widget: relation
-        collection: "meta"
-        file: "authors"
-        searchFields:
-          - "authors.*.name"
-        displayFields:
-          - "authors.*.name"
-        valueField: "authors.*.slug"
-      - label: Tags
-        label_singular: "Tag"
-        name: "tags"
-        widget: list
-        summary: "{{fields.tag}}"
-        field:
-          label: Tag
-          name: tag
+    files:
+    
+    - file: "src/workData.json"
+    - name: 'works'
+      fields:
+        - label: "Slug"
+          name: "slug"
+          widget: "string"
+        - label: "Title"
+          name: "title"
+          widget: "string"
+        - label: "Year"
+          name: "year"
+          widget: "string"
+        - label: Author
+          name: "author"
           widget: relation
           collection: "meta"
-          file: "tags"
+          file: "authors"
           searchFields:
-            - "tags.*.name"
+            - "authors.*.name"
           displayFields:
-            - "tags.*.name"
-          valueField: "tags.*.slug"
-      - label: "description"
-        name: "body"
-        widget: "markdown"
+            - "authors.*.name"
+          valueField: "authors.*.slug"
+        - label: Tags
+          label_singular: "Tag"
+          name: "tags"
+          widget: list
+          summary: "{{fields.tag}}"
+          field:
+            label: Tag
+            name: tag
+            widget: relation
+            collection: "meta"
+            file: "tags"
+            searchFields:
+              - "tags.*.name"
+            displayFields:
+              - "tags.*.name"
+            valueField: "tags.*.slug"
+        - label: "description"
+          name: "body"
+          widget: "markdown"
