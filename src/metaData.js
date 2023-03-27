@@ -26,7 +26,7 @@ const metas = {
   title:'Saroj Pradhan',
   description: "Looking for a skilled web developer with expertise in Laravel, Django, React, and Node.js? Check out my portfolio website! As a freelancer, I've developed custom web applications and websites that meet the unique needs of my clients. Explore my portfolio and let's work together to bring your ideas to life!",
    imageSrc: `${getGithubLink() && getGithubLink()+'.png'}`,
-   keyword:'web developer, software developer, freelancer, nepal, freelancer in kathmandu, web developer in kathmandu'
+   keywords:'web developer, software developer, freelancer, nepal, freelancer in kathmandu, web developer in kathmandu'
 };
 
 export default metas;
