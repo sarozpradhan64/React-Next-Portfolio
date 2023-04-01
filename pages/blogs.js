@@ -37,13 +37,13 @@ export default function blogs({ posts }) {
                   rel={"noreferrer"}
                 >
                   {" "}
-                  <h4 className="text-white">{post.title}</h4>
+                  <h5 className="text-white">{post.title}</h5>
                 </a>
                 <a
                   href={`https://blazecodes.com/post/${post.slug}`}
                   target="_blank"
                   rel={"noreferrer"}
-                  className="fs-5"
+                  className="mt-2"
                 >
                   Read
                 </a>

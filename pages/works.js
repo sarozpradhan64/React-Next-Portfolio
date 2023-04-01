@@ -31,11 +31,11 @@ export default function Works({ works }) {
           </li>
           <li
             className={`mx-3 mb-2 ${
-              active === "UI/UX" ? "active" : "text-white"
+              active === "website" ? "active" : "text-white"
             }`}
-            onClick={() => handleFilter("UI/UX")}
+            onClick={() => handleFilter("website")}
           >
-            UI/UX Design
+            Website
           </li>
           <li
             className={`mx-3 mb-2 ${
