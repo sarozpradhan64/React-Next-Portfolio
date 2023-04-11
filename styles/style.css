@@ -288,16 +288,21 @@ img {
 }
 
 /*** Service ***/
-.service-item .bg-icon {
-  width: 100px;
-  height: 100px;
+.service-card {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  background: url(/img/bg-icon.png) center center no-repeat;
-  background-size: cover;
 }
-
+.service-img-holder{
+  position: relative;
+  height: 250px;
+  object-fit: cover;
+}
+.service-card p {
+  font-size: .9rem;
+  text-align: justify;
+}
+.service-card h5 {
+  font-weight: 400;
+}
 /*** work Portfolio ***/
 #portfolio-flters li {
   display: inline-block;
