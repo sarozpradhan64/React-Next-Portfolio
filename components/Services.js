@@ -23,7 +23,7 @@ export default function Services() {
             </p>
             <div className="mt-3 row gx-md-5 gy-md-5 gy-3">
               {services.map((service, index) => (
-                <div className="col-md-6 service-card" key={index}>
+                <div className="col-lg-6 service-card" key={index}>
                   <div className="me-3 col-5 service-img-holder">
                     <Image
                       className="object-cover"
