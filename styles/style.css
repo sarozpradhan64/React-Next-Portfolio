@@ -51,7 +51,23 @@ img {
 .pointer {
   cursor: pointer;
 }
+/* Set the initial opacity to 0 and transition to 0.5 seconds */
+.reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(0);
+  transition: opacity 0.5s ease-in-out;
+}
 
+/* When the element becomes visible, change the opacity to 1 */
+.reveal-on-scroll.visible {
+  opacity: 1;
+  transform: translateY(-50px);
+}
+
+.hidden {
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+}
 .debug {
   border: 2px solid red;
 }
@@ -291,13 +307,13 @@ img {
 .service-card {
   display: flex;
 }
-.service-img-holder{
+.service-img-holder {
   position: relative;
   height: 250px;
   object-fit: cover;
 }
 .service-card p {
-  font-size: .9rem;
+  font-size: 0.9rem;
   text-align: justify;
 }
 .service-card h5 {

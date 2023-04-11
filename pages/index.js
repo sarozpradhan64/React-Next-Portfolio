@@ -4,6 +4,7 @@ import About1 from "../public/img/about-1.jpg";
 import About2 from "../public/img/about-2.jpg";
 import Link from "next/link";
 import SrzLayout from "../components/SrzLayout";
+import RevealOnScroll from "../components/Reveal";
 import metas from "../src/metaData";
 import Services from "../components/Services";
 export default function Home() {
@@ -70,11 +71,13 @@ export default function Home() {
               <div className="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
                 <div className="row g-3 mb-4">
                   <div className="col-sm-6">
-                    <Image
-                      className="img-fluid rounded"
-                      src={About1}
-                      alt="about"
-                    />
+                    <RevealOnScroll>
+                      <Image
+                        className="img-fluid rounded"
+                        src={About1}
+                        alt="about"
+                      />
+                    </RevealOnScroll>
                   </div>
                   <div className="col-sm-6">
                     <Image
