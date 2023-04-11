@@ -13,7 +13,7 @@ export default function Services() {
               <h3 className="lh-base mb-0 text-white">My Services !</h3>
             </div>
             <p className="text-justify">
-              Whether you're looking to build a new website, develop a mobile
+              Whether you&apos;re looking to build a new website, develop a mobile
               app, improve your online visibility with digital marketing, or
               need help with any other aspect of your online presence, we have
               the skills and expertise to get the job done right. Explore my
