@@ -7,15 +7,19 @@ import metas from "../src/metaData";
 import ScrollToTop from "./ScrollToTop";
 import { useRouter } from "next/router";
 
-
-export default function SrzLayout({ children, title, isContactPage = false }) {
+export default function SrzLayout({
+  children,
+  title,
+  description,
+  isContactPage = false,
+}) {
   const socials = data.socials;
   const links = data.routes;
 
   const router = useRouter();
   return (
     <div>
-      <Meta />
+      <Meta title={title} description={description} />
       <nav className="navbar py-2 px-4 px-5 d-flex justify-content-between">
         <div>
           <Link href={"/"}>
@@ -29,7 +33,9 @@ export default function SrzLayout({ children, title, isContactPage = false }) {
             <Link
               href={link.href}
               key={index}
-              className={`${router.pathname == link.href ? 'active-nav-item':''} nav-item text-white px-3 py-2 mx-2x`}
+              className={`${
+                router.pathname == link.href ? "active-nav-item" : ""
+              } nav-item text-white px-3 py-2 mx-2x`}
             >
               {link.title.toUpperCase()}
             </Link>
@@ -42,7 +48,9 @@ export default function SrzLayout({ children, title, isContactPage = false }) {
             <Link
               href={link.href}
               key={index}
-              className={`${router.pathname == link.href ? 'active-mobile-nav-item':''} mobile-nav-item text-white d-flex py-1 px-3 flex-column justify-content-between align-items-center
+              className={`${
+                router.pathname == link.href ? "active-mobile-nav-item" : ""
+              } mobile-nav-item text-white d-flex py-1 px-3 flex-column justify-content-between align-items-center
                mx-1`}
             >
               <div className="fs-5">{link.icon}</div>
@@ -79,7 +87,7 @@ export default function SrzLayout({ children, title, isContactPage = false }) {
           <div className="row">
             <div className="col-md-6 text-center text-md-start mb-3 mb-md-0">
               <Link className="border-bottom text-secondary" href="/">
-                {metas.user.name} 
+                {metas.user.name}
               </Link>
             </div>
 
