@@ -22,21 +22,27 @@ export default function Services() {
               free to contact me if you have any questions or would like to
               discuss your project.
             </p>
-            <div className="mt-3 row gx-md-5 gy-md-5 gy-3">
+            <div className="mt-3 row gx-md-5">
               {services.map((service, index) => (
-                <RevealOnScroll key={index} className={"service-card row gy-md-0 gy-3 col-md-6"} revealGroupName={"service-card"}>
+                <RevealOnScroll
+                  key={index}
+                  className={"service-card gy-md-0 gy-3 col-md-6 mb-3"}
+                  revealGroupName={"service-card"}
+                >
                   {" "}
-                  <div className="me-3 col-md-5 service-img-holder">
-                    <Image
-                      className="object-cover"
-                      src={service.thumbnail}
-                      fill
-                      alt={service.title}
-                    />
-                  </div>
-                  <div className="col-md-7">
-                    <h5 className="text-white">{service.title}</h5>
-                    <p className="">{service.description}</p>
+                  <div className="row gy-md-0 gy-3">
+                    <div className="col-md-5 service-img-holder">
+                      <Image
+                        className="object-cover"
+                        src={service.thumbnail}
+                        fill
+                        alt={service.title}
+                      />
+                    </div>
+                    <div className="col-md-7">
+                      <h5 className="text-white">{service.title}</h5>
+                      <p className="">{service.description}</p>
+                    </div>
                   </div>
                 </RevealOnScroll>
               ))}
