@@ -71,7 +71,7 @@ export default function Home() {
               <div className="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
                 <div className="row g-3 mb-4">
                   <div className="col-sm-6">
-                    <RevealOnScroll>
+                    <RevealOnScroll revealGroupName="about-img">
                       <Image
                         className="img-fluid rounded"
                         src={About1}
@@ -80,11 +80,13 @@ export default function Home() {
                     </RevealOnScroll>
                   </div>
                   <div className="col-sm-6">
-                    <Image
-                      className="img-fluid rounded"
-                      src={About2}
-                      alt="about 2"
-                    />
+                    <RevealOnScroll revealGroupName={"about-img"}>
+                      <Image
+                        className="img-fluid rounded"
+                        src={About2}
+                        alt="about 2"
+                      />
+                    </RevealOnScroll>
                   </div>
                 </div>
               </div>

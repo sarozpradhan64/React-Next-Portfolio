@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import SrzLayout from "../components/SrzLayout";
 import Image from "next/image";
 import Link from "next/link";
+import RevealOnScroll from "../components/Reveal";
 
 export default function Works({ works }) {
   const [myWorks, setMyWorks] = useState(works);
@@ -59,7 +60,11 @@ export default function Works({ works }) {
       <div className="row gx-md-5 gy-md-5 gy-4" data-wow-delay="0.1s">
         {myWorks.length >= 1 ? (
           myWorks.map((work, index) => (
-            <div key={index} className="col-lg-4 col-md-6 portfolio-item">
+            <RevealOnScroll
+              key={index}
+              className="col-lg-4 col-md-6 portfolio-item"
+              revealGroupName={"work-card"}
+            >
               <div className="portfolio-img  rounded overflow-hidden">
                 <Image
                   className="img-fluid object-cover"
@@ -75,7 +80,7 @@ export default function Works({ works }) {
                   </Link>
                 </div>
               </div>
-            </div>
+            </RevealOnScroll>
           ))
         ) : (
           <h3 className="text-white">No works yet</h3>

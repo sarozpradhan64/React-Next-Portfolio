@@ -3,6 +3,7 @@ import Link from "next/link";
 import React from "react";
 import SrzLayout from "../components/SrzLayout";
 import data from "../src/data";
+import RevealOnScroll from "../components/Reveal";
 export default function blogs({ posts }) {
   // console.log(posts);
   return (
@@ -10,7 +11,11 @@ export default function blogs({ posts }) {
       <div className="row g-md-5" data-wow-delay="0.1s">
         {posts.length >= 1 ? (
           posts.map((post, index) => (
-            <div key={index} className="col-lg-4 col-md-6 mb-md-0 mb-4">
+            <RevealOnScroll
+              key={index}
+              className="col-lg-4 col-md-6 mb-md-0 mb-4"
+              revealGroupName={"blog-card"}
+            >
               <div
                 className="rounded position-relative"
                 style={{ minHeight: "250px" }}
@@ -48,7 +53,7 @@ export default function blogs({ posts }) {
                   Read
                 </a>
               </div>
-            </div>
+            </RevealOnScroll>
           ))
         ) : (
           <h3 className="text-white">No Blogs yet</h3>

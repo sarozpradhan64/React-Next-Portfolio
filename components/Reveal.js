@@ -1,15 +1,28 @@
-import { useState, useEffect } from "react";
-
-export default function RevealOnScroll({ children }) {
-  const [isVisible, setIsVisible] = useState(false);
-
+import react, { useState, useEffect } from "react";
+export default function RevealOnScroll({
+  children,
+  className,
+  revealGroupName,
+  offsetY = "50px",
+  duration = "0.5s",
+  timingFunction = "ease-in-out",
+}) {
   useEffect(() => {
     function handleScroll() {
-      const element = document.querySelector(".reveal-on-scroll");
-      if (element && element.getBoundingClientRect().top < window.innerHeight) {
-        setIsVisible(true);
-        window.removeEventListener("scroll", handleScroll);
-      }
+      const elements = document.querySelectorAll(`.${revealGroupName}`);
+      elements.forEach(function (element) {
+        if (element.getBoundingClientRect().top < window.innerHeight) {
+          element.classList.add("visible");
+        }
+      });
+
+      // Remove the scroll event listener once all elements have been revealed
+      // if (
+      //   document.querySelectorAll(`.reveal-on-scroll.visible`).length ===
+      //   elements.length
+      // ) {
+      //   window.removeEventListener("scroll", handleScroll);
+      // }
     }
 
     window.addEventListener("scroll", handleScroll);
@@ -18,10 +31,14 @@ export default function RevealOnScroll({ children }) {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, []);
+  }, [revealGroupName]);
 
+  const style = {
+    transform: `translateY(${offsetY})`,
+    transition: `transform ${duration} ${timingFunction}`,
+  };
   return (
-    <div className={`reveal-on-scroll ${isVisible ? "visible" : "hidden"}`}>
+    <div className={`reveal-on-scroll hidden ${className} ${revealGroupName}`}>
       {children}
     </div>
   );

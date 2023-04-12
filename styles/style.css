@@ -54,14 +54,14 @@ img {
 /* Set the initial opacity to 0 and transition to 0.5 seconds */
 .reveal-on-scroll {
   opacity: 0;
-  transform: translateY(0);
-  transition: opacity 0.5s ease-in-out;
+  transform: translateY(50px);
+  transition: all 0.5s ease-in-out;
 }
 
 /* When the element becomes visible, change the opacity to 1 */
 .reveal-on-scroll.visible {
   opacity: 1;
-  transform: translateY(-50px);
+  transform: translateY(0);
 }
 
 .hidden {
