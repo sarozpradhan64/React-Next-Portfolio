@@ -11,7 +11,7 @@
 
 body {
   background-color: var(--dark) !important;
-  font-family: "Poppins", sans-serif;
+  font-family: "Poppins", sans-serif !important;
 }
 p {
   color: gray;
