@@ -2,6 +2,7 @@ import Script from "next/script";
 import metas from "../src/metaData";
 import "../styles/bootstrap.css";
 import "../styles/style.css";
+import "../styles/globals.css";
 
 function MyApp({ Component, pageProps }) {
   return (
