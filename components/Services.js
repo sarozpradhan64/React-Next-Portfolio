@@ -22,7 +22,7 @@ export default function Services() {
               free to contact me if you have any questions or would like to
               discuss your project.
             </p>
-            <div className="mt-3 row gx-md-5">
+            <div className="mt-4 row gx-md-5">
               {services.map((service, index) => (
                 <RevealOnScroll
                   key={index}
