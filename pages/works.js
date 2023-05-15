@@ -69,7 +69,7 @@ export default function Works({ works }) {
                 <Image
                   className="img-fluid object-cover"
                   src={work.image}
-                  alt="gyannhub"
+                  alt={work.title}
                   fill
                 />
                 <div className="portfolio-btn position-relative">
