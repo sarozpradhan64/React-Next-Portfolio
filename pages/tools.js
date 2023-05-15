@@ -2,7 +2,6 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import SrzLayout from "../components/SrzLayout";
-import data from "../src/data";
 export default function tools({tools}) {
 
   return (

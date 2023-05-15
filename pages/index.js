@@ -24,7 +24,7 @@ export default function Home() {
           <div className="home-container">
             <div className="row g-5 align-items-center">
               <div className="col-lg-6 py-6 pb-0 pt-lg-0">
-                <h3 className="text-primary mb-3 fw-bold">Hi 👋,I&apos;m</h3>
+                <h3 className="text-primary mb-3 fw-bold">Hi 👋, I&apos;m</h3>
                 <h1 className="display-3 mb-3 text-white">{metas.user.name}</h1>
                 <h2 className="typed-text-output d-inline text-secondary">
                   {metas.user.whoAmI}
@@ -35,11 +35,17 @@ export default function Home() {
                 </div>
                 <div className="d-flex align-items-center pt-5">
                   <Link
-                    rel="noreferrer"
                     href="/contact"
-                    className="btn btn-primary py-3 px-4 me-5"
+                    className="btn btn-primary py-3 px-4 me-3"
                   >
                     Work with me
+                  </Link>
+
+                  <Link
+                    href="/works"
+                    className="btn btn-danger py-3 px-4"
+                  >
+                    Explore My Works
                   </Link>
                 </div>
               </div>

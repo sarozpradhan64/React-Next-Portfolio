@@ -1,16 +1,53 @@
 {
   "works": [
     {
-      "title": "Pasa International",
+      "title": "KumariJob Web App",
+      "slug": "kumari-job-web",
+      "type": "Web App",
+      "year": "2023",
+      "href": "https://www.kumarijob.com",
+      "source": "",
+      "image": "/works/kumari job.png",
+      "description": "Kumari Job Pvt. Ltd. is Nepal's no.1 Job Portal and a Human Resource consulting firm providing one stop HR services along with leading job portal named www.kumarijob.com in Nepal since 2014.",
+      "role": "Backend Developer",
+      "stack": "Laravel, Rest API, Firebase"
+    },
+    {
+      "title": "Pasa HRMS",
+      "slug": "pasa-hrms",
+      "type": "Web App",
+      "year": "2022",
+      "href": "",
+      "source": "",
+      "image": "/works/pasa hrms.png",
+      "description": "Pasa HRMS is the inhouse software of Pasa International Pvt. Ltd. which is a manpower recruitment agency itself. In order to maintain documents of huge number of candidates, this system was built. ",
+      "role": "FullStack Developer",
+      "stack": "Laravel, Docker, VPS"
+    },
+
+    {
+      "title": "Pasa Website",
       "slug": "pasa-international",
       "type": "website",
       "year": "2022",
       "href": "https://pasainternational.com.np",
       "source": "",
-      "image": "/works/pasa.png",
+      "image": "/works/pasa website.png",
       "description": "Pasa International Pvt. Ltd. is a manpower recruitment agency located at Kupondole, Nepal. Pasa is one of the best consulting agency in the country.",
       "role": "FullStack Developer",
       "stack": "Laravel, Bootstrap"
+    },
+    {
+      "title": "Al-Rimal Company Website",
+      "slug": "al-rimal-website",
+      "type": "website",
+      "year": "2023",
+      "href": "https://www.al-rimalgroup.com/",
+      "source": "",
+      "image": "/works/al-rimal.png",
+      "description": "Al-rimal Website is developed for the purpose of blogging to assist user with career tips and self growth blogs. Its website also list various job positions available in UAE",
+      "role": "Backend Developer",
+      "stack": "SEO, Analytics, Adsense, Django, DRF, Next.js, Tailwind"
     },
     {
       "title": "Good Neighbours",
@@ -39,14 +76,14 @@
     {
       "title": "BlazeCodes",
       "slug": "blazecodes",
-      "type": "Web App",
+      "type": "website",
       "year": "2022",
       "href": "https://blazecodes.com",
       "source": "",
       "image": "/works/blazecodes.png",
       "description": "Blaze Codes is a blog application that allows users to create and publish blog posts, articles, and tutorials on a wide range of topics related to web development, programming, and the latest technology. It provides a simple and easy-to-use interface for creating and editing blog content, and allows users to customize the appearance of their blogs. With this application, users can share their knowledge and experience with the web development, programming, and technology communities, and engage with other users through comments and discussions. It is an ideal platform for developers, programmers, and tech enthusiasts to share their insights, ideas, and expertise with a global audience.",
-      "role": "FullStack Developer",
-      "stack": "Laravel, React, Inertiajs, Tailwind"
+      "role": "Backend Developer",
+      "stack": "Django, React.js, Next.js, Tailwind"
     },
     {
       "title": "TodoApp",

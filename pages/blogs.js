@@ -18,26 +18,26 @@ export default function blogs({ posts }) {
             >
               <div
                 className="rounded position-relative"
-                style={{ minHeight: "250px" }}
+                style={{ minHeight: "200px" }}
               >
                 <a
-                  href={`https://blazecodes.com/post/${post.slug}`}
+                  href={`https://www.blazecodes.com/posts/${post.slug}`}
                   target="_blank"
                   rel={"noreferrer"}
                 >
                   {" "}
                   <Image
                     className="img-fluid object-cover"
-                    src={`https://blazecodes.com${post.thumbnail}`}
+                    src={`${post.thumbnail}`}
                     alt={post.title}
                     fill
                   />
                 </a>
               </div>
               <div className="mt-3">
-                <span>{post.category.title}</span>
+                {/* <span>{post.category.title}</span> */}
                 <a
-                  href={`https://blazecodes.com/post/${post.slug}`}
+                  href={`https://www.blazecodes.com/posts/${post.slug}`}
                   target="_blank"
                   rel={"noreferrer"}
                 >
@@ -45,7 +45,7 @@ export default function blogs({ posts }) {
                   <h5 className="text-white">{post.title}</h5>
                 </a>
                 <a
-                  href={`https://blazecodes.com/post/${post.slug}`}
+                  href={`https://www.blazecodes.com/posts/${post.slug}`}
                   target="_blank"
                   rel={"noreferrer"}
                   className="mt-2"
@@ -66,7 +66,7 @@ export default function blogs({ posts }) {
 export async function getStaticProps() {
   let posts = [];
   try {
-    var res = await fetch(`https://blazecodes.com/api/posts`);
+    var res = await fetch(`https://admin.blazecodes.com/api/srz-portfolio-post-list`);
     posts = await res.json();
   } catch (e) {
     posts = [

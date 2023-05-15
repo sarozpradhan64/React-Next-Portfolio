@@ -7,6 +7,11 @@ const data = {
       icon: <i className="fab fa-github"></i>,
     },
     {
+      title: "linkedin",
+      href: "https://www.linkedin.com/in/saroj-pradhan-4628831a1/",
+      icon: <i className="fab fa-linkedin-in"></i>,
+    },
+    {
       title: "facebook",
       href: "https://facebook.com/srz.prdhn",
       icon: <i className="fab fa-facebook-f"></i>,
@@ -15,12 +20,7 @@ const data = {
       title: "instagram",
       href: "https://instagram.com/srz.prdhn",
       icon: <i className="fab fa-instagram"></i>,
-    },
-    {
-      title: "linkedin",
-      href: "https://www.linkedin.com/in/saroj-pradhan-4628831a1/",
-      icon: <i className="fab fa-linkedin-in"></i>,
-    },
+    }
   ],
 
   routes: [
@@ -58,7 +58,7 @@ const data = {
       thumbnail:
         "https://images.unsplash.com/photo-1485988412941-77a35537dae4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NzJ8fHdlYiUyMGRldmVsb3BtZW50fGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
       description:
-        "Web development is the process of building and maintaining websites and web apps for your business. A website is your company&apos;s online presence and serves as a key marketing tool for attracting and engaging customers. Web development involves creating an online platform that represents your brand, provides information about your products or services, and offers a user-friendly experience to visitors.",
+        "Web development is the process of building and maintaining websites and web apps for your business. A website is your company's online presence and serves as a key marketing tool for attracting and engaging customers. Web development involves creating an online platform that represents your brand, provides information about your products or services, and offers a user-friendly experience to visitors.",
     },
     {
       title: "Mobile App",
