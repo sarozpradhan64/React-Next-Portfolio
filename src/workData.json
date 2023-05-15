@@ -19,7 +19,7 @@
       "year": "2022",
       "href": "",
       "source": "",
-      "image": "/works/pasa hrms.png",
+      "image": "/works/pasa_hrms.png",
       "description": "Pasa HRMS is the inhouse software of Pasa International Pvt. Ltd. which is a manpower recruitment agency itself. In order to maintain documents of huge number of candidates, this system was built. ",
       "role": "FullStack Developer",
       "stack": "Laravel, Docker, VPS"
@@ -32,7 +32,7 @@
       "year": "2022",
       "href": "https://pasainternational.com.np",
       "source": "",
-      "image": "/works/pasa website.png",
+      "image": "/works/pasa_website.png",
       "description": "Pasa International Pvt. Ltd. is a manpower recruitment agency located at Kupondole, Nepal. Pasa is one of the best consulting agency in the country.",
       "role": "FullStack Developer",
       "stack": "Laravel, Bootstrap"
