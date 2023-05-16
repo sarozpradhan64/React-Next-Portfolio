@@ -33,7 +33,7 @@ export default function Home() {
                   Web Designer, Web Developer, Front End Developer, Apps
                   Designer, Apps Developer
                 </div>
-                <div className="d-flex align-items-center pt-5">
+                <div className="d-flex  flex-md-row flex-column align-items-md-center align-items-start pt-5">
                   <Link
                     href="/contact"
                     className="btn btn-primary py-3 px-4 me-3"
@@ -43,7 +43,7 @@ export default function Home() {
 
                   <Link
                     href="/works"
-                    className="btn btn-danger py-3 px-4"
+                    className="btn btn-danger py-3 px-4 mt-md-0 mt-3"
                   >
                     Explore My Works
                   </Link>
