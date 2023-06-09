@@ -12,6 +12,7 @@ const getGithubLink = function(){
 console.log(getGithubLink());
 const metas = {
   google_analytics_id: "G-1618WEC7X4",
+  google_adsense_id: "ca-pub-7025574296219229",
   user: {
     name: "Saroj Pradhan",
     whoAmI: "Web Developer",

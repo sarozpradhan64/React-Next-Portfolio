@@ -26,6 +26,18 @@ function MyApp({ Component, pageProps }) {
         }}
       />
       {/* google analytics end  */}
+
+      {/* google adsense  */}
+      <Script
+      id="Adsense-id"
+      data-ad-client={metas.google_adsense_id}
+      async="true"
+      strategy="beforeInteractive"
+      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
+    />
+
+
+      {/* google adsense end  */}
       <Component {...pageProps} />
     </>
   );
