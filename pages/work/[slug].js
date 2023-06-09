@@ -18,7 +18,7 @@ export default function workDetail({ work }) {
     }
   };
   return (
-    <SrzLayout title={work.title}>
+    <SrzLayout title={`Project ${work.title}`}>
       <div className="row">
         <div
           className="col-lg-5 col-md-6"
