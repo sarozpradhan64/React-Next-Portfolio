@@ -21,15 +21,6 @@ export default function tools({tools}) {
                     {" "}
                     <h3 className="portfolio-hover-title">{work.title}</h3>
                   </a>
- 
-                  <a
-                    rel="noreferrer"
-                    className="btn btn-outline-secondary border-2 mx-1"
-                    target={"_blank"}
-                    href={work.href}
-                  >
-                    <i className="fa fa-link me-2"></i> Use
-                  </a>
                 </div>
               </div>
             </div>
