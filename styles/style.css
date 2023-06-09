@@ -10,6 +10,9 @@ body {
   background-color: var(--dark) !important;
   font-family: "Poppins", sans-serif !important;
 }
+a{
+  text-decoration: none;
+}
 p {
   color: gray;
 }
@@ -98,6 +101,31 @@ img {
   visibility: visible;
   opacity: 1;
 }
+/* custom bg color  */
+.bg-primary {
+  background-color: #6244c5 !important;
+}
+.bg-secondary {
+  background-color: #ffc448 !important;
+}
+.bg-success {
+  background-color: #198754 !important;
+}
+.bg-info {
+  background-color: #0dcaf0 !important;
+}
+.bg-warning {
+  background-color: #ffc107 !important;
+}
+.bg-danger {
+  background-color: #dc3545 !important;
+}
+.bg-light {
+  background-color: #fafafb !important;
+}
+.bg-dark {
+  background-color: #12141d !important;
+}
 
 /*** Button ***/
 .btn {
@@ -108,6 +136,21 @@ img {
 .btn.btn-primary,
 .btn.btn-secondary {
   color: #ffffff;
+}
+
+.text-primary{
+  color: var(--primary);
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: var(--primary);
+  border-color: var(--primary);
+}
+.btn-primary:hover {
+  color: #fff;
+  background-color: #533aa7;
+  border-color: #4e369e;
 }
 
 .btn-square {
@@ -306,7 +349,7 @@ img {
 }
 .service-img-holder {
   position: relative;
-  height: 250px;
+  height: 200px;
   object-fit: cover;
 }
 .service-card p {
@@ -361,7 +404,7 @@ img {
 
 .portfolio-hover-title {
   color: white;
-  font-size: 40px;
+  font-size: 35px;
   text-align: center;
   font-weight: bold;
 }

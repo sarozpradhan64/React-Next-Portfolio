@@ -26,12 +26,12 @@ export default function Services() {
               {services.map((service, index) => (
                 <RevealOnScroll
                   key={index}
-                  className={"service-card gy-md-0 gy-3 col-md-6 mb-3"}
+                  className={"service-card gy-md-4 gy-3 col-md-6 mb-3"}
                   revealGroupName={"service-card"}
                 >
                   {" "}
                   <div className="row gy-md-0 gy-3">
-                    <div className="col-md-5 service-img-holder">
+                    <div className="col-lg-4 service-img-holder align-self-center">
                       <Image
                         className="object-cover"
                         src={service.thumbnail}
@@ -39,7 +39,7 @@ export default function Services() {
                         alt={service.title}
                       />
                     </div>
-                    <div className="col-md-7">
+                    <div className="col-lg-8">
                       <h5 className="text-white">{service.title}</h5>
                       <p className="">{service.description}</p>
                     </div>

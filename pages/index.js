@@ -26,10 +26,10 @@ export default function Home() {
               <div className="col-lg-6 py-6 pb-0 pt-lg-0">
                 <h3 className="text-primary mb-3 fw-bold">Hi 👋, I&apos;m</h3>
                 <h1 className="display-3 mb-3 text-white">{metas.user.name}</h1>
-                <h2 className="typed-text-output d-inline text-secondary">
+                <h2 className="text-light d-inline text-secondary">
                   {metas.user.whoAmI}
                 </h2>
-                <div className="typed-text d-none">
+                <div className="text-light d-none">
                   Web Designer, Web Developer, Front End Developer, Apps
                   Designer, Apps Developer
                 </div>

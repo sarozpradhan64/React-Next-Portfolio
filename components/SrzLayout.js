@@ -82,7 +82,7 @@ export default function SrzLayout({
       {/* children content end  */}
 
       {/* footer  */}
-      <div className="container-fluid bg-dark text-white py-4 mb-md-0 mb-5">
+      <div className="container-fluid text-white py-4 mb-md-0 mb-5">
         <div className="container">
           <div className="row">
             <div className="col-md-6 text-center text-md-start mb-3 mb-md-0">
