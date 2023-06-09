@@ -1,6 +1,6 @@
 import Script from "next/script";
 import metas from "../src/metaData";
-import "../styles/bootstrap.css";
+import 'bootstrap/dist/css/bootstrap.css'
 import "../styles/style.css";
 
 function MyApp({ Component, pageProps }) {
