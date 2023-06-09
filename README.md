@@ -20,6 +20,6 @@ npm run dev
 
 
 #### Credits:
-- HTMLCodex.com for Template
+- HTMLCodex.com for HTML Template
 - Unplash.com for Images
 
