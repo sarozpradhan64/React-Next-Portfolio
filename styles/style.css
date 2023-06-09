@@ -139,7 +139,7 @@ img {
 }
 
 a, .text-primary{
-  color: var(--primary) !important;
+  color: var(--primary);
 }
 
 .btn-primary {
