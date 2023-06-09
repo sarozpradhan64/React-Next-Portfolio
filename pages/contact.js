@@ -16,7 +16,7 @@ export default function contact() {
           <hr className="w-100" />
           <p className="mb-2">Send me your mail:</p>
           <h3 className="fw-bold text-white">
-            <a href="mailto:sarozpradhan64@gmail.com">
+            <a href="mailto:sarozpradhan64@gmail.com" className="text-primary">
               sarozpradhan64@gmail.com
             </a>
           </h3>

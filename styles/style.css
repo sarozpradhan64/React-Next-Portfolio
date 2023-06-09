@@ -138,8 +138,8 @@ img {
   color: #ffffff;
 }
 
-.text-primary{
-  color: var(--primary);
+a, .text-primary{
+  color: var(--primary) !important;
 }
 
 .btn-primary {
