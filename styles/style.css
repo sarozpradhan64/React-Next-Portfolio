@@ -138,8 +138,11 @@ img {
   color: #ffffff;
 }
 
-a, .text-primary{
+a{
   color: var(--primary);
+}
+.text-primary{
+  color: var(--primary) !important;
 }
 
 .btn-primary {
