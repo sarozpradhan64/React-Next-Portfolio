@@ -5,7 +5,7 @@ export default function Meta({ title, description }) {
   return (
     <Head>
       <title>{title ? `${title} | ${metas.title}` : metas.title}</title>
-      <link rel="icon" type="image/x-icon" href="/favicon.png" />
+      <link rel="icon" type="image/x-icon" href="/favicon.ico" />
 
       <meta
         name="title"
