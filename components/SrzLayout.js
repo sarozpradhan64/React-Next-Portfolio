@@ -20,7 +20,7 @@ export default function SrzLayout({
   return (
     <div>
       <Meta title={title} description={description} />
-      <nav className="navbar py-2 px-4 px-5 d-flex justify-content-between">
+      <nav className="navbar py-md-2 px-4 px-md-5 d-flex justify-content-between">
         <div>
           <Link href={"/"}>
             <h2 className="logo-title h1 fw-bold text-primary">SRZ.</h2>
@@ -35,7 +35,7 @@ export default function SrzLayout({
               key={index}
               className={`${
                 router.pathname == link.href ? "active-nav-item" : ""
-              } nav-item text-white px-3 py-2 mx-2x`}
+              } nav-item text-white px-3 py-2 mx-2`}
             >
               {link.title.toUpperCase()}
             </Link>

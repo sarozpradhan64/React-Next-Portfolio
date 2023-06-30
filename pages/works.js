@@ -23,7 +23,7 @@ export default function Works({ works }) {
       <div className="mb-5">
         <ul className="list-inline mx-n3 mb-0" id="portfolio-flters">
           <li
-            className={`mx-3 mb-2 ${
+            className={`mx-3 mb-md-2 mb-4 ${
               active === "All" ? "active" : "text-white"
             }`}
             onClick={() => handleFilter("All")}
@@ -31,7 +31,7 @@ export default function Works({ works }) {
             All Projects
           </li>
           <li
-            className={`mx-3 mb-2 ${
+            className={`mx-3 mb-md-2 mb-4 ${
               active === "website" ? "active" : "text-white"
             }`}
             onClick={() => handleFilter("website")}
@@ -39,7 +39,7 @@ export default function Works({ works }) {
             Website
           </li>
           <li
-            className={`mx-3 mb-2 ${
+            className={`mx-3 mb-md-2 mb-4 ${
               active === "Web App" ? "active" : "text-white"
             }`}
             onClick={() => handleFilter("Web App")}
@@ -47,7 +47,7 @@ export default function Works({ works }) {
             Web App
           </li>
           <li
-            className={`mx-3 mb-2 ${
+            className={`mx-3 mb-md-2 mb-4 ${
               active === "Mobile App" ? "active" : "text-white"
             }`}
             onClick={() => handleFilter("Mobile App")}
