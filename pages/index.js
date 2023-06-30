@@ -67,7 +67,7 @@ export default function Home() {
                 </p>
                 <p className="mb-3">
                   <i className="far fa-check-circle text-primary me-3"></i>A
-                  Quality Product
+                  Quality Service
                 </p>
                 <p className="mb-3">
                   <i className="far fa-check-circle text-primary me-3"></i>

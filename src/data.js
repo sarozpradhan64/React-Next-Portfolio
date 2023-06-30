@@ -60,6 +60,14 @@ const data = {
       description:
         "A website is your company's online presence and serves as a key marketing tool for attracting and engaging customers. Web development involves creating an online platform that represents your brand, provides information about your products or services, and offers a user-friendly experience to visitors.",
     },
+
+    {
+      title: "Web Hosting",
+      thumbnail:
+        "https://images.unsplash.com/photo-1483058712412-4245e9b90334?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
+      description:
+        "I offer comprehensive web hosting services, including seamless deployment onto reliable servers, secure backups, and robust infrastructure. Trust me to handle the technical aspects, empowering your online presence with optimal performance, availability, and customer engagement.",
+    },
     {
       title: "Mobile App",
       thumbnail:
