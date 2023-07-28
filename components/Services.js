@@ -30,16 +30,17 @@ export default function Services() {
                   revealGroupName={"service-card"}
                 >
                   {" "}
-                  <div className="row gy-md-0 gy-3">
-                    <div className="col-lg-4 service-img-holder align-self-center">
+                  <div className="d-flex gy-md-0">
+                    <div className="service-img-holder align-self-center">
                       <Image
                         className="object-cover"
                         src={service.thumbnail}
-                        fill
+                          height={100}
+                          width={100}
                         alt={service.title}
                       />
                     </div>
-                    <div className="col-lg-8">
+                    <div className="ps-md-3">
                       <h5 className="text-white">{service.title}</h5>
                       <p className="">{service.description}</p>
                     </div>

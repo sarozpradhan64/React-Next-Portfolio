@@ -353,6 +353,7 @@ a{
 .service-img-holder {
   position: relative;
   height: 200px;
+  margin-top:35px;
   object-fit: cover;
 }
 .service-card p {
