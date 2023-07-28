@@ -35,7 +35,7 @@ export default function SrzLayout({
               key={index}
               className={`${
                 router.pathname == link.href ? "active-nav-item" : ""
-              } nav-item text-white px-3 py-2 mx-2`}
+              } nav-item text-white px-3 py-2  mx-2`}
             >
               {link.title.toUpperCase()}
             </Link>
@@ -50,7 +50,7 @@ export default function SrzLayout({
               key={index}
               className={`${
                 router.pathname == link.href ? "active-mobile-nav-item" : ""
-              } mobile-nav-item text-white d-flex py-1 px-3 flex-column justify-content-between align-items-center
+              } mobile-nav-item text-white d-flex py-1 px-2 flex-column justify-content-between align-items-center
                mx-1`}
             >
               <div className="fs-5">{link.icon}</div>
@@ -65,11 +65,11 @@ export default function SrzLayout({
       </nav>
 
       {/* children content  */}
-      <div className="" style={{ padding: "100px 0px" }}>
+      <div className="content-wrapper">
         <div className="container">
           {/*  page title  */}
           {title && (
-            <div className="mb-4">
+            <div className="mb-md-5 mb-3">
               <h1 className="display-5 mb-0 text-white">
                 <i className="fa-solid fa-caret-right"></i> {title}
               </h1>

@@ -24,7 +24,7 @@ export default function workDetail({ work }) {
           className="col-lg-5 col-md-6"
           // style={{ minHeight: "60vh" }}
         >
-          <div className="position-relative" style={{ minHeight: "55vh" }}>
+          <div className="position-relative job-detail__image-holder">
             <Image
               src={work.image}
               alt={`saroj pradhan's work ${work.title}`}

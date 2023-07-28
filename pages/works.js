@@ -20,7 +20,7 @@ export default function Works({ works }) {
   // console.log(active)
   return (
     <SrzLayout title="Works">
-      <div className="mb-5">
+      <div className="mb-4">
         <ul className="list-inline mx-n3 mb-0" id="portfolio-flters">
           <li
             className={`mx-3 mb-md-2 mb-4 ${
@@ -73,9 +73,9 @@ export default function Works({ works }) {
                   fill
                 />
                 <div className="portfolio-btn position-relative">
-                  <Link href={`/work/${work.slug}`}>
+                  <Link href={`/works/${work.slug}`}>
                     {" "}
-                    <h3 className="portfolio-hover-title">{work.title}</h3>
+                    <h4 className="portfolio-hover-title">{work.title}</h4>
                     <p className="text-center text-white">View Details</p>
                   </Link>
                 </div>

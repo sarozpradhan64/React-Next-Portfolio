@@ -34,7 +34,7 @@ export default function blogs({ posts }) {
                   />
                 </a>
               </div>
-              <div className="mt-3">
+              <div className="mt-3 px-3">
                 {/* <span>{post.category.title}</span> */}
                 <a
                   href={`https://www.blazecodes.com/posts/${post.slug}`}
