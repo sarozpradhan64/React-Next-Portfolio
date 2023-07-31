@@ -355,7 +355,7 @@ a {
 }
 .service-img-holder {
   position: relative;
-  height: 200px;
+  height: 120px;
   margin-top: 35px;
   object-fit: cover;
 }

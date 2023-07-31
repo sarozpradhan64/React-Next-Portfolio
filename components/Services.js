@@ -26,12 +26,12 @@ export default function Services() {
               {services.map((service, index) => (
                 <RevealOnScroll
                   key={index}
-                  className={"service-card gy-md-4 gy-3 col-md-6 mb-3"}
+                  className={"service-card gy-md-4 gy-3 col-md-6"}
                   revealGroupName={"service-card"}
                 >
                   {" "}
                   <div className="d-flex gy-md-0">
-                    <div className="service-img-holder align-self-center">
+                    <div className="d-md-block d-none service-img-holder align-self-center">
                       <Image
                         className="object-cover"
                         src={service.thumbnail}
