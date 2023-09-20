@@ -33,9 +33,10 @@ export default function SrzLayout({
             <Link
               href={link.href}
               key={index}
-              className={`${
-                router.pathname == link.href ? "active-nav-item" : ""
-              } nav-item text-white px-3 py-2  mx-2`}
+              // ${router.asPath.startsWith("/jobseeker/update-profile")
+              className={`${link.title === 'works' ? (router.pathname === link.href || router.asPath.startsWith("/works/") ? "active-nav-item" : '') :
+                (router.pathname === link.href ? "active-nav-item" : "")
+                } nav-item text-white px-3 py-2  mx-2`}
             >
               {link.title.toUpperCase()}
             </Link>
@@ -48,9 +49,12 @@ export default function SrzLayout({
             <Link
               href={link.href}
               key={index}
-              className={`${
-                router.pathname == link.href ? "active-mobile-nav-item" : ""
-              } mobile-nav-item text-white d-flex py-1 px-2 flex-column justify-content-between align-items-center
+              className={`
+
+             ${link.title === 'works' ? (router.pathname === link.href || router.asPath.startsWith("/works/") ? "active-mobile-nav-item" : '') :
+                  (router.pathname === link.href ? "active-mobile-nav-item" : "")
+
+                } mobile-nav-item text-white d-flex py-1 px-2 flex-column justify-content-between align-items-center
                mx-1`}
             >
               <div className="fs-5">{link.icon}</div>
@@ -62,10 +66,10 @@ export default function SrzLayout({
           ))}
         </div>
         {/* mobile nav end  */}
-      </nav>
+      </nav >
 
       {/* children content  */}
-      <div className="content-wrapper">
+      < div className="content-wrapper" >
         <div className="container">
           {/*  page title  */}
           {title && (
@@ -78,7 +82,7 @@ export default function SrzLayout({
           {/* page title end  */}
           {children}
         </div>
-      </div>
+      </div >
       {/* children content end  */}
 
       {/* footer  */}
@@ -112,6 +116,6 @@ export default function SrzLayout({
       </div>
 
       <ScrollToTop />
-    </div>
+    </div >
   );
 }

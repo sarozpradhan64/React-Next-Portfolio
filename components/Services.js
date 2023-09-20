@@ -35,8 +35,8 @@ export default function Services() {
                       <Image
                         className="object-cover"
                         src={service.thumbnail}
-                          height={100}
-                          width={100}
+                        height={100}
+                        width={100}
                         alt={service.title}
                       />
                     </div>
