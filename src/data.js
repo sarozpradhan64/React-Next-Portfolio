@@ -36,11 +36,6 @@ const data = {
       icon: <i className="fa-solid fa-briefcase"></i>,
     },
     {
-      title: "tools",
-      href: "/tools",
-      icon: <i className="fa-solid fa-fire"></i>,
-    },
-    {
       title: "blogs",
       href: "/blogs",
       icon: <i className="fa-solid fa-note-sticky"></i>,
