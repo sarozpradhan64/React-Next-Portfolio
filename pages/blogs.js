@@ -21,7 +21,7 @@ export default function blogs({ posts }) {
                 style={{ minHeight: "200px" }}
               >
                 <a
-                  href={`https://www.blazecodes.com/posts/${post.slug}`}
+                  href={`https://blazecodes.pradhansaroj.com.np/posts/${post.slug}`}
                   target="_blank"
                   rel={"noreferrer"}
                 >
@@ -37,7 +37,7 @@ export default function blogs({ posts }) {
               <div className="mt-3 px-3">
                 {/* <span>{post.category.title}</span> */}
                 <a
-                  href={`https://www.blazecodes.com/posts/${post.slug}`}
+                  href={`https://blazecodes.pradhansaroj.com.np/posts/${post.slug}`}
                   target="_blank"
                   rel={"noreferrer"}
                 >
@@ -45,7 +45,7 @@ export default function blogs({ posts }) {
                   <h5 className="text-white">{post.title}</h5>
                 </a>
                 <a
-                  href={`https://www.blazecodes.com/posts/${post.slug}`}
+                  href={`https://blazecodes.pradhansaroj.com.np/posts/${post.slug}`}
                   target="_blank"
                   rel={"noreferrer"}
                   className="mt-2"
@@ -66,7 +66,7 @@ export default function blogs({ posts }) {
 export async function getStaticProps() {
   let posts = [];
   try {
-    var res = await fetch(`https://admin.blazecodes.com/api/srz-portfolio-post-list`);
+    var res = await fetch(`https://system.pradhansaroj.com.np/api/srz-portfolio-post-list`);
     posts = await res.json();
   } catch (e) {
     posts = [

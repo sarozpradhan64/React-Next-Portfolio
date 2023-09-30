@@ -2,7 +2,7 @@
 const nextConfig = {
   reactStrictMode: true,
   images: {
-    domains: ["admin.blazecodes.com", 'blazecodes.com', 'wwww.blazecodes.com', "127.0.0.1", "images.unsplash.com"],
+    domains: ["admin.blazecodes.com", 'blazecodes.com', "system.pradhansaroj.com.np", 'wwww.blazecodes.com', "127.0.0.1", "images.unsplash.com"],
   },
 };
 
