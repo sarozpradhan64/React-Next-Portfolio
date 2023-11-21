@@ -8,16 +8,16 @@ export default function blogs({ posts }) {
   // console.log(posts);
   return (
     <SrzLayout title="Blogs">
-      <div className="row g-md-5" data-wow-delay="0.1s">
+      <div className="grid lg:grid-cols-3 md:grid-cols-2 md:gap-5">
         {posts.length >= 1 ? (
           posts.map((post, index) => (
             <RevealOnScroll
               key={index}
-              className="col-lg-4 col-md-6 mb-md-0 mb-4"
+              className="md:mb-0 mb-8"
               revealGroupName={"blog-card"}
             >
               <div
-                className="rounded position-relative"
+                className="rounded relative"
                 style={{ minHeight: "200px" }}
               >
                 <a
@@ -27,7 +27,7 @@ export default function blogs({ posts }) {
                 >
                   {" "}
                   <Image
-                    className="img-fluid object-cover"
+                    className="object-cover"
                     src={`${post.thumbnail}`}
                     alt={post.title}
                     fill

@@ -75,11 +75,11 @@ export default function SrzLayout({
 
         {/* children content  */}
         < div className="content-wrapper" >
-          <div className="container">
+          <div>
             {/*  page title  */}
             {title && (
-              <div className="mb-md-5 mb-3">
-                <h1 className="display-5 mb-0 text-white">
+              <div className="mb-6">
+                <h1 className="text-2xl mb-0 text-white">
                   <i className="fa-solid fa-caret-right"></i> {title}
                 </h1>
               </div>
@@ -91,10 +91,10 @@ export default function SrzLayout({
         {/* children content end  */}
 
         {/* footer  */}
-        <div className="text-white py-4 md:mb-0 mb-5">
-          <div className="container">
-            <div className="row">
-              <div className="col-md-6 text-center text-md-start mb-3 md:mb-0">
+        <div className="text-white py-4 md:mb-0 mb-16">
+          <div>
+            <div>
+              <div className="text-center text-md-start mb-3 md:mb-0">
                 <Link className="border-bottom text-secondary" href="/">
                   {metas.user.name}
                 </Link>
@@ -102,12 +102,12 @@ export default function SrzLayout({
 
               {/* hide these in contact page  */}
               {!isContactPage && (
-                <div className="col-md-6 flex justify-content-md-end justify-content-center text-center text-md-start mb-3 mb-md-0">
+                <div className="flex justify-center text-center text-md-start my-3">
                   {socials.map((social, index) => (
                     <a
                       key={index}
                       rel="noreferrer"
-                      className="btn btn-square btn-primary mx-1 fs-5"
+                      className="btn btn-square btn-primary rounded mx-1"
                       href={social.href}
                       target={"_blank"}
                     >

@@ -27,7 +27,7 @@ export default function ScrollToTop() {
   return (
     <div
       onClick={handleScrollToTop}
-      className={`btn btn-lg btn-primary btn-lg-square back-to-top ${visible ? "flex" : "hidden"
+      className={`btn btn-lg btn-primary btn-lg-square rounded back-to-top ${visible ? "flex" : "hidden"
         } `}
     >
       <i className="bi bi-arrow-up"></i>

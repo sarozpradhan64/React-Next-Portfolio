@@ -6,9 +6,7 @@ import RevealOnScroll from "./Reveal";
 export default function Services() {
   const services = data.services;
   return (
-    <div className="container mt-5">
-
-
+    <div className="mt-5 ">
       <div className="flex align-items-center mb-3">
         <h3 className="lh-base mb-0 text-white">My Services !</h3>
       </div>
@@ -23,31 +21,32 @@ export default function Services() {
       </p>
       <div className="grid md:grid-cols-2 md:gap-x-5 mt-4 ">
         {services.map((service, index) => (
-          <RevealOnScroll
-            key={index}
-            className={"service-card gy-md-4 gy-3 col-md-6"}
-            revealGroupName={"service-card"}
-          >
-            {" "}
-            <div className="flex gy-md-0">
-              <div className="md:block hidden service-img-holder self-center">
-                <Image
-                  className="object-cover"
-                  src={service.thumbnail}
-                  height={100}
-                  width={100}
-                  alt={service.title}
-                />
+          <div key={index} className="md:mb-0 mb-6">
+            <RevealOnScroll
+              className={"service-card"}
+              revealGroupName={"service-card"}
+            >
+
+              <div className="flex md:gap-y-0">
+                <div className="md:block hidden service-img-holder self-center">
+                  <Image
+                    className="object-cover"
+                    src={service.thumbnail}
+                    height={400}
+                    width={400}
+                    alt={service.title}
+                  />
+                </div>
+                <div className="md:ps-3">
+                  <h5 className="text-white">{service.title}</h5>
+                  <p className="">{service.description}</p>
+                </div>
               </div>
-              <div className="md:ps-3">
-                <h5 className="text-white">{service.title}</h5>
-                <p className="">{service.description}</p>
-              </div>
-            </div>
-          </RevealOnScroll>
+            </RevealOnScroll>
+          </div>
         ))}
       </div>
-      
+
     </div>
   );
 }

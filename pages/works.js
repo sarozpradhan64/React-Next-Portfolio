@@ -20,7 +20,7 @@ export default function Works({ works }) {
   // console.log(active)
   return (
     <SrzLayout title="Works">
-      <div className="mb-4">
+      <div className="mb-8">
         <ul className="list-inline mb-0" id="portfolio-flters">
           <li
             className={`mx-3 md:mb-2 mb-4 ${

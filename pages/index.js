@@ -24,16 +24,16 @@ export default function Home() {
           <div className="home-container">
             <div className="grid lg:grid-cols-2 g-5 items-center">
               <div className=" py-6 pb-0 lg:pt-0">
-                <h3 className="text-primary mb-3 fw-bold">Hi 👋, I&apos;m</h3>
-                <h1 className="display-3 mb-3 text-white">{metas.user.name}</h1>
-                <h2 className="text-light inline text-secondary">
+                <h3 className="text-3xl text-primary mb-3 font-bold">Hi 👋, I&apos;m</h3>
+                <h1 className="text-6xl mb-3 text-white">{metas.user.name}</h1>
+                <h2 className="text-3xl text-white inline text-secondary">
                   {metas.user.whoAmI}
                 </h2>
                 <div className="text-light hidden">
                   Web Designer, Web Developer, Front End Developer, Apps
                   Designer, Apps Developer
                 </div>
-                <div className="flex  md:flex-row flex-col items-md-center items-start pt-5">
+                <div className="flex  md:flex-row flex-col md:items-center items-start md:mt-10 mt-8">
                   <Link
                     href="/contact"
                     className="btn btn-primary py-3 px-4 me-3"
@@ -43,7 +43,7 @@ export default function Home() {
 
                   <Link
                     href="/works"
-                    className="btn btn-danger py-3 px-4 mt-md-0 mt-3"
+                    className="btn bg-red-700 text-white py-3 px-4 md:mt-0 mt-3"
                   >
                     Explore My Works
                   </Link>
@@ -54,7 +54,7 @@ export default function Home() {
         </div>
 
         <div>
-          <div className="grid grid-cols-2 gap-5">
+          <div className="grid md:grid-cols-2 gap-5">
             <div>
               <div className="flex align-items-center mb-3">
                 <h3 className="lh-base mb-0 text-white">Know About Me !</h3>
@@ -73,30 +73,31 @@ export default function Home() {
                 Client Satisfaction
               </p>
             </div>
-            <div>
-              <div className="grid grid-cols-2 gap-3 mb-4">
-                <div>
-                  <RevealOnScroll revealGroupName="about-img">
-                    <Image
-                      className="rounded"
-                      src={About1}
-                      alt="about"
 
-                    />
-                  </RevealOnScroll>
-                </div>
-                <div>
-                  <RevealOnScroll revealGroupName={"about-img"}>
-                    <Image
-                      className="rounded"
-                      src={About2}
-                      alt="about 2"
 
-                    />
-                  </RevealOnScroll>
-                </div>
+            <div className="grid md:grid-cols-2 gap-3 mb-4">
+              <div>
+                <RevealOnScroll revealGroupName="about-img">
+                  <Image
+                    className="rounded"
+                    src={About1}
+                    alt="about"
+
+                  />
+                </RevealOnScroll>
+              </div>
+              <div>
+                <RevealOnScroll revealGroupName={"about-img"}>
+                  <Image
+                    className="rounded"
+                    src={About2}
+                    alt="about 2"
+
+                  />
+                </RevealOnScroll>
               </div>
             </div>
+            
           </div>
         </div>
 
