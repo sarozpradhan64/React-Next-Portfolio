@@ -1,6 +1,6 @@
 import Script from "next/script";
 import metas from "../src/metaData";
-import 'bootstrap/dist/css/bootstrap.css'
+import "../styles/tailwind.css";
 import "../styles/style.css";
 
 function MyApp({ Component, pageProps }) {
