@@ -23,7 +23,7 @@ export default function contact() {
           <hr className="w-100" />
           <p className="mb-2">Follow me:</p>
           {/* social medias */}
-          <div className="d-flex pt-2">
+          <div className="flex pt-2">
             {socials.map((social, index) => (
               <a
                 key={index}
@@ -39,10 +39,10 @@ export default function contact() {
         </div>
 
         <div
-          className="col-lg-6 col-md-6 d-md-block d-none position-relative"
-              style={{'minHeight': '500px','marginTop':'-20px'}}
+          className="col-lg-6 col-md-6 d-md-block hidden position-relative"
+          style={{ 'minHeight': '500px', 'marginTop': '-20px' }}
         >
-          <Image src={profile} fill alt={`${metas.user.name} profile picture`}  className="m-md-3"  />{" "}
+          <Image src={profile} fill alt={`${metas.user.name} profile picture`} className="m-md-3" />{" "}
         </div>
       </div>
     </SrzLayout>

@@ -17,9 +17,3 @@ npm install
 ``` 
 npm run dev
 ```
-
-
-#### Credits:
-- HTMLCodex.com for HTML Template
-- Unplash.com for Images
-

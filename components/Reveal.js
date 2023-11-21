@@ -1,7 +1,7 @@
 import react, { useState, useEffect } from "react";
 export default function RevealOnScroll({
   children,
-  className,
+  className = '',
   revealGroupName,
   offsetY = "50px",
   duration = "0.5s",
@@ -38,7 +38,7 @@ export default function RevealOnScroll({
     transition: `transform ${duration} ${timingFunction}`,
   };
   return (
-    <div className={`reveal-on-scroll hidden ${className} ${revealGroupName}`}>
+    <div className={`reveal-on-scroll ${className} ${revealGroupName}`}>
       {children}
     </div>
   );

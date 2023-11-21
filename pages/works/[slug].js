@@ -22,7 +22,7 @@ export default function workDetail({ work }) {
       <div className="row">
         <div
           className="col-lg-5 col-md-6"
-          // style={{ minHeight: "60vh" }}
+        // style={{ minHeight: "60vh" }}
         >
           <div className="position-relative job-detail__image-holder">
             <Image
@@ -65,7 +65,7 @@ export default function workDetail({ work }) {
               </div>
             </div>
 
-            <div className="mt-3 d-flex align-items-center">
+            <div className="mt-3 flex align-items-center">
               <a
                 href={work.href}
                 target="_blank"

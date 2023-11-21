@@ -63,7 +63,7 @@ img {
   transform: translateY(0);
 }
 
-.hidden {
+.reveal-on-scroll.hidden {
   opacity: 0;
   transition: all 0.5s ease-in-out;
 }
@@ -85,6 +85,44 @@ img {
 .py-6 {
   padding-top: 6rem;
   padding-bottom: 6rem;
+}
+
+.container {
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 16px;
+  padding-left: 16px;
+}
+
+@media (min-width: 540px) {
+  .container {
+    max-width: 540px;
+  }
+}
+
+@media (min-width: 720px) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 960px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 1140px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+
+@media (min-width: 1320px) {
+  .container {
+    max-width: 1320px;
+  }
 }
 
 /*** Spinner ***/
@@ -327,12 +365,6 @@ a {
   }
 }
 
-.navbar {
-  position: absolute;
-  top: 0;
-  z-index: 10;
-  width: 100%;
-}
 
 .content-wrapper {
   padding: 100px 0;
