@@ -19,22 +19,21 @@ export default function workDetail({ work }) {
   };
   return (
     <SrzLayout title={`${work.title}`}>
-      <div className="row">
+      <div className="grid md:grid-cols-5 gap-4">
         <div
-          className="col-lg-5 col-md-6"
-        // style={{ minHeight: "60vh" }}
+          className="md:col-span-2 w-full"
         >
-          <div className="position-relative job-detail__image-holder">
+          <div className="relative job-detail__image-holder w-full">
             <Image
               src={work.image}
               alt={`saroj pradhan's work ${work.title}`}
-              className="img-fluid  w-100 object-cover"
+              className=" object-cover"
               fill
             />
           </div>
         </div>
 
-        <div className="col-lg-7 col-md-6 my-3 ps-md-4">
+        <div className="md:col-span-3 md:ps-8">
           <div className="mb-3">
             <Link className="pointer" href={"/works"}>
               <i class="fa-solid fa-arrow-left-long me-2"></i>Go Back
@@ -44,28 +43,28 @@ export default function workDetail({ work }) {
             <p className="text-justify">{work.description}</p>
 
             {/* detail list  */}
-            <div className="row mt-4">
-              <div className="col-md-2">
+            <div className="flex mt-4">
+              <div className="w-2/12">
                 <h5 className="mb-2 text-white">Type</h5>
                 <p>{work.type}</p>
               </div>
-              <div className="col-md-4">
+              <div className="w-4/12">
                 <h5 className="mb-2 text-white">Role</h5>
                 <p>{work.role}</p>
               </div>
 
-              <div className="col-md-4">
+              <div className="w-4/12">
                 <h5 className="mb-2 text-white">Tech Stack</h5>
                 <p>{work.stack}</p>
               </div>
 
-              <div className="col-md-2">
+              <div className="w-2/12">
                 <h5 className="mb-2 text-white">Year</h5>
                 <p>{work.year}</p>
               </div>
             </div>
 
-            <div className="mt-3 flex align-items-center">
+            <div className="mt-8 items-center">
               <a
                 href={work.href}
                 target="_blank"

@@ -402,7 +402,7 @@ a {
 #portfolio-flters li {
   display: inline-block;
   font-weight: 500;
-  color: var(--dark);
+  /* color: var(--dark); */
   cursor: pointer;
   transition: 0.5s;
   border-bottom: 2px solid transparent;
