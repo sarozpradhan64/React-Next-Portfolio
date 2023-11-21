@@ -49,20 +49,18 @@ export default function SrzLayout({
             </div>
 
             {/* mobile nav */}
-            <div className="md:hidden flex justify-around position-fixed start-0 end-0 bottom-0 bg-primary">
+            <div className="md:hidden grid grid-cols-4 fixed left-0 right-0 bottom-0 bg-primary">
               {links.map((link, index) => (
                 <Link
                   href={link.href}
                   key={index}
                   className={`
-
-             ${link.title === 'works' ? (router.pathname === link.href || router.asPath.startsWith("/works/") ? "active-mobile-nav-item" : '') :
+                    ${link.title === 'works' ? (router.pathname === link.href ||
+                      router.asPath.startsWith("/works/") ? "active-mobile-nav-item" : '') :
                       (router.pathname === link.href ? "active-mobile-nav-item" : "")
-
-                    } mobile-nav-item text-white flex py-1 px-2 flex-column justify-between items-center
-               mx-1`}
+                    } mobile-nav-item text-white flex py-4 px-6 flex-column items-center`}
                 >
-                  <div className="fs-5">{link.icon}</div>
+                  <div className="me-2">{link.icon}</div>
 
                   <span style={{ fontSize: "12px" }}>
                     {link.title.toUpperCase()}
