@@ -5,10 +5,10 @@ import metas from "../../src/metaData";
 import Link from "next/link";
 import { useRouter } from "next/router";
 
-export default function workDetail({ work }) {
-
+export default function WorkDetail({ work }) {
 
   const router = useRouter();
+  
   if (router.isFallback) {
     return <div className="text-white">Loading...</div>
   }
