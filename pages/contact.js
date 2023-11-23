@@ -9,40 +9,48 @@ export default function contact() {
   const socials = data.socials;
   return (
     <SrzLayout isContactPage={true} title="Lets work together">
-      <div className="row g-5">
-        <div className="col-lg-6 col-md-6">
-          <p className="mb-2">Address:</p>
-          <h3 className="fw-bold text-white">Lalitpur, Nepal</h3>
-          <hr className="w-100" />
-          <p className="mb-2">Send me your mail:</p>
-          <h3 className="fw-bold text-white">
-            <a href="mailto:sarozpradhan64@gmail.com" className="text-primary">
-              sarozpradhan64@gmail.com
-            </a>
-          </h3>
-          <hr className="w-100" />
-          <p className="mb-2">Follow me:</p>
-          {/* social medias */}
-          <div className="d-flex pt-2">
-            {socials.map((social, index) => (
-              <a
-                key={index}
-                rel="noreferrer"
-                className="btn btn-square btn-primary me-2 fs-5"
-                href={social.href}
-                target={"_blank"}
-              >
-                {social.icon}
+      <div className="grid md:grid-cols-2 gap-5">
+        <div>
+
+          <div>
+            <p className="mb-2">Address:</p>
+            <h3 className="font-bold md:text-3xl text-xl text-white border-0">Lalitpur, Nepal</h3>
+          </div>
+
+          <div className="mt-8">
+            <p className="mb-2">Send me your mail:</p>
+            <h3 className="font-bold md:text-3xl text-xl text-white border-0">
+              <a href="mailto:sarozpradhan64@gmail.com" className="text-primary border-0">
+                sarozpradhan64@gmail.com
               </a>
-            ))}
+            </h3>
+          </div>
+
+
+          <div className="mt-8">
+            <p className="mb-2">Get in touch:</p>
+            {/* social medias */}
+            <div className="flex pt-2">
+              {socials.map((social, index) => (
+                <a
+                  key={index}
+                  rel="noreferrer"
+                  className="btn btn-square btn-primary me-2 rounded"
+                  href={social.href}
+                  target={"_blank"}
+                >
+                  {social.icon}
+                </a>
+              ))}
+            </div>
           </div>
         </div>
 
         <div
-          className="col-lg-6 col-md-6 d-md-block d-none position-relative"
-              style={{'minHeight': '500px','marginTop':'-20px'}}
+          className="md:block hidden relative"
+          style={{ 'minHeight': '500px', 'marginTop': '-20px' }}
         >
-          <Image src={profile} fill alt={`${metas.user.name} profile picture`}  className="m-md-3"  />{" "}
+          <Image src={profile} fill alt={`${metas.user.name} profile picture`} className="md:m-3" />{" "}
         </div>
       </div>
     </SrzLayout>

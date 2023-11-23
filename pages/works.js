@@ -20,10 +20,10 @@ export default function Works({ works }) {
   // console.log(active)
   return (
     <SrzLayout title="Works">
-      <div className="mb-4">
-        <ul className="list-inline mx-n3 mb-0" id="portfolio-flters">
+      <div className="mb-8">
+        <ul className="list-inline mb-0" id="portfolio-flters">
           <li
-            className={`mx-3 mb-md-2 mb-4 ${
+            className={`mx-3 md:mb-2 mb-4 ${
               active === "All" ? "active" : "text-white"
             }`}
             onClick={() => handleFilter("All")}
@@ -31,7 +31,7 @@ export default function Works({ works }) {
             All Projects
           </li>
           <li
-            className={`mx-3 mb-md-2 mb-4 ${
+            className={`mx-3 md:mb-2 mb-4 ${
               active === "website" ? "active" : "text-white"
             }`}
             onClick={() => handleFilter("website")}
@@ -39,7 +39,7 @@ export default function Works({ works }) {
             Website
           </li>
           <li
-            className={`mx-3 mb-md-2 mb-4 ${
+            className={`mx-3 md:mb-2 mb-4 ${
               active === "Web App" ? "active" : "text-white"
             }`}
             onClick={() => handleFilter("Web App")}
@@ -47,7 +47,7 @@ export default function Works({ works }) {
             Web App
           </li>
           <li
-            className={`mx-3 mb-md-2 mb-4 ${
+            className={`mx-3 md:mb-2 mb-4 ${
               active === "Mobile App" ? "active" : "text-white"
             }`}
             onClick={() => handleFilter("Mobile App")}
@@ -57,12 +57,12 @@ export default function Works({ works }) {
         </ul>
       </div>
 
-      <div className="row gx-md-5 gy-md-5 gy-4" data-wow-delay="0.1s">
+      <div className="grid lg:grid-cols-3 md:grid-cols-2 md:gap-x-5 md:gap-5 gap-4">
         {myWorks.length >= 1 ? (
           myWorks.map((work, index) => (
             <RevealOnScroll
               key={index}
-              className="col-lg-4 col-md-6 portfolio-item"
+              className="portfolio-item"
               revealGroupName={"work-card"}
             >
               <div className="portfolio-img  rounded overflow-hidden">
@@ -72,7 +72,7 @@ export default function Works({ works }) {
                   alt={work.title}
                   fill
                 />
-                <div className="portfolio-btn position-relative">
+                <div className="portfolio-btn relative">
                   <Link href={`/works/${work.slug}`}>
                     {" "}
                     <h4 className="portfolio-hover-title">{work.title}</h4>
