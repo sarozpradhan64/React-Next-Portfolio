@@ -14,12 +14,12 @@ export default function contact() {
 
           <div>
             <p className="mb-2">Address:</p>
-            <h3 className="font-bold text-3xl text-white border-0">Lalitpur, Nepal</h3>
+            <h3 className="font-bold md:text-3xl text-xl text-white border-0">Lalitpur, Nepal</h3>
           </div>
 
           <div className="mt-8">
             <p className="mb-2">Send me your mail:</p>
-            <h3 className="font-bold text-3xl text-white border-0">
+            <h3 className="font-bold md:text-3xl text-xl text-white border-0">
               <a href="mailto:sarozpradhan64@gmail.com" className="text-primary border-0">
                 sarozpradhan64@gmail.com
               </a>

@@ -8,7 +8,7 @@ export default function blogs({ posts }) {
   // console.log(posts);
   return (
     <SrzLayout title="Blogs">
-      <div className="grid lg:grid-cols-3 md:grid-cols-2 md:gap-5">
+      <div className="grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 md:gap-5">
         {posts.length >= 1 ? (
           posts.map((post, index) => (
             <RevealOnScroll

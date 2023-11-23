@@ -119,8 +119,6 @@ export default function SrzLayout({
             </div>
           </div>
         </div>
-
-        <ScrollToTop />
       </div>
     </>
   );
