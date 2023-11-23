@@ -2,9 +2,17 @@ import React from "react";
 import Image from "next/image";
 import SrzLayout from "../../components/SrzLayout";
 import metas from "../../src/metaData";
-
 import Link from "next/link";
+import { useRouter } from "next/router";
+
 export default function workDetail({ work }) {
+
+
+  const router = useRouter();
+  if (router.isFallback) {
+    return <div className="text-white">Loading...</div>
+  }
+
   const handleShare = async function () {
     try {
       await navigator.share({
@@ -116,11 +124,11 @@ export async function getStaticPaths() {
     params: { slug: work.slug },
   }));
   // fallback:false means other routes should be 404
-  return { paths, fallback: false };
+  return { paths, fallback: true };
 }
 
 export async function getStaticProps(context) {
-  console.log(context.params.slug);
+  // console.log(context.params.slug);
   const { works } = await import("../../src/workData.json");
   const work = works.find((w) => context.params.slug === w.slug);
   return {

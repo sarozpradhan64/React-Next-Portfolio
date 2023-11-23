@@ -6,10 +6,8 @@ import RevealOnScroll from "./Reveal";
 export default function Services() {
   const services = data.services;
   return (
-    <div className="mt-5 ">
-      <div className="flex align-items-center mb-3">
-        <h3 className="lh-base mb-0 text-white">My Services !</h3>
-      </div>
+    <div className="mt-8">
+        <h2 className="mb-3 text-2xl font-medium text-white">My Services !</h2>
       <p className="text-justify">
         Whether you&apos;re looking to build a new website, develop a
         mobile app, improve your online visibility with digital marketing,
@@ -46,7 +44,6 @@ export default function Services() {
           </div>
         ))}
       </div>
-
     </div>
   );
 }

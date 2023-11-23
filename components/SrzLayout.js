@@ -56,9 +56,9 @@ export default function SrzLayout({
                   key={index}
                   className={`
                     ${link.title === 'works' ? (router.pathname === link.href ||
-                      router.asPath.startsWith("/works/") ? "active-mobile-nav-item" : '') :
+                      router.asPath.startsWith("/works/") ? "active-mobile-nav-item" : "") :
                       (router.pathname === link.href ? "active-mobile-nav-item" : "")
-                    } mobile-nav-item text-white flex py-4 px-6 flex-column items-center`}
+                    } mobile-nav-item text-white flex justify-center items-center py-4`}
                 >
                   <div className="me-2">{link.icon}</div>
 
