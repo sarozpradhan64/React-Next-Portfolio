@@ -7,7 +7,8 @@ import SrzLayout from "../components/SrzLayout";
 import RevealOnScroll from "../components/Reveal";
 import metas from "../src/metaData";
 import Services from "../components/Services";
-export default function Home() {
+import HighlightedProject from "../components/HighlightedProject";
+export default function Home({ featuredWorks }) {
   return (
     <SrzLayout>
       <div>
@@ -53,56 +54,67 @@ export default function Home() {
           </div>
         </div>
 
-        <div>
-          <div className="grid md:grid-cols-2 gap-5">
-            <div>
-              <div className="flex align-items-center mb-3">
-                <h3 className="lh-base mb-0 text-white">Know About Me !</h3>
-              </div>
-              <p className="mb-4 text-justify">{metas.user.about}</p>
-              <p className="mb-3">
-                <i className="far fa-check-circle text-primary me-3"></i>
-                Demand Analysis
-              </p>
-              <p className="mb-3">
-                <i className="far fa-check-circle text-primary me-3"></i>A
-                Quality Service
-              </p>
-              <p className="mb-3">
-                <i className="far fa-check-circle text-primary me-3"></i>
-                Client Satisfaction
-              </p>
-            </div>
 
+        <div className="grid md:grid-cols-2 gap-5">
+          <div>
+            <h2 className="mb-3 text-2xl font-medium text-white">Know About Me !</h2>
 
-            <div className="grid md:grid-cols-2 gap-3 mb-4">
-              <div>
-                <RevealOnScroll revealGroupName="about-img">
-                  <Image
-                    className="rounded"
-                    src={About1}
-                    alt="about"
-
-                  />
-                </RevealOnScroll>
-              </div>
-              <div>
-                <RevealOnScroll revealGroupName={"about-img"}>
-                  <Image
-                    className="rounded"
-                    src={About2}
-                    alt="about 2"
-
-                  />
-                </RevealOnScroll>
-              </div>
-            </div>
-            
+            <p className="mb-4 text-justify">{metas.user.about}</p>
+            <p className="mb-3">
+              <i className="far fa-check-circle text-primary me-3"></i>
+              Demand Analysis
+            </p>
+            <p className="mb-3">
+              <i className="far fa-check-circle text-primary me-3"></i>A
+              Quality Service
+            </p>
+            <p className="mb-3">
+              <i className="far fa-check-circle text-primary me-3"></i>
+              Client Satisfaction
+            </p>
           </div>
+
+
+          <div className="grid md:grid-cols-2 gap-3 mb-4">
+            <div>
+              <RevealOnScroll revealGroupName="about-img">
+                <Image
+                  className="rounded"
+                  src={About1}
+                  alt="about"
+
+                />
+              </RevealOnScroll>
+            </div>
+            <div>
+              <RevealOnScroll revealGroupName={"about-img"}>
+                <Image
+                  className="rounded"
+                  src={About2}
+                  alt="about 2"
+
+                />
+              </RevealOnScroll>
+            </div>
+          </div>
+
         </div>
 
         <Services />
+
+        <HighlightedProject data={featuredWorks} />
+
+
       </div>
     </SrzLayout>
   );
+}
+
+
+export async function getStaticProps() {
+  const { works } = await import("../src/workData.json");
+  const featuredWorks = works.filter((item) => item.is_featured === true);
+  return {
+    props: { featuredWorks },
+  };
 }
