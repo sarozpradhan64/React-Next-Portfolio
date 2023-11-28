@@ -6,6 +6,7 @@ import data from "../src/data";
 import metas from "../src/metaData";
 import ScrollToTop from "./ScrollToTop";
 import { useRouter } from "next/router";
+import Button from "./Button"
 
 export default function SrzLayout({
   children,
@@ -107,11 +108,13 @@ export default function SrzLayout({
                     <a
                       key={index}
                       rel="noreferrer"
-                      className="btn btn-square btn-primary rounded mx-1"
+                      className="mx-1"
                       href={social.href}
                       target={"_blank"}
                     >
-                      {social.icon}
+                      <Button size="md">
+                        {social.icon}
+                      </Button>
                     </a>
                   ))}
                 </div>

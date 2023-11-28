@@ -7,7 +7,8 @@ export default function Services() {
   const services = data.services;
   return (
     <div className="mt-8">
-        <h2 className="mb-3 text-2xl font-medium text-white">My Services !</h2>
+      <h2 className="mb-3 text-2xl font-medium text-white">My Services !</h2>
+      <span class="h-[2px] bg-secondary w-20 mb-8 inline-block"></span>
       <p className="text-justify">
         Whether you&apos;re looking to build a new website, develop a
         mobile app, improve your online visibility with digital marketing,

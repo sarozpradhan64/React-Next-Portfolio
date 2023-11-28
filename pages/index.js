@@ -8,6 +8,8 @@ import RevealOnScroll from "../components/Reveal";
 import metas from "../src/metaData";
 import Services from "../components/Services";
 import HighlightedProject from "../components/HighlightedProject";
+import Button from "../components/Button"
+
 export default function Home({ featuredWorks }) {
   return (
     <SrzLayout>
@@ -37,16 +39,19 @@ export default function Home({ featuredWorks }) {
                 <div className="flex  md:flex-row flex-col md:items-center items-start md:mt-10 mt-8">
                   <Link
                     href="/contact"
-                    className="btn btn-primary py-3 px-4 me-3"
+                    className="me-2 md:mb-0 mb-2"
                   >
-                    Work with me
+                    <Button>
+                      Work with me
+                    </Button>
                   </Link>
 
                   <Link
                     href="/works"
-                    className="btn bg-red-700 text-white py-3 px-4 md:mt-0 mt-3"
                   >
-                    Explore My Works
+                    <Button color="secondary">
+                      Explore My Works
+                    </Button>
                   </Link>
                 </div>
               </div>
@@ -58,7 +63,7 @@ export default function Home({ featuredWorks }) {
         <div className="grid md:grid-cols-2 gap-5">
           <div>
             <h2 className="mb-3 text-2xl font-medium text-white">Know About Me !</h2>
-
+            <span class="h-[2px] bg-secondary w-20 mb-8 inline-block"></span>
             <p className="mb-4 text-justify">{metas.user.about}</p>
             <p className="mb-3">
               <i className="far fa-check-circle text-primary me-3"></i>

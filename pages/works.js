@@ -21,35 +21,31 @@ export default function Works({ works }) {
   return (
     <SrzLayout title="Works">
       <div className="mb-8">
-        <ul className="list-inline mb-0" id="portfolio-flters">
+        <ul className="list-inline mb-0" id="portfolio-filters">
           <li
-            className={`mx-3 md:mb-2 mb-4 ${
-              active === "All" ? "active" : "text-white"
-            }`}
+            className={`mx-3 md:mb-2 mb-4 ${active === "All" ? "active" : "text-white"
+              }`}
             onClick={() => handleFilter("All")}
           >
             All Projects
           </li>
           <li
-            className={`mx-3 md:mb-2 mb-4 ${
-              active === "website" ? "active" : "text-white"
-            }`}
+            className={`mx-3 md:mb-2 mb-4 ${active === "website" ? "active" : "text-white"
+              }`}
             onClick={() => handleFilter("website")}
           >
             Website
           </li>
           <li
-            className={`mx-3 md:mb-2 mb-4 ${
-              active === "Web App" ? "active" : "text-white"
-            }`}
+            className={`mx-3 md:mb-2 mb-4 ${active === "Web App" ? "active" : "text-white"
+              }`}
             onClick={() => handleFilter("Web App")}
           >
             Web App
           </li>
           <li
-            className={`mx-3 md:mb-2 mb-4 ${
-              active === "Mobile App" ? "active" : "text-white"
-            }`}
+            className={`mx-3 md:mb-2 mb-4 ${active === "Mobile App" ? "active" : "text-white"
+              }`}
             onClick={() => handleFilter("Mobile App")}
           >
             Mobile App
