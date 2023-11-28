@@ -4,6 +4,7 @@ import SrzLayout from "../components/SrzLayout";
 import data from "../src/data";
 import metas from "../src/metaData";
 import profile from "../public/img/profile.svg";
+import Button from "../components/Button"
 
 export default function contact() {
   const socials = data.socials;
@@ -35,11 +36,14 @@ export default function contact() {
                 <a
                   key={index}
                   rel="noreferrer"
-                  className="btn btn-square btn-primary me-2 rounded"
+                  className="mx-1"
                   href={social.href}
                   target={"_blank"}
                 >
+                  <Button size="md">
                   {social.icon}
+                  </Button>
+    
                 </a>
               ))}
             </div>
