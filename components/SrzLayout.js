@@ -29,7 +29,7 @@ export default function SrzLayout({
           <nav className="md:py-2 px-4 md:px-5 flex justify-between items-center absolute z-50 w-full">
             <div>
               <Link href={"/"}>
-                <h2 className="logo-title text-primary">SRZ.</h2>
+                <h2 className="logo-title text-secondary">Srz</h2>
               </Link>
             </div>
 
