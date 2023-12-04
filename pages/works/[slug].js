@@ -51,23 +51,23 @@ export default function WorkDetail({ work }) {
             <p className="text-justify">{work.description}</p>
 
             {/* detail list  */}
-            <div className="flex mt-4">
-              <div className="w-2/12">
-                <h5 className="mb-2 text-white">Type</h5>
+            <div className="flex md:flex-row flex-col md:gap-0 gap-y-4 mt-4">
+              <div className="md:w-2/12">
+                <h5 className="md:mb-2 mb-0 text-white">Type</h5>
                 <p>{work.type}</p>
               </div>
-              <div className="w-4/12">
-                <h5 className="mb-2 text-white">Role</h5>
+              <div className="md:w-4/12">
+                <h5 className="md:mb-2 mb-0 text-white">Role</h5>
                 <p>{work.role}</p>
               </div>
 
-              <div className="w-4/12">
-                <h5 className="mb-2 text-white">Tech Stack</h5>
+              <div className="md:w-4/12">
+                <h5 className="md:mb-2 mb-0 text-white">Tech Stack</h5>
                 <p>{work.stack}</p>
               </div>
 
-              <div className="w-2/12">
-                <h5 className="mb-2 text-white">Year</h5>
+              <div className="md:w-2/12">
+                <h5 className="md:mb-2 mb-0 text-white">Year</h5>
                 <p>{work.year}</p>
               </div>
             </div>

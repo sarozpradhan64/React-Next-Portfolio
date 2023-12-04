@@ -41,9 +41,9 @@ export default function contact() {
                   target={"_blank"}
                 >
                   <Button size="md">
-                  {social.icon}
+                    {social.icon}
                   </Button>
-    
+
                 </a>
               ))}
             </div>
