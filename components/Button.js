@@ -3,16 +3,16 @@ import React from "react";
 const baseClasses = " font-medium flex justify-center items-center";
 const colorClasses = {
     light: " bg-white border border-gray-300 text-gray-700",
-    primary: " bg-primary border border-primary text-white",
-    secondary: " bg-secondary border border-secondary text-white",
+    primary: " bg-primary border border-transparent text-white",
+    secondary: " bg-secondary border border-transparent text-white",
     danger: " bg-red-500 border border-red-500 text-white",
     warning: " bg-warning text-white",
 };
 
 const outlineClasses = {
     light: " border border-gray-300 text-gray-700",
-    primary: " border border-primary text-primary",
-    secondary: " border border-secondary text-primary",
+    primary: " border border-transparent text-primary",
+    secondary: " border border-transparent text-primary",
     danger: " border border-red-500 text-white",
     warning: " text-dark",
 };
