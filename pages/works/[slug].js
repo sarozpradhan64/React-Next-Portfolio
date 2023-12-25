@@ -77,7 +77,7 @@ export default function WorkDetail({ work }) {
                 href={work.href}
                 target="_blank"
                 rel="noreferrer"
-                className="mx-md-2"
+                className="md:mx-2"
               >
                 <i className="me-1 fa-solid fa-arrow-up-right-from-square"></i>
                 View Project
@@ -88,7 +88,7 @@ export default function WorkDetail({ work }) {
                   href={work.source}
                   target="_blank"
                   rel="noreferrer"
-                  className="mx-md-2"
+                  className="md:mx-2"
                 >
                   <i className="me-1 fa-solid fa-code"></i>
                   Source Code
