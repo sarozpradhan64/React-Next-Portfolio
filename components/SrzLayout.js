@@ -95,7 +95,7 @@ export default function SrzLayout({
         <div className="text-white py-4 md:mb-0 mb-16">
           <div>
             <div>
-              <div className="text-center text-md-start mb-3 md:mb-0">
+              <div className="text-center md:text-start mb-3 md:mb-0">
                 <Link className="border-bottom text-secondary" href="/">
                   {metas.user.name}
                 </Link>
@@ -103,7 +103,7 @@ export default function SrzLayout({
 
               {/* hide these in contact page  */}
               {!isContactPage && (
-                <div className="flex justify-center text-center text-md-start my-3">
+                <div className="flex justify-center text-center md:text-start my-3">
                   {socials.map((social, index) => (
                     <a
                       key={index}
