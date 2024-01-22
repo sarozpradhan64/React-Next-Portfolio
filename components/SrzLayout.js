@@ -18,6 +18,10 @@ export default function SrzLayout({
   const links = data.routes;
 
   const router = useRouter();
+
+  const currentDate = new Date();
+  const currentYear = currentDate.getFullYear();
+
   return (
     <>
       <Meta title={title} description={description} />
@@ -56,7 +60,7 @@ export default function SrzLayout({
                   href={link.href}
                   key={index}
                   className={`
-                    ${link.title === 'works' ? (router.pathname === link.href ||
+                      ${link.title === 'works' ? (router.pathname === link.href ||
                       router.asPath.startsWith("/works/") ? "active-mobile-nav-item" : "") :
                       (router.pathname === link.href ? "active-mobile-nav-item" : "")
                     } mobile-nav-item text-white flex justify-center items-center py-4`}
@@ -92,35 +96,32 @@ export default function SrzLayout({
         {/* children content end  */}
 
         {/* footer  */}
-        <div className="text-white py-4 md:mb-0 mb-16">
-          <div>
-            <div>
-              <div className="text-center md:text-start mb-3 md:mb-0">
-                <Link className="border-bottom text-secondary" href="/">
-                  {metas.user.name}
-                </Link>
-              </div>
-
-              {/* hide these in contact page  */}
-              {!isContactPage && (
-                <div className="flex justify-center text-center md:text-start my-3">
-                  {socials.map((social, index) => (
-                    <a
-                      key={index}
-                      rel="noreferrer"
-                      className="mx-1"
-                      href={social.href}
-                      target={"_blank"}
-                    >
-                      <Button size="md">
-                        {social.icon}
-                      </Button>
-                    </a>
-                  ))}
-                </div>
-              )}
-            </div>
+        <div className="flex items-center justify-between text-white py-4 md:mb-0 mb-16">
+          <div className="text-center md:text-start mb-3 md:mb-0">
+            <i class="fa-regular fa-copyright"></i> {currentYear} |&nbsp;
+            <Link className="border-bottom text-secondary" href="/">
+              {metas.user.name}
+            </Link>
           </div>
+
+          {/* hide these in contact page  */}
+          {!isContactPage && (
+            <div className="flex justify-center text-center md:text-start my-3">
+              {socials.map((social, index) => (
+                <a
+                  key={index}
+                  rel="noreferrer"
+                  className="mx-1"
+                  href={social.href}
+                  target={"_blank"}
+                >
+                  <Button size="md">
+                    {social.icon}
+                  </Button>
+                </a>
+              ))}
+            </div>
+          )}
         </div>
       </div>
     </>
