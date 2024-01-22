@@ -19,7 +19,7 @@ export default function Meta({ title, description }) {
         name="og:description"
         content={description ? description : metas.description}
       />
-      <meta name="og:image" content={metas.imageSrc} />
+      <meta name="og:image" content={metas.photoPath} />
       <meta name="keywords" content={metas.keywords} />
       <meta name="robots" content="index, follow" />
       <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />

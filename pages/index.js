@@ -16,19 +16,20 @@ export default function Home({ featuredWorks }) {
       <div>
         <div className="container" id="home">
           <div className="home-cover">
-            <Image
-              src={"/img/cover.jpg"}
-              fill
-              className="home-cover-image"
-              alt={`${metas.user.name} portfolio cover image`}
-              style={{ objectFit: "cover" }}
-            />
+            <div className="absolute lg:w-[500px] lg:h-[500px] 2xl:right-[200px] lg:right-[100px] lg:top-[45%] -translate-y-[50%] lg:block hidden" >
+              <Image
+                src={metas.photoPath}
+                fill
+                alt={`${metas.user.name} Portfolio Photo`}
+                style={{ objectFit: "cover" }}
+              />
+            </div>
           </div>
           <div className="home-container">
             <div className="grid lg:grid-cols-2 g-5 items-center">
               <div className=" py-6 pb-0 lg:pt-0">
                 <h3 className="text-3xl text-primary mb-3 font-bold">Hi 👋, I&apos;m</h3>
-                <h1 className="text-6xl mb-3 text-white">{metas.user.name}</h1>
+                <h1 className="text-6xl mb-8 text-white">{metas.user.name}</h1>
                 <h2 className="text-3xl text-white inline text-secondary">
                   {metas.user.whoAmI}
                 </h2>
@@ -36,10 +37,10 @@ export default function Home({ featuredWorks }) {
                   Web Designer, Web Developer, Front End Developer, Apps
                   Designer, Apps Developer
                 </div>
-                <div className="flex  md:flex-row flex-col md:items-center items-start md:mt-10 mt-8">
+                <div className="flex  md:flex-row flex-col md:items-center items-start md:mt-8 mt-6">
                   <Link
                     href="/contact"
-                    className="me-2 md:mb-0 mb-2"
+                    className="me-6 md:mb-0 mb-2"
                   >
                     <Button>
                       Work with me
