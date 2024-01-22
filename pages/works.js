@@ -6,10 +6,10 @@ import RevealOnScroll from "../components/Reveal";
 
 export default function Works({ works }) {
   const [myWorks, setMyWorks] = useState(works);
-  const [active, setActive] = useState("All");
+  const [active, setActive] = useState("all");
 
   const handleFilter = function (filterValue) {
-    if (filterValue == "All") {
+    if (filterValue == "all") {
       setMyWorks(works);
     } else {
       setMyWorks(works.filter((work) => work.type == filterValue));
@@ -23,9 +23,9 @@ export default function Works({ works }) {
       <div className="mb-8">
         <ul className="list-inline mb-0" id="portfolio-filters">
           <li
-            className={`mx-3 md:mb-2 mb-4 ${active === "All" ? "active" : "text-white"
+            className={`mx-3 md:mb-2 mb-4 ${active === "all" ? "active" : "text-white"
               }`}
-            onClick={() => handleFilter("All")}
+            onClick={() => handleFilter("all")}
           >
             All Projects
           </li>
@@ -37,18 +37,26 @@ export default function Works({ works }) {
             Website
           </li>
           <li
-            className={`mx-3 md:mb-2 mb-4 ${active === "Web App" ? "active" : "text-white"
+            className={`mx-3 md:mb-2 mb-4 ${active === "software" ? "active" : "text-white"
               }`}
-            onClick={() => handleFilter("Web App")}
+            onClick={() => handleFilter("software")}
           >
-            Web App
+            Software
           </li>
           <li
-            className={`mx-3 md:mb-2 mb-4 ${active === "Mobile App" ? "active" : "text-white"
+            className={`mx-3 md:mb-2 mb-4 ${active === "mobile" ? "active" : "text-white"
               }`}
-            onClick={() => handleFilter("Mobile App")}
+            onClick={() => handleFilter("mobile")}
           >
             Mobile App
+          </li>
+
+          <li
+            className={`mx-3 md:mb-2 mb-4 ${active === "mini" ? "active" : "text-white"
+              }`}
+            onClick={() => handleFilter("mini")}
+          >
+            Mini App
           </li>
         </ul>
       </div>

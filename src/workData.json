@@ -1,9 +1,9 @@
 {
   "works": [
     {
-      "title": "KumariJob Web App",
+      "title": "Kumari Job",
       "slug": "kumari-job-web",
-      "type": "Web App",
+      "type": "software",
       "year": "2023",
       "href": "https://www.kumarijob.com",
       "source": "",
@@ -30,7 +30,7 @@
     {
       "title": "Pasa HRMS",
       "slug": "pasa-hrms",
-      "type": "Web App",
+      "type": "software",
       "year": "2022",
       "href": "",
       "source": "",
@@ -83,7 +83,7 @@
     {
       "title": "Gyannhub",
       "slug": "gyannhub",
-      "type": "Web App",
+      "type": "software",
       "year": "2022",
       "href": "https://gyannhub.com",
       "source": "",
@@ -109,7 +109,7 @@
     {
       "title": "TodoApp",
       "slug": "todo-app",
-      "type": "Web App",
+      "type": "mini",
       "year": "2020",
       "href": "https://blaze-todo-app.netlify.app/",
       "source": "https://github.com/sarozpradhan64/React-TodoApp",
