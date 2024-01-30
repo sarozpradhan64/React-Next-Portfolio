@@ -28,6 +28,19 @@
       "is_featured": false
     },
     {
+      "title": "Asian Bartending and Barista School",
+      "slug": "asian-bartending-and-barista-achool",
+      "type": "website",
+      "year": "2023",
+      "href": "https://asianbartendingandbaristaschool.com",
+      "source": "",
+      "image": "/works/asian.jpg",
+      "description": "A training institute, a team of dedicated professionals who share a common love for crafting exceptional beverages and empowering individuals to thrive in the hospitality industry",
+      "role": "FullStack Development",
+      "stack": "Django, Tailwind",
+      "is_featured": false
+    },
+    {
       "title": "Pasa HRMS",
       "slug": "pasa-hrms",
       "type": "software",
