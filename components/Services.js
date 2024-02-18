@@ -18,32 +18,34 @@ export default function Services() {
         free to contact me if you have any questions or would like to
         discuss your project.
       </p>
-      <div className="grid md:grid-cols-2 md:gap-x-5 mt-4 ">
-        {services.map((service, index) => (
-          <div key={index} className="md:mb-0 mb-6">
-            <RevealOnScroll
-              className={"service-card"}
-              revealGroupName={"service-card"}
-            >
 
-              <div className="flex md:gap-y-0">
-                <div className="md:block hidden service-img-holder self-center">
-                  <Image
-                    className="object-cover"
-                    src={service.thumbnail}
-                    height={400}
-                    width={400}
-                    alt={service.title}
-                  />
+      <div className="w-full flex justify-center items-center">
+        <div className="md:w-4/5 md:p-16 flex flex-col gap-12 mt-8">
+          {services.map((service, index) => (
+            <div key={index} className="md:mb-0 mb-6">
+              <RevealOnScroll
+                className={"service-card"}
+                revealGroupName={"service-card"}
+              >
+
+                <div className="flex md:flex-row flex-col gap-4">
+                  <div className="w-1/5 service-img-holder">
+                    <Image
+                      className="object-cover"
+                      src={service.thumbnail}
+                      fill
+                      alt={service.title}
+                    />
+                  </div>
+                  <div className="md:w-4/5 md:ps-3">
+                    <h5 className="text-lg text-white mb-6">{service.title}</h5>
+                    <p>{service.description}</p>
+                  </div>
                 </div>
-                <div className="md:ps-3">
-                  <h5 className="text-white">{service.title}</h5>
-                  <p className="">{service.description}</p>
-                </div>
-              </div>
-            </RevealOnScroll>
-          </div>
-        ))}
+              </RevealOnScroll>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );
