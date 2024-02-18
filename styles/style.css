@@ -268,8 +268,8 @@ a {
 }
 .service-img-holder {
   position: relative;
-  height: 120px;
-  margin-top: 35px;
+  height: 200px;
+  width:200px;
   object-fit: cover;
 }
 .service-card p {
