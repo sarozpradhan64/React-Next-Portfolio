@@ -1,3 +1,5 @@
+"use client";
+
 import react, { useState, useEffect } from "react";
 export default function RevealOnScroll({
   children,

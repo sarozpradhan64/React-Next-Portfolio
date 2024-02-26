@@ -1,17 +1,18 @@
+"use client";
+
 import React from "react";
 import Image from "next/image";
-import SrzLayout from "../../components/SrzLayout";
-import metas from "../../src/metaData";
+import SrzLayout from "@/components/SrzLayout";
+import metas from "@/data/metaData";
 import Link from "next/link";
-import { useRouter } from "next/router";
+import useWork from "@/components/swr/useWork";
 
-export default function WorkDetail({ work }) {
+export default function Page({ params }) {
 
-  const router = useRouter();
+  const { works, isLoading, isError } = useWork();
   
-  if (router.isFallback) {
-    return <div className="text-white">Loading...</div>
-  }
+
+ const work = works ? works.find((w) => params.slug === w.slug) : {};
 
   const handleShare = async function () {
     try {
@@ -26,7 +27,12 @@ export default function WorkDetail({ work }) {
     }
   };
   return (
-    <SrzLayout title={`${work.title}`}>
+    <SrzLayout title={`${work?.title || ''}`}>
+          {isLoading ? (
+          <h3 className="text-white">Loading...</h3>
+        ) : isError ? (
+          <h3 className="text-white">Error fetching data</h3>
+        ) : (
       <div className="grid md:grid-cols-5 gap-4">
         <div
           className="md:col-span-2 w-full"
@@ -112,26 +118,9 @@ export default function WorkDetail({ work }) {
           </div>
         </div>
       </div>
+        )}
     </SrzLayout>
   );
 }
 
-export async function getStaticPaths() {
-  const { works } = await import("../../src/workData.json");
 
-  //get the paths that we want to pre-render based on category
-  const paths = works.map((work) => ({
-    params: { slug: work.slug },
-  }));
-  // fallback:false means other routes should be 404
-  return { paths, fallback: true };
-}
-
-export async function getStaticProps(context) {
-  // console.log(context.params.slug);
-  const { works } = await import("../../src/workData.json");
-  const work = works.find((w) => context.params.slug === w.slug);
-  return {
-    props: { work },
-  };
-}

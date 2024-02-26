@@ -1,10 +1,12 @@
+"use client";
+
 import Image from "next/image";
 import React from "react";
-import SrzLayout from "../components/SrzLayout";
-import data from "../src/data";
-import metas from "../src/metaData";
-import profile from "../public/img/profile.svg";
-import Button from "../components/Button"
+import SrzLayout from "@/components/SrzLayout";;
+import data from "@/data/data";
+import metas from "@/data/metaData";
+import profile from "../../../public/img/profile.svg";
+import Button from "@/components/Button";
 
 export default function contact() {
   const socials = data.socials;

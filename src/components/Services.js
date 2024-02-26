@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React from "react";
-import data from "../src/data";
+import data from "@/data/data";
 import RevealOnScroll from "./Reveal";
 
 export default function Services() {

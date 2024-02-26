@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useState } from "react";
 export default function ScrollToTop() {
   const [visible, setVisible] = useState(false);
