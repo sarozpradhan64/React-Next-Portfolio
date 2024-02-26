@@ -2,8 +2,13 @@ import React from 'react'
 import RevealOnScroll from './Reveal'
 import Image from 'next/image'
 import Link from 'next/link'
+import useSWR from 'swr';
+import useWork from './swr/useWork';
 
-function HighlightedProject({ data }) {
+function HighlightedProject() {
+    const {works, isLoading, isError} = useWork();
+
+    const featuredWorks = works ? works.filter((item) => item.is_featured === true) : [];
     return (
         <div className="mt-16">
             <h2 className="mb-3 text-2xl font-medium text-white">Highlighted Projects</h2>
@@ -14,8 +19,8 @@ function HighlightedProject({ data }) {
 
 
             <div className="mt-8 grid lg:grid-cols-3 md:grid-cols-2 md:gap-x-5 md:gap-5 gap-4">
-                {data.length >= 1 ? (
-                    data.map((work, index) => (
+                {featuredWorks && featuredWorks.length >= 1 ? (
+                    featuredWorks.map((work, index) => (
                         <RevealOnScroll
                             key={index}
                             className="portfolio-item"

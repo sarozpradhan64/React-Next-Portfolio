@@ -1,6 +1,7 @@
 import React from "react";
 import Head from "next/head";
-import metas from "../src/metaData";
+import metas from "@/data/metaData";
+
 export default function Meta({ title, description }) {
   return (
     <Head>

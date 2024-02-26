@@ -23,7 +23,7 @@ const sizeClasses = {
     lg: "py-3 px-5 text-base tracking-wider rounded",
 };
 
-export default function Btn({
+export default function Button({
     color = "primary",
     outline = "",
     size = "lg",

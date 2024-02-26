@@ -2,10 +2,10 @@ import Head from "next/head";
 import Link from "next/link";
 import React from "react";
 import Meta from "./Meta";
-import data from "../src/data";
-import metas from "../src/metaData";
+import data from "@/data/data";
+import metas from "@/data/metaData";
 import ScrollToTop from "./ScrollToTop";
-import { useRouter } from "next/router";
+import { usePathname, useRouter } from "next/navigation";
 import Button from "./Button"
 
 export default function SrzLayout({
@@ -18,6 +18,7 @@ export default function SrzLayout({
   const links = data.routes;
 
   const router = useRouter();
+  const pathname = usePathname();
 
   const currentDate = new Date();
   const currentYear = currentDate.getFullYear();
@@ -43,9 +44,8 @@ export default function SrzLayout({
                 <Link
                   href={link.href}
                   key={index}
-                  // ${router.asPath.startsWith("/jobseeker/update-profile")
-                  className={`${link.title === 'works' ? (router.pathname === link.href || router.asPath.startsWith("/works/") ? "active-nav-item" : '') :
-                    (router.pathname === link.href ? "active-nav-item" : "")
+                  className={`${link.title === 'works' ? (pathname === link.href || pathname.includes("/works/") ? "active-nav-item" : '') :
+                    (pathname === link.href ? "active-nav-item" : "")
                     } nav-item text-white px-3 py-2  mx-2`}
                 >
                   {link.title.toUpperCase()}
@@ -60,9 +60,9 @@ export default function SrzLayout({
                   href={link.href}
                   key={index}
                   className={`
-                      ${link.title === 'works' ? (router.pathname === link.href ||
-                      router.asPath.startsWith("/works/") ? "active-mobile-nav-item" : "") :
-                      (router.pathname === link.href ? "active-mobile-nav-item" : "")
+                      ${link.title === 'works' ? (pathname === link.href ||
+                      pathname.includes("/works/") ? "active-mobile-nav-item" : "") :
+                      (pathname === link.href ? "active-mobile-nav-item" : "")
                     } mobile-nav-item text-white flex justify-center items-center py-4`}
                 >
                   <div className="me-2">{link.icon}</div>
