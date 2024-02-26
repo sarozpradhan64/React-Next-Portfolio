@@ -1,10 +1,9 @@
 import React from "react";
-import Head from "next/head";
 import metas from "@/data/metaData";
 
 export default function Meta({ title, description }) {
   return (
-    <Head>
+    <>
       <title>{title ? `${title} | ${metas.title}` : metas.title}</title>
       <link rel="icon" type="image/x-icon" href="/favicon.ico" />
 
@@ -27,6 +26,6 @@ export default function Meta({ title, description }) {
       <meta name="language" content="English" />
       <meta name="revisit-after" content="2 days" />
       <meta name="author" content={metas.user.name} />
-    </Head>
+      </>
   );
 }
