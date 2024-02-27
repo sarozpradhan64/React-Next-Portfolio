@@ -6,6 +6,7 @@ import React, { useState } from "react";
 import SrzLayout from "@/components/SrzLayout";
 import RevealOnScroll from "@/components/Reveal";
 import useWork from "@/components/swr/useWork";
+import CardSkeleton from "@/components/skeleton/CardSkeleton";
 
 export default function Page() {
   const { works, isLoading, isError } = useWork();
@@ -33,13 +34,18 @@ export default function Page() {
         </ul>
       </div>
 
-      <div className="grid lg:grid-cols-3 md:grid-cols-2 md:gap-x-5 md:gap-5 gap-4">
+    
         {isLoading ? (
-          <h3 className="text-white">Loading...</h3>
+           <div className="grid lg:grid-cols-3 gap-4">
+           <CardSkeleton />
+           <CardSkeleton />
+           <CardSkeleton />
+         </div>
         ) : isError ? (
           <h3 className="text-white">Error fetching data</h3>
         ) : filteredWorks.length > 0 ? (
-          filteredWorks.map((work, index) => (
+          <div className="grid lg:grid-cols-3 md:grid-cols-2 md:gap-x-5 md:gap-5 gap-4">
+          {filteredWorks.map((work, index) => (
             <RevealOnScroll
               key={index}
               className="portfolio-item"
@@ -61,11 +67,11 @@ export default function Page() {
                 </div>
               </div>
             </RevealOnScroll>
-          ))
+          ))}
+          </div>
         ) : (
           <h3 className="text-white">No works yet</h3>
         )}
-      </div>
     </SrzLayout>
   );
 }
