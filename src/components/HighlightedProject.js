@@ -27,8 +27,6 @@ function HighlightedProject() {
         {isLoading ? (
           <div className="grid lg:grid-cols-3 gap-4">
             <CardSkeleton />
-            <CardSkeleton />
-            <CardSkeleton />
           </div>
         ) : isError ? (
           <h3 className="text-white">Error fetching data</h3>
