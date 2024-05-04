@@ -22,8 +22,8 @@
       "source": "",
       "image": "/works/sas.png",
       "description": "SAS is a distinguished consultancy firm all set to offer exceptional IELTS Classes. Study in Canada, Australia, The UK, and The USA.",
-      "role": "WordPress Development",
-      "stack": "WordPress",
+      "role": "FullStack Development",
+      "stack": "Laravel, Inertia.js, React.js",
       "is_featured": false
     },
     {
