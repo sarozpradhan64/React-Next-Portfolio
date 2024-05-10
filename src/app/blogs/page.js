@@ -22,8 +22,8 @@ export default function Page() {
   return (
     <SrzLayout title="Blogs">
       {isLoading ? (
-        <div className="grid lg:grid-cols-3 gap-4">
-          <CardSkeleton />
+        <div className="grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 md:gap-5">
+          <CardSkeleton number={8} />
         </div>
       ) : posts && posts.length >= 1 ? (
         <div className="grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 md:gap-5">
