@@ -50,7 +50,7 @@ export default function Page({ params }) {
         <div className="md:col-span-3 md:ps-8">
           <div className="mb-3">
             <Link className="pointer" href={"/works"}>
-              <i class="fa-solid fa-arrow-left-long me-2"></i>Go Back
+              <i className="fa-solid fa-arrow-left-long me-2"></i>Go Back
             </Link>
           </div>
           <div className="project-info">
