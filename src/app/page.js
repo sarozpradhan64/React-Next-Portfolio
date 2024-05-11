@@ -67,7 +67,7 @@ export default function Home() {
       <div className="grid md:grid-cols-2 gap-5">
         <div>
           <h2 className="mb-3 text-2xl font-medium text-white">Know About Me !</h2>
-          <span class="h-[2px] bg-secondary w-20 mb-8 inline-block"></span>
+          <span className="h-[2px] bg-secondary w-20 mb-8 inline-block"></span>
           <p className="mb-4 text-justify">{metas.user.about}</p>
           <p className="mb-3">
             <i className="far fa-check-circle text-primary me-3"></i>

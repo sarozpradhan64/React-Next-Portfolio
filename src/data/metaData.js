@@ -5,6 +5,7 @@ const metas = {
   google_adsense_id: "ca-pub-7025574296219229",
   user: {
     name: "Saroj Pradhan",
+    email: "sarozpradhan64@gmail.com",
     whoAmI: "FullStack Developer",
     about: `As a web developer, I am skilled in the development and maintenance of 
     websites and web applications. I have experience working with frameworks such as 

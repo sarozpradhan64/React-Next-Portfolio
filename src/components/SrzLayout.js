@@ -12,7 +12,6 @@ export default function SrzLayout({
   children,
   title,
   description,
-  isContactPage = false,
 }) {
   const socials = data.socials;
   const links = data.routes;
@@ -98,14 +97,13 @@ export default function SrzLayout({
         {/* footer  */}
         <div className="flex md:flex-row flex-col items-center justify-between text-white py-4 md:mb-0 mb-16">
           <div className="text-center md:text-start mb-3 md:mb-0">
-            <i class="fa-regular fa-copyright"></i> {currentYear} |&nbsp;
+            <i className="fa-regular fa-copyright"></i> {currentYear} |&nbsp;
             <Link className="border-bottom text-secondary" href="/">
               {metas.user.name}
             </Link>
           </div>
 
-          {/* hide these in contact page  */}
-          {!isContactPage && (
+     
             <div className="flex justify-center text-center md:text-start my-3">
               {socials.map((social, index) => (
                 <a
@@ -121,7 +119,6 @@ export default function SrzLayout({
                 </a>
               ))}
             </div>
-          )}
         </div>
       </div>
     </>
