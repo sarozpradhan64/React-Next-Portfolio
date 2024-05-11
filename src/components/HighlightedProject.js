@@ -17,7 +17,7 @@ function HighlightedProject() {
       <h2 className="mb-3 text-2xl font-medium text-white">
         Highlighted Projects
       </h2>
-      <span class="h-[2px] bg-secondary w-20 mb-8 inline-block"></span>
+      <span className="h-[2px] bg-secondary w-20 mb-8 inline-block"></span>
       <p className="text-justify">
         Amongst many of my works and project that i put my footprint in, here
         are some the major listings:
