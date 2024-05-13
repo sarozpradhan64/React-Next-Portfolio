@@ -86,24 +86,20 @@ export default function Home() {
 
         <div className="grid md:grid-cols-2 gap-3 mb-4">
           <div>
-            <RevealOnScroll revealGroupName="about-img">
               <Image
                 className="rounded"
                 src={About1}
                 alt="about"
 
               />
-            </RevealOnScroll>
           </div>
           <div>
-            <RevealOnScroll revealGroupName={"about-img"}>
               <Image
                 className="rounded"
                 src={About2}
                 alt="about 2"
 
               />
-            </RevealOnScroll>
           </div>
         </div>
 
