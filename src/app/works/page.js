@@ -49,7 +49,7 @@ export default function Page() {
               className="portfolio-item"
               revealGroupName={"work-card"}
             >
-              <div className="portfolio-img  rounded overflow-hidden">
+              <div className="portfolio-img  rounded ">
                 <Image
                   className="img-fluid object-cover"
                   src={work.image}

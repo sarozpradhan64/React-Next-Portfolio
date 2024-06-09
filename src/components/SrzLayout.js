@@ -1,6 +1,6 @@
 import Head from "next/head";
 import Link from "next/link";
-import React from "react";
+import React, { useEffect } from "react";
 import Meta from "./Meta";
 import data from "@/data/data";
 import metas from "@/data/metaData";
@@ -21,6 +21,14 @@ export default function SrzLayout({
 
   const currentDate = new Date();
   const currentYear = currentDate.getFullYear();
+
+
+
+  useEffect( () => {
+    window.scrollTo({
+      top: 0,
+    });
+  }, [])
 
   return (
     <>
