@@ -62,7 +62,7 @@ export default function Page() {
                   href={`https://blazecodes.pradhansaroj.com.np/posts/${post.slug}`}
                   target="_blank"
                   rel={"noreferrer"}
-                  className="mt-2"
+                  className="text-primary mt-2"
                 >
                   Read
                 </a>
