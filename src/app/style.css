@@ -170,9 +170,7 @@
     transition: 0.5s;
   }
   
-  a {
-    color: var(--primary);
-  }
+
   .text-primary {
     color: var(--primary) !important;
   }

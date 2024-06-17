@@ -47,7 +47,7 @@ export default function Page({ params }) {
 
           <div className="md:col-span-3 md:ps-8">
             <div className="mb-3">
-              <Link className="pointer" href={"/works"}>
+              <Link className="pointer text-primary" href={"/works"}>
                 <i className="fa-solid fa-arrow-left-long me-2"></i>Go Back
               </Link>
             </div>
@@ -82,7 +82,7 @@ export default function Page({ params }) {
                     href={work.href}
                     target="_blank"
                     rel="noreferrer"
-                    className="md:mx-2"
+                    className="md:mx-2 text-primary"
                   >
                     <i className="me-1 fa-solid fa-arrow-up-right-from-square"></i>
                     View Project
@@ -94,7 +94,7 @@ export default function Page({ params }) {
                     href={work.source}
                     target="_blank"
                     rel="noreferrer"
-                    className="md:mx-2"
+                    className="md:mx-2 text-primary"
                   >
                     <i className="me-1 fa-solid fa-code"></i>
                     Source Code
@@ -106,7 +106,7 @@ export default function Page({ params }) {
                   onClick={() => handleShare()}
                   target="_blank"
                   rel="noreferrer"
-                  className="mx-3"
+                  className="text-primary mx-3"
                 >
                   <i
                     className="me-1 fa-solid fa-share-nodes pointer"
