@@ -1,3 +1,5 @@
+"use client";
+
 import React, { Suspense } from "react";
 import RevealOnScroll from "./Reveal";
 import Image from "next/image";
