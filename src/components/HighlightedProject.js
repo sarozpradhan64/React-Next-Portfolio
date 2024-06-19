@@ -12,7 +12,7 @@ const wrapperClassNames =
   "grid lg:grid-cols-3 md:grid-cols-2 md:gap-x-5 md:gap-5 gap-4";
 
 function HighlightedProjectContent() {
-  const { works } = useWork({ suspense: true });
+  const { works } = useWork();
 
   const featuredWorks = works
     ? works.filter((item) => item.is_featured === true)
