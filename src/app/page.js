@@ -9,14 +9,16 @@ import About2 from "../../public/img/about-2.jpg";
 import Services from "@/components/Services";
 import HighlightedProject from "@/components/HighlightedProject";
 import { Suspense } from "react";
+import getWorks from "@/utils/getWorks";
 
 export default async function Home() {
-  const response = await fetch("http:localhost:3000/api/works");
-  const works = await response.json();
-
-  const featuredWorks = works
-    ? works.filter((item) => item.is_featured === true)
-    : null;
+  let featuredWorks;
+  try {
+    const works = await getWorks();
+    featuredWorks = works.filter((item) => item.is_featured === true);
+  } catch (error) {
+    console.error("Error fetching works:", error);
+  }
 
   return (
     <SrzLayout>

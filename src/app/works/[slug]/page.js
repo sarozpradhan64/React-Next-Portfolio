@@ -5,14 +5,9 @@ import metas from "@/data/metaData";
 import Link from "next/link";
 import WorkDetailSkeleton from "@/components/skeleton/WorkDetailSkeleton";
 import ShareButton from "../_partials/ShareButton";
+import getWorks from "@/utils/getWorks";
 
-async function getWorks() {
-  const res = await fetch("http://localhost:3000/api/works", {
-    next: { revalidate: 3600 },
-  });
-  if (!res.ok) throw new Error("Failed to fetch works");
-  return res.json();
-}
+
 
 export default async function Page({ params }) {
   let works;

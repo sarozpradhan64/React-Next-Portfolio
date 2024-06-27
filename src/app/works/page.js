@@ -1,13 +1,8 @@
 import SrzLayout from "@/components/SrzLayout";
 import WorkFilter from "./_partials/WorkFilter";
+import getWorks from "@/utils/getWorks";
 
-async function getWorks() {
-  const res = await fetch("http://localhost:3000/api/works", {
-    next: { revalidate: 3600 },
-  });
-  if (!res.ok) throw new Error("Failed to fetch works");
-  return res.json();
-}
+
 
 export default async function Page() {
   let works;
