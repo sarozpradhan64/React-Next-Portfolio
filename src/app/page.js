@@ -1,5 +1,3 @@
-"use client";
-
 import Image from "next/image";
 import Link from "next/link";
 import Button from "@/components/Button";
@@ -10,8 +8,16 @@ import About1 from "../../public/img/about-1.jpg";
 import About2 from "../../public/img/about-2.jpg";
 import Services from "@/components/Services";
 import HighlightedProject from "@/components/HighlightedProject";
+import { Suspense } from "react";
 
-export default function Home() {
+export default async function Home() {
+  const response = await fetch("http:localhost:3000/api/works");
+  const works = await response.json();
+
+  const featuredWorks = works
+    ? works.filter((item) => item.is_featured === true)
+    : null;
+
   return (
     <SrzLayout>
       <div>
@@ -87,7 +93,9 @@ export default function Home() {
 
         <Services />
 
-        <HighlightedProject />
+        <Suspense fallback={<div>Loading</div>}>
+          <HighlightedProject featuredWorks={featuredWorks} />
+        </Suspense>
       </div>
     </SrzLayout>
   );

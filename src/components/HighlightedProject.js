@@ -4,19 +4,14 @@ import React, { Suspense } from "react";
 import RevealOnScroll from "./Reveal";
 import Image from "next/image";
 import Link from "next/link";
-import useSWR from "swr";
-import useWork from "./swr/useWork";
 import CardSkeleton from "./skeleton/CardSkeleton";
 
 const wrapperClassNames =
   "grid lg:grid-cols-3 md:grid-cols-2 md:gap-x-5 md:gap-5 gap-4";
 
-function HighlightedProjectContent() {
-  const { works } = useWork();
+function HighlightedProject({featuredWorks}) {
 
-  const featuredWorks = works
-    ? works.filter((item) => item.is_featured === true)
-    : [];
+  console.log(featuredWorks);
 
   return (
     <div className="mt-16">
@@ -63,19 +58,6 @@ function HighlightedProjectContent() {
   );
 }
 
-function HighlightedProject() {
-  return (
-    <Suspense
-      fallback={
-        <div className={wrapperClassNames}>
-          {" "}
-          <CardSkeleton />
-        </div>
-      }
-    >
-      <HighlightedProjectContent />
-    </Suspense>
-  );
-}
+
 
 export default HighlightedProject;

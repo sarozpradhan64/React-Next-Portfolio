@@ -1,11 +1,10 @@
 import Head from "next/head";
 import Link from "next/link";
-import React, { useEffect } from "react";
+import React from "react";
 import Meta from "./Meta";
 import data from "@/data/data";
 import metas from "@/data/metaData";
 import ScrollToTop from "./ScrollToTop";
-import { usePathname, useRouter } from "next/navigation";
 import Button from "./Button"
 
 export default function SrzLayout({
@@ -16,19 +15,18 @@ export default function SrzLayout({
   const socials = data.socials;
   const links = data.routes;
 
-  const router = useRouter();
-  const pathname = usePathname();
+  const pathname = '';
 
   const currentDate = new Date();
   const currentYear = currentDate.getFullYear();
 
 
 
-  useEffect( () => {
-    window.scrollTo({
-      top: 0,
-    });
-  }, [])
+  // useEffect( () => {
+  //   window.scrollTo({
+  //     top: 0,
+  //   });
+  // }, [])
 
   return (
     <>

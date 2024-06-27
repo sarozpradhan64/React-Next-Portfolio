@@ -1,15 +1,26 @@
-"use client";
-
 import React from "react";
 import Image from "next/image";
 import SrzLayout from "@/components/SrzLayout";
 import metas from "@/data/metaData";
 import Link from "next/link";
-import useWork from "@/components/swr/useWork";
 import WorkDetailSkeleton from "@/components/skeleton/WorkDetailSkeleton";
+import ShareButton from "../_partials/ShareButton";
 
-export default function Page({ params }) {
-  const { works, isLoading, isError } = useWork();
+async function getWorks() {
+  const res = await fetch("http://localhost:3000/api/works", {
+    next: { revalidate: 3600 },
+  });
+  if (!res.ok) throw new Error("Failed to fetch works");
+  return res.json();
+}
+
+export default async function Page({ params }) {
+  let works;
+  try {
+    works = await getWorks();
+  } catch (error) {
+    console.error("Error fetching works:", error);
+  }
 
   const work = works ? works.find((w) => params.slug === w.slug) : {};
 
@@ -28,11 +39,9 @@ export default function Page({ params }) {
 
   return (
     <SrzLayout title={`${work?.title || ""}`}>
-      {isLoading ? (
+      {!work ? (
         <WorkDetailSkeleton />
-      ) : isError ? (
-        <h3 className="text-white">Error fetching data</h3>
-      ) : (
+      )  : (
         <div className="grid md:grid-cols-5 gap-4">
           <div className="md:col-span-2 w-full">
             <div className="relative job-detail__image-holder w-full">
@@ -101,19 +110,7 @@ export default function Page({ params }) {
                   </a>
                 )}
 
-                <a
-                  href={""}
-                  onClick={() => handleShare()}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="text-primary mx-3"
-                >
-                  <i
-                    className="me-1 fa-solid fa-share-nodes pointer"
-                    onClick={() => handleShare()}
-                  ></i>
-                  Share
-                </a>
+                <ShareButton/>
               </div>
             </div>
           </div>
