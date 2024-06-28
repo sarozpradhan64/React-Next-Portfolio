@@ -4,9 +4,6 @@ import "./style.css";
 import metas from "@/data/metaData";
 import { GoogleAnalytics } from '@next/third-parties/google'
 
-
-
-
 export default function RootLayout({ children }) {
   return (
     <html lang="en">

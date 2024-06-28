@@ -1,4 +1,3 @@
-import data from "./data";
 
 const metas = {
   google_analytics_id: "G-1618WEC7X4",
@@ -15,10 +14,10 @@ const metas = {
     latest technologies and best practices in web development, and I am able to apply my
      knowledge to solve complex problems and build high-quality web solutions.`,
   },
-  title: 'Saroj Pradhan - Fullstack, Django, Laravel, React.js developer in Nepal',
-  description: "Looking for a skilled web developer with expertise in Laravel, Django, React, and Node.js? Check out my portfolio website! As a freelancer, I've developed custom web applications and websites that meet the unique needs of my clients. Explore my portfolio and let's work together to bring your ideas to life!",
+  title: 'Saroj Pradhan | Fullstack Developer: Python, Javascript, PHP',
+  description: "Transform your business with Saroj Pradhan's web expertise. Custom websites, apps & software tailored for growth. Innovative solutions, optimized performance.",
   photoPath: "/img/photo.webp",
-  keywords: 'web developer, software developer, freelancer, nepal, freelancer in kathmandu, web developer in kathmandu'
+  keywords: 'web developer, software developer, freelancer, nepal, freelancer in kathmandu, web developer in kathmandu, Web developer, Custom website design, Web application development, Business software solutions, Full-stack developer, Responsive web design, E-commerce websites, SEO optimization, Business growth technology, Tailored digital solutions, Web performance optimization'
 };
 
 export default metas;
