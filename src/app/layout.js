@@ -1,5 +1,3 @@
-
-import "./globals.css";
 import "./style.css";
 import metas from "@/data/metaData";
 import { GoogleAnalytics } from '@next/third-parties/google'

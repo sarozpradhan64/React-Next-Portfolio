@@ -11,8 +11,6 @@ const wrapperClassNames =
 
 function HighlightedProject({featuredWorks}) {
 
-  console.log(featuredWorks);
-
   return (
     <div className="mt-16">
       <h2 className="mb-3 text-2xl font-medium text-white">
