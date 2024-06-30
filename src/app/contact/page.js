@@ -67,7 +67,7 @@ export default function Contact() {
   };
 
   return (
-    <SrzLayout>
+    <SrzLayout title="Contact Me">
       <div className="relative isolate">
         <div className="mx-auto max-w-xl lg:max-w-4xl">
           <h2 className="text-4xl font-bold tracking-tight text-white">
