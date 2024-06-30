@@ -23,7 +23,7 @@ function WorkItem({ work }) {
     <RevealOnScroll className="portfolio-item" revealGroupName="work-card">
       <div
         className="portfolio-img rounded relative"
-        style={{ height: "200px" }}
+        style={{ height: "250px" }}
       >
         <Image
           className="img-fluid object-cover"
