@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import Button from "@/components/Button";
 import RevealOnScroll from "@/components/Reveal";
-import SrzLayout from "@/components/SrzLayout";
+import FrontendLayout from "@/components/Layouts/FrontendLayout";
 import metas from "@/data/metaData";
 import About1 from "../../public/img/about-1.jpg";
 import About2 from "../../public/img/about-2.jpg";
@@ -21,7 +21,7 @@ export default async function Home() {
   }
 
   return (
-    <SrzLayout>
+    <FrontendLayout>
       <div>
         <div className="container" id="home">
           <div className="home-cover">
@@ -99,6 +99,6 @@ export default async function Home() {
           <HighlightedProject featuredWorks={featuredWorks} />
         </Suspense>
       </div>
-    </SrzLayout>
+    </FrontendLayout>
   );
 }

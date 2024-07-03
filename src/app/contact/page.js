@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useRef, useState } from "react";
-import SrzLayout from "@/components/SrzLayout";
+import FrontendLayout from "@/components/Layouts/FrontendLayout";
 import metas from "@/data/metaData";
 import emailjs from "@emailjs/browser";
 import { CheckCircleIcon } from "@heroicons/react/20/solid";
@@ -67,7 +67,7 @@ export default function Contact() {
   };
 
   return (
-    <SrzLayout title="Contact Me">
+    <FrontendLayout title="Contact Me">
       <div className="relative isolate">
         <div className="mx-auto max-w-xl lg:max-w-4xl">
           <h2 className="text-4xl font-bold tracking-tight text-white">
@@ -231,6 +231,6 @@ export default function Contact() {
           </div>
         </div>
       </div>
-    </SrzLayout>
+    </FrontendLayout>
   );
 }

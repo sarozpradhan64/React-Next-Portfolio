@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import SrzLayout from "@/components/SrzLayout";
+import FrontendLayout from "@/components/Layouts/FrontendLayout";
 import metas from "@/data/metaData";
 import Link from "next/link";
 import WorkDetailSkeleton from "@/components/skeleton/WorkDetailSkeleton";
@@ -33,7 +33,7 @@ export default async function Page({ params }) {
   };
 
   return (
-    <SrzLayout title={`${work?.title || ""}`}>
+    <FrontendLayout title={`${work?.title || ""}`}>
       {!work ? (
         <WorkDetailSkeleton />
       )  : (
@@ -111,6 +111,6 @@ export default async function Page({ params }) {
           </div>
         </div>
       )}
-    </SrzLayout>
+    </FrontendLayout>
   );
 }
