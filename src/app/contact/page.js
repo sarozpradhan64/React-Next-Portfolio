@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useRef, useState } from "react";
-import FrontendLayout from "@/components/Layouts/FrontendLayout";
+import FrontendLayout from "@/components/layouts/FrontendLayout";
 import metas from "@/data/metaData";
 import emailjs from "@emailjs/browser";
 import { CheckCircleIcon } from "@heroicons/react/20/solid";
