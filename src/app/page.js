@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import Button from "@/components/Button";
 import RevealOnScroll from "@/components/Reveal";
-import FrontendLayout from "@/components/Layouts/FrontendLayout";
+import FrontendLayout from "@/components/layouts/FrontendLayout";
 import metas from "@/data/metaData";
 import About1 from "../../public/img/about-1.jpg";
 import About2 from "../../public/img/about-2.jpg";
