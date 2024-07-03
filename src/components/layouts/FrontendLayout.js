@@ -1,4 +1,3 @@
-import Head from "next/head";
 import Link from "next/link";
 import React from "react";
 import Meta from "../Meta";
@@ -13,12 +12,6 @@ export default function FrontendLayout({ children, title, description }) {
 
   const currentDate = new Date();
   const currentYear = currentDate.getFullYear();
-
-  // useEffect( () => {
-  //   window.scrollTo({
-  //     top: 0,
-  //   });
-  // }, [])
 
   return (
     <>
