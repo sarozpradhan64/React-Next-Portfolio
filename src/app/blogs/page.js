@@ -1,5 +1,5 @@
 import Image from "next/image";
-import SrzLayout from "@/components/SrzLayout";
+import FrontendLayout from "@/components/Layouts/FrontendLayout";
 import RevealOnScroll from "@/components/Reveal";
 import CardSkeleton from "@/components/skeleton/CardSkeleton";
 
@@ -61,7 +61,7 @@ export default async function Page() {
   }
 
   return (
-    <SrzLayout title="Blogs">
+    <FrontendLayout title="Blogs">
       {!posts ? (
         <div className="grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 md:gap-5">
           <CardSkeleton number={8} />
@@ -75,6 +75,6 @@ export default async function Page() {
       ) : (
         <h3 className="text-white">No Blogs yet</h3>
       )}
-    </SrzLayout>
+    </FrontendLayout>
   );
 }
