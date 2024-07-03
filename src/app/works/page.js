@@ -1,4 +1,4 @@
-import SrzLayout from "@/components/SrzLayout";
+import FrontendLayout from "@/components/Layouts/FrontendLayout";
 import WorkFilter from "./_partials/WorkFilter";
 import getWorks from "@/utils/getWorks";
 
@@ -13,8 +13,8 @@ export default async function Page() {
   }
 
   return (
-    <SrzLayout title="Works">
+    <FrontendLayout title="Works">
       <WorkFilter works={works} />
-    </SrzLayout>
+    </FrontendLayout>
   );
 }
