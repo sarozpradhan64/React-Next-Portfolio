@@ -57,8 +57,8 @@ export default function WorkFilter({ works }) {
 
   return (
     <>
-      <div className="mb-8">
-        <ul className="list-inline mb-0" id="portfolio-filters">
+      <div className="mb-12">
+        <ul className="md:flex md:justify-center list-inline mb-0" id="portfolio-filters">
           {["all", "website", "software", "mobile", "mini"].map((filter) => (
             <FilterButton
               key={filter}

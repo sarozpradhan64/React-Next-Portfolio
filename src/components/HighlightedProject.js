@@ -13,9 +13,13 @@ function HighlightedProject({featuredWorks}) {
 
   return (
     <div className="mt-16">
+      <div className="flex items-end justify-between">
       <h2 className="mb-3 text-2xl font-medium text-white">
         Highlighted Projects
       </h2>
+
+      <Link href={'/works'} className="text-primary md:inline hidden">View More</Link>
+      </div>
       <span className="h-[2px] bg-secondary w-20 mb-8 inline-block"></span>
       <p className="text-justify">
         Amongst many of my works and project that I put my footprint in, here
@@ -52,6 +56,8 @@ function HighlightedProject({featuredWorks}) {
           <h3 className="text-white">No works yet</h3>
         )}
       </div>
+
+      <Link href={'/works'} className="mt-8 text-center text-primary md:hidden block">View More</Link>
     </div>
   );
 }

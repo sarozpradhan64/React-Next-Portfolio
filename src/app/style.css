@@ -82,15 +82,7 @@ img {
   bottom: 80px;
   z-index: 99;
 }
-.my-6 {
-  margin-top: 6rem;
-  margin-bottom: 6rem;
-}
 
-.py-6 {
-  padding-top: 6rem;
-  padding-bottom: 6rem;
-}
 
 .container {
   width: 100%;
@@ -130,19 +122,6 @@ img {
   }
 }
 
-/*** Spinner ***/
-#spinner {
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.5s ease-out, visibility 0s linear 0.5s;
-  z-index: 99999;
-}
-
-#spinner.show {
-  transition: opacity 0.5s ease-out, visibility 0s linear 0s;
-  visibility: visible;
-  opacity: 1;
-}
 /* custom bg color  */
 .bg-primary {
   background-color: #6244c5 !important;
@@ -180,7 +159,14 @@ img {
 }
 
 /*** Navbar ***/
-
+.navigation_wrapper{
+  background-color: var(--dark);
+}
+.navigation_wrapper.sticky{
+  position: sticky;
+  top:0;
+  z-index: 50;
+}
 .nav-item {
   background: linear-gradient(var(--primary) 0 0) bottom / var(--d, 0) 3px
     no-repeat;

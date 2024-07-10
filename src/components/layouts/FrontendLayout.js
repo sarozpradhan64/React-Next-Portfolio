@@ -14,29 +14,13 @@ export default function FrontendLayout({ children, title, description }) {
   const currentDate = new Date();
   const currentYear = currentDate.getFullYear();
 
-  // useEffect( () => {
-  //   window.scrollTo({
-  //     top: 0,
-  //   });
-  // }, [])
-
   return (
     <>
       <Meta title={title} description={description} />
 
+      <Navigation />
+
       <div className="container">
-        <div className="relative">
-          <nav className="md:py-2 px-4 md:px-5 flex justify-between items-center absolute z-50 w-full">
-            <div>
-              <Link href={"/"}>
-                <h2 className="logo-title text-secondary">Srz</h2>
-              </Link>
-            </div>
-
-            <Navigation />
-          </nav>
-        </div>
-
         {/* children content  */}
         <div className="content-wrapper">
           <div>
