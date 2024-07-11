@@ -72,7 +72,7 @@ const Navigation = () => {
       </div>
 
       {/* mobile nav */}
-      <div className="md:hidden grid grid-cols-4 fixed left-0 right-0 bottom-0 bg-primary">
+      <div className="md:hidden grid grid-cols-4 fixed left-0 right-0 z-50 bottom-0 bg-primary">
         {links.map((link, index) => (
           <Link
             href={link.href}
