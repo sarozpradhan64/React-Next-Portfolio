@@ -8,7 +8,7 @@ import ScrollToTop from "../ScrollToTop";
 import Button from "../Button";
 import Navigation from "./Navigation";
 
-export default function FrontendLayout({ children, title, description }) {
+export default function FrontendLayout({ children, title, metaTitle, description }) {
   const socials = data.socials;
 
   const currentDate = new Date();
@@ -16,7 +16,7 @@ export default function FrontendLayout({ children, title, description }) {
 
   return (
     <>
-      <Meta title={title} description={description} />
+      <Meta title={metaTitle ? metaTitle : title} description={description} />
 
       <Navigation />
 
