@@ -2,8 +2,6 @@ import FrontendLayout from "@/components/layouts/FrontendLayout";
 import WorkFilter from "./_partials/WorkFilter";
 import getWorks from "@/utils/getWorks";
 
-
-
 export default async function Page() {
   let works;
   try {
