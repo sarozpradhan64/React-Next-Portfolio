@@ -1,7 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import Button from "@/components/Button";
-import RevealOnScroll from "@/components/Reveal";
 import FrontendLayout from "@/components/layouts/FrontendLayout";
 import metas from "@/data/metaData";
 import About1 from "../../public/img/about-1.jpg";
@@ -10,22 +9,22 @@ import Services from "@/components/Services";
 import HighlightedProject from "@/components/HighlightedProject";
 import { Suspense } from "react";
 import getWorks from "@/utils/getWorks";
+import SectionTitle from "@/components/SectionTitle";
+import getSkills from "@/utils/getSkills";
+import Skills from "@/components/Skills";
 
 export default async function Home() {
-  let featuredWorks;
-  try {
+
     const works = await getWorks();
-    featuredWorks = works.filter((item) => item.is_featured === true);
-  } catch (error) {
-    console.error("Error fetching works:", error);
-  }
+    const skills = await getSkills();
+   const featuredWorks = works.filter((item) => item.is_featured === true);
+
 
   return (
     <FrontendLayout>
-      <div>
         <div className="container" id="home">
           <div className="home-cover">
-            <div className="absolute lg:w-[500px] lg:h-[500px] 2xl:right-[200px] lg:right-[100px] lg:top-[45%] -translate-y-[50%] lg:block hidden">
+            <div className="absolute lg:w-[500px] lg:h-[500px] 2xl:right-[200px] lg:right-[100px] lg:top-[50%] -translate-y-[50%] lg:block hidden">
               <Image
                 src={metas.photoPath}
                 fill
@@ -64,10 +63,8 @@ export default async function Home() {
 
         <div className="grid md:grid-cols-2 gap-5">
           <div>
-            <h2 className="mb-3 text-2xl font-medium text-white">
-              Know About Me !
-            </h2>
-            <span className="h-[2px] bg-secondary w-20 mb-8 inline-block"></span>
+            <SectionTitle title={"Know about me !"} />
+         
             <p className="mb-4 text-justify">{metas.user.about}</p>
             <p className="mb-3">
               <i className="far fa-check-circle text-primary me-3"></i>
@@ -98,7 +95,10 @@ export default async function Home() {
         <Suspense fallback={<div>Loading</div>}>
           <HighlightedProject featuredWorks={featuredWorks} />
         </Suspense>
-      </div>
+
+        <Suspense fallback={<div>Loading</div>}>
+          <Skills skills={skills}/>
+        </Suspense>
     </FrontendLayout>
   );
 }

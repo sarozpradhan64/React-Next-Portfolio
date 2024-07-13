@@ -5,22 +5,23 @@ import RevealOnScroll from "./Reveal";
 import Image from "next/image";
 import Link from "next/link";
 import CardSkeleton from "./skeleton/CardSkeleton";
+import SectionTitle from "./SectionTitle";
 
 const wrapperClassNames =
   "grid lg:grid-cols-3 md:grid-cols-2 md:gap-x-5 md:gap-5 gap-4";
 
-function HighlightedProject({featuredWorks}) {
-
+function HighlightedProject({ featuredWorks }) {
   return (
     <div className="mt-16">
       <div className="flex items-end justify-between">
-      <h2 className="mb-3 text-2xl font-medium text-white">
-        Highlighted Projects
-      </h2>
+        
+        <SectionTitle title={"Highlighted Projects !"} />
 
-      <Link href={'/works'} className="text-primary md:inline hidden">View More</Link>
+        <Link href={"/works"} className="text-primary md:inline hidden">
+          View More
+        </Link>
       </div>
-      <span className="h-[2px] bg-secondary w-20 mb-8 inline-block"></span>
+      
       <p className="text-justify">
         Amongst many of my works and project that I put my footprint in, here
         are some of the major listings:
@@ -57,11 +58,14 @@ function HighlightedProject({featuredWorks}) {
         )}
       </div>
 
-      <Link href={'/works'} className="mt-8 text-center text-primary md:hidden block">View More</Link>
+      <Link
+        href={"/works"}
+        className="mt-8 text-center text-primary md:hidden block"
+      >
+        View More
+      </Link>
     </div>
   );
 }
-
-
 
 export default HighlightedProject;
