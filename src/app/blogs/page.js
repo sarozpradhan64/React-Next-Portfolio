@@ -1,5 +1,5 @@
 import Image from "next/image";
-import FrontendLayout from "@/components/Layouts/FrontendLayout";
+import FrontendLayout from "@/components/layouts/FrontendLayout";
 import RevealOnScroll from "@/components/Reveal";
 import CardSkeleton from "@/components/skeleton/CardSkeleton";
 

@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import FrontendLayout from "@/components/Layouts/FrontendLayout";
+import FrontendLayout from "@/components/layouts/FrontendLayout";
 import metas from "@/data/metaData";
 import Link from "next/link";
 import WorkDetailSkeleton from "@/components/skeleton/WorkDetailSkeleton";
