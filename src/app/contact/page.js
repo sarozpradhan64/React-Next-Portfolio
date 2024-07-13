@@ -1,45 +1,39 @@
 "use client";
 
 import React, { useRef, useState } from "react";
-import FrontendLayout from "@/components/Layouts/FrontendLayout";
+import FrontendLayout from "@/components/layouts/FrontendLayout";
 import metas from "@/data/metaData";
 import emailjs from "@emailjs/browser";
-import { CheckCircleIcon } from "@heroicons/react/20/solid";
+import {
+  CheckCircleIcon,
+  ExclamationCircleIcon,
+} from "@heroicons/react/20/solid";
 
 export default function Contact() {
   const form = useRef();
-  const [success, setSuccess] = useState(false);
+  const [message, setMessage] = useState(null);
   const [errors, setErrors] = useState({});
+  const [isLoading, setIsLoading] = useState(false);
 
   const sendEmail = (e) => {
     e.preventDefault();
+
+    setIsLoading(true);
 
     // Validate form fields
     const formData = new FormData(form.current);
     const newErrors = {};
 
-    if (!formData.get("first_name")) {
-      newErrors["first_name"] = "First name is required.";
+    for (const [key, value] of formData.entries()) {
+      if (!value) {
+        newErrors[key] = `The ${key.replace("_", " ")} is required.`;
+      } else if (key === "email" && !/\S+@\S+\.\S+/.test(value)) {
+        newErrors[key] = `The email is not valid.`;
+      }
     }
-    if (!formData.get("last_name")) {
-      newErrors["last_name"] = "Last name is required.";
-    }
-    if (!formData.get("mobile")) {
-      newErrors["mobile"] = "Mobile number is required.";
-    }
-    if (!formData.get("email")) {
-      newErrors["email"] = "Email is required.";
-    } else if (!/\S+@\S+\.\S+/.test(formData.get("email"))) {
-      newErrors["email"] = "Email is not valid.";
-    }
-
-    if (!formData.get("message")) {
-      newErrors["message"] = "Message is required.";
-    }
-
     if (Object.keys(newErrors).length > 0) {
       setErrors(newErrors);
-
+      setIsLoading(false);
       return;
     }
 
@@ -56,12 +50,15 @@ export default function Contact() {
       .then(
         () => {
           form.current.reset();
-          setSuccess(true);
+          setMessage({ success: true, message: "Message sent successfully." });
           setErrors({});
-          console.log("SUCCESS!");
+          setIsLoading(false);
         },
         (error) => {
           console.log("FAILED...", error);
+          setMessage({ success: false, message: error });
+          setIsLoading(false);
+          setErrors({});
         }
       );
   };
@@ -195,16 +192,30 @@ export default function Contact() {
               <div className="mt-10">
                 <button
                   type="submit"
-                  className="block w-full rounded-md bg-primary px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+                  className="flex justify-center items-center w-full rounded-md bg-primary px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
                 >
-                  Let’s talk
+                  {isLoading ? (
+                    <div className="btn-spinner"></div>
+                  ) : (
+                    "Let’s talk"
+                  )}
                 </button>
               </div>
-              {success && (
-                <div className="mt-4 text-green-600">
-                  <CheckCircleIcon className="h-6 inline me-1" /> Message sent
-                  successfully.
-                </div>
+
+              {message && (
+                <>
+                  {message?.success ? (
+                    <div className="mt-4 text-green-600">
+                      <CheckCircleIcon className="h-6 inline me-1" />{" "}
+                      {message?.message}
+                    </div>
+                  ) : (
+                    <div className="mt-4 text-red-600">
+                      <ExclamationCircleIcon className="h-6 inline me-1" />{" "}
+                      {message?.message}
+                    </div>
+                  )}
+                </>
               )}
             </form>
 
