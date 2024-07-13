@@ -2,13 +2,13 @@ import Image from "next/image";
 import React from "react";
 import data from "@/data/data";
 import RevealOnScroll from "./Reveal";
+import SectionTitle from "./SectionTitle";
 
 export default function Services() {
 const services = data.services;
 return (
 <div className="mt-8">
-    <h2 className="mb-3 text-2xl font-medium text-white">My Services !</h2>
-    <span className="h-[2px] bg-secondary w-20 mb-8 inline-block"></span>
+   <SectionTitle title={'My Services !'}/>
     <p className="text-justify">
         Whether you&apos;re looking to build a new website, develop a
         mobile app, improve your online visibility with digital marketing,
