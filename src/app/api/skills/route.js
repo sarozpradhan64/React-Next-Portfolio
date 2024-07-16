@@ -1,16 +1,16 @@
-import { promises as fs } from 'fs';
-import { NextResponse } from 'next/server'
+// import { promises as fs } from 'fs';
+// import { NextResponse } from 'next/server'
 
-export async function GET(request) {
+// export async function GET(request) {
     
-    try{
-        const file = await fs.readFile(process.cwd() + '/src/data/skills.json');
-        const data = await JSON.parse(file);
+//     try{
+//         const file = await fs.readFile(process.cwd() + '/src/data/skills.json');
+//         const data = await JSON.parse(file);
     
-        return NextResponse.json(data , {status:200})
-    }
-    catch(err){
-        return NextResponse.json({ err }, {status:200})
-    }
+//         return NextResponse.json(data , {status:200})
+//     }
+//     catch(err){
+//         return NextResponse.json({ err }, {status:200})
+//     }
 
-  }
+//   }

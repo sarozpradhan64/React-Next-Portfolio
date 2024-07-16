@@ -12,12 +12,14 @@ import getWorks from "@/utils/getWorks";
 import SectionTitle from "@/components/SectionTitle";
 import getSkills from "@/utils/getSkills";
 import Skills from "@/components/Skills";
+import workData from "@/data/workData";
+import skillsData from "@/data/skillData";
 
 export default async function Home() {
 
 
-  const works = await getWorks();
-  const skills = await getSkills();
+  const works = workData;
+  const skills = skillsData;
   const featuredWorks = works.filter((item) => item.is_featured === true);
 
   return (

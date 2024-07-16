@@ -1,4 +1,4 @@
-[
+const workData = [
   {
     "title": "Kumari Job",
     "slug": "kumari-job-web",
@@ -132,3 +132,6 @@
     "is_featured": false
   }
 ]
+
+
+export default workData;
