@@ -1,14 +1,10 @@
 import FrontendLayout from "@/components/layouts/FrontendLayout";
 import WorkFilter from "./_partials/WorkFilter";
-import getWorks from "@/utils/getWorks";
+import workData from "@/data/workData";
 
 export default async function Page() {
-  let works;
-  try {
-    works = await getWorks();
-  } catch (error) {
-    console.error("Error fetching works:", error);
-  }
+  
+  const works = workData
 
   return (
     <FrontendLayout title="Works">
