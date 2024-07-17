@@ -5,38 +5,36 @@ import metas from "@/data/metaData";
 import Link from "next/link";
 import WorkDetailSkeleton from "@/components/skeleton/WorkDetailSkeleton";
 import ShareButton from "../_partials/ShareButton";
-import getWorks from "@/utils/getWorks";
-
-
+import workData from "@/data/workData";
 
 export default async function Page({ params }) {
   let works;
   try {
-    works = await getWorks();
+    works = workData;
   } catch (error) {
     console.error("Error fetching works:", error);
   }
 
   const work = works ? works.find((w) => params.slug === w.slug) : {};
 
-  const handleShare = async function () {
-    try {
-      await navigator.share({
-        title: `${metas.user.name} | Project - ${work.title} `,
-        url: work.slug,
-      });
-      // console.log("Data was shared successfully");
-    } catch (err) {
-      alert("Your device doesnot support this feature");
-      // console.error("Share failed:", err.message);
-    }
-  };
+  // const handleShare = async function () {
+  //   try {
+  //     await navigator.share({
+  //       title: `${metas.user.name} | Project - ${work.title} `,
+  //       url: work.slug,
+  //     });
+  //     // console.log("Data was shared successfully");
+  //   } catch (err) {
+  //     alert("Your device doesnot support this feature");
+  //     // console.error("Share failed:", err.message);
+  //   }
+  // };
 
   return (
     <FrontendLayout title={`${work?.title || ""}`}>
       {!work ? (
         <WorkDetailSkeleton />
-      )  : (
+      ) : (
         <div className="grid md:grid-cols-5 gap-4">
           <div className="md:col-span-2 w-full">
             <div className="relative job-detail__image-holder w-full">
@@ -105,7 +103,7 @@ export default async function Page({ params }) {
                   </a>
                 )}
 
-                <ShareButton/>
+                <ShareButton title={work.title} url={`/works/${work.slug}`} />
               </div>
             </div>
           </div>

@@ -3,6 +3,7 @@
 import React from "react";
 
 export default function ShareButton({ title, url }) {
+  
   const handleShare = async function () {
     try {
       await navigator.share({
