@@ -17,19 +17,6 @@ export default async function Page({ params }) {
 
   const work = works ? works.find((w) => params.slug === w.slug) : {};
 
-  // const handleShare = async function () {
-  //   try {
-  //     await navigator.share({
-  //       title: `${metas.user.name} | Project - ${work.title} `,
-  //       url: work.slug,
-  //     });
-  //     // console.log("Data was shared successfully");
-  //   } catch (err) {
-  //     alert("Your device doesnot support this feature");
-  //     // console.error("Share failed:", err.message);
-  //   }
-  // };
-
   return (
     <FrontendLayout title={`${work?.title || ""}`}>
       {!work ? (

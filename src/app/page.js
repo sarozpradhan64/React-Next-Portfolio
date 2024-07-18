@@ -7,17 +7,13 @@ import About1 from "../../public/img/about-1.jpg";
 import About2 from "../../public/img/about-2.jpg";
 import Services from "@/components/Services";
 import HighlightedProject from "@/components/HighlightedProject";
-import { Suspense } from "react";
 import getWorks from "@/utils/getWorks";
 import SectionTitle from "@/components/SectionTitle";
-import getSkills from "@/utils/getSkills";
 import Skills from "@/components/Skills";
 import workData from "@/data/workData";
 import skillsData from "@/data/skillData";
 
 export default async function Home() {
-
-
   const works = workData;
   const skills = skillsData;
   const featuredWorks = works.filter((item) => item.is_featured === true);
@@ -94,13 +90,9 @@ export default async function Home() {
 
       <Services />
 
-      <Suspense fallback={<div>Loading</div>}>
-        <HighlightedProject featuredWorks={featuredWorks} />
-      </Suspense>
+      <Skills skills={skills} />
 
-      <Suspense fallback={<div>Loading</div>}>
-        <Skills skills={skills} />
-      </Suspense>
+      <HighlightedProject featuredWorks={featuredWorks} />
     </FrontendLayout>
   );
 }
