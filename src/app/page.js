@@ -63,7 +63,7 @@ export default async function Home() {
         <div>
           <SectionTitle title={"Know about me !"} />
 
-          <p className="mb-4 text-justify">{metas.user.about}</p>
+          <p className="mb-4 tracking-wide leading-relaxed">{metas.user.about}</p>
           <p className="mb-3">
             <i className="far fa-check-circle text-primary me-3"></i>
             Demand Analysis
@@ -80,10 +80,10 @@ export default async function Home() {
 
         <div className="grid md:grid-cols-2 gap-3 mb-4">
           <div>
-            <Image className="rounded" src={About1} alt="about" />
+            <Image src={About1} alt="about" />
           </div>
-          <div>
-            <Image className="rounded" src={About2} alt="about 2" />
+          <div className="md:block hidden">
+            <Image src={About2} alt="about 2" />
           </div>
         </div>
       </div>
