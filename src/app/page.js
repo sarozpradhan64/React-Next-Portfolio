@@ -79,10 +79,10 @@ export default async function Home() {
 
         <div className="grid md:grid-cols-2 gap-3 mb-4">
           <div>
-            <Image src={About1} alt="about" />
+            <Image className="md:rounded-lg rounded-sm" src={About1} alt="about" />
           </div>
           <div className="md:block hidden">
-            <Image src={About2} alt="about 2" />
+            <Image className="md:rounded-lg rounded-sm" src={About2} alt="about 2" />
           </div>
         </div>
       </div>
