@@ -39,6 +39,9 @@ export default function FrontendLayout({ children, title, metaTitle, description
         {/* children content end  */}
 
         {/* footer  */}
+        <div className="md:mt-32 mt-16 md:mb-0 mb-4 border-t border-gray-600">
+
+        </div>
         <div className="flex md:flex-row flex-col items-center justify-between text-white py-4 md:mb-0 mb-16">
           <div className="text-center md:text-start mb-3 md:mb-0">
             <i className="fa-regular fa-copyright"></i> {currentYear} |&nbsp;
@@ -56,7 +59,7 @@ export default function FrontendLayout({ children, title, metaTitle, description
                 href={social.href}
                 target={"_blank"}
               >
-                <Button size="md">{social.icon}</Button>
+                <Button color="transparent" size="md">{social.icon}</Button>
               </a>
             ))}
           </div>
