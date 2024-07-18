@@ -7,6 +7,7 @@ const colorClasses = {
     secondary: " bg-secondary border border-transparent text-white",
     danger: " bg-red-500 border border-red-500 text-white",
     warning: " bg-warning text-white",
+    transparent: " bg-transparent text-white",
 };
 
 const outlineClasses = {
