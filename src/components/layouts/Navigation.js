@@ -15,7 +15,7 @@ const Navigation = () => {
     window.scrollTo({ top: 0 });
 
     const handleScroll = () => {
-      if (window.scrollY > 850) {
+      if (window.scrollY > 500) {
         setSticky(true);
       } else {
         setSticky(false);
