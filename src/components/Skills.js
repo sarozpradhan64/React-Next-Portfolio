@@ -15,7 +15,7 @@ const Skills = ({ skills }) => {
   console.log(skills);
 
   return (
-    <div className="mt-16">
+    <div className="mt-32">
       <SectionTitle title="My Skills !" />
       <div className="grid lg:grid-cols-6 md:grid-cols-4 grid-cols-2 gap-4">
         {displayedSkills.map((skill) => (

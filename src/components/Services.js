@@ -7,7 +7,7 @@ import SectionTitle from "./SectionTitle";
 export default function Services() {
   const services = data.services;
   return (
-    <div className="mt-8">
+    <div className="mt-32">
       <SectionTitle title={"My Services !"} />
       <p className="text-justify">
         Whether you&apos;re looking to build a new website, develop a mobile
