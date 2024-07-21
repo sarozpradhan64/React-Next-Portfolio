@@ -27,7 +27,7 @@ export default function Services() {
                 revealGroupName={"service-card"}
               >
                 <div className="bg-[#1C1F26] sm:p-4 p-2 flex flex-row  md:gap-4 gap-2  rounded-md border border-transparent hover:border-gray-600">
-                  <div className="md:w-1/5 min-h-[60px] w-[30%] relative">
+                  <div className="md:w-1/5 sm:h-auto h-[60px] w-[30%] relative">
                     <Image
                       src={service.thumbnail}
                       fill
@@ -38,7 +38,7 @@ export default function Services() {
                     <h5 className="sm:text-md text-sm text-white sm:mb-2 mb-1">
                       {service.title}
                     </h5>
-                    <p className="sm:text-sm text-xs md:leading-6">
+                    <p className="text-sm md:leading-6">
                       {service.description}
                     </p>
                   </div>
