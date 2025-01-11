@@ -1,4 +1,6 @@
-## React | Next.js | Portfolio : [Demo](https://pradhansaroj.com.np)
+## [Developer Portfolio in Next.js](https://pradhansaroj.com.np)
+
+![image](https://github.com/user-attachments/assets/774e2489-daa2-4544-b612-6a6816743e3e)
 
 
 ### Setup
