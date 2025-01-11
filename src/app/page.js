@@ -7,7 +7,6 @@ import About1 from "../../public/img/about-1.jpg";
 import About2 from "../../public/img/about-2.jpg";
 import Services from "@/components/Services";
 import HighlightedProject from "@/components/HighlightedProject";
-import getWorks from "@/utils/getWorks";
 import SectionTitle from "@/components/SectionTitle";
 import Skills from "@/components/Skills";
 import workData from "@/data/workData";
