@@ -7,7 +7,8 @@ import WorkDetailSkeleton from "@/components/skeleton/WorkDetailSkeleton";
 import ShareButton from "../_partials/ShareButton";
 import workData from "@/data/workData";
 
-export default async function Page({ params }) {
+export default async function Page(props) {
+  const params = await props.params;
   let works;
   try {
     works = workData;

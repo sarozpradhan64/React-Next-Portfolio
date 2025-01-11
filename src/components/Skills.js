@@ -12,8 +12,6 @@ const Skills = ({ skills }) => {
     [loadMore, skills]
   );
 
-  console.log(skills);
-
   return (
     <div className="mt-32">
       <SectionTitle title="My Skills !" />
@@ -40,9 +38,11 @@ const Skills = ({ skills }) => {
       </div>
 
       <div className="mt-12 flex justify-center">
-        <Button color="primary" onClick={() => setLoadMore(!loadMore)}>
-          {loadMore ? "View Less.." : "Load More.."}
-        </Button>
+        {!loadMore && (
+          <Button color="primary" onClick={() => setLoadMore(!loadMore)}>
+            Load More
+          </Button>
+        )}
       </div>
     </div>
   );
