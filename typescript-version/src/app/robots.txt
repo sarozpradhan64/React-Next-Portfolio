@@ -1,0 +1,4 @@
+User-Agent: *
+Allow:/
+
+Sitemap: https://www.pradhansaroj.com.np/sitemap.xml
