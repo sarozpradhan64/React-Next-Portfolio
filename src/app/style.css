@@ -45,16 +45,6 @@ img {
   background: #314163;
 }
 
-.object-cover {
-  object-fit: cover;
-}
-
-.text-justify {
-  text-align: justify;
-}
-.pointer {
-  cursor: pointer;
-}
 /* Set the initial opacity to 0 and transition to 0.5 seconds */
 .reveal-on-scroll {
   opacity: 0;
@@ -221,7 +211,6 @@ img {
   font-size: 40px;
 }
 
-
 .typed-cursor {
   font-size: 30px;
   color: var(--dark);
@@ -231,7 +220,6 @@ img {
   padding: 50px 0;
   min-height: 90vh;
 }
-
 
 /*** work Portfolio ***/
 #portfolio-filters li {
