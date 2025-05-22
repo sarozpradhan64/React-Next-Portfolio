@@ -9,6 +9,6 @@ export interface Work {
   image: string;
   description: string;
   role: string;
-  stack: string;
+  stacks: string[];
   is_featured: boolean;
 }
