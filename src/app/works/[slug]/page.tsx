@@ -49,7 +49,7 @@ export default async function Page({
       ) : (
         <div className="grid md:grid-cols-5 gap-4">
           <div className="md:col-span-2 w-full">
-            <div className="relative job-detail__image-holder w-full">
+            <div className="relative job-detail__image-holder w-full rounded-xl">
               <Image
                 src={work.image}
                 alt={`saroj pradhan's work ${work.title}`}
@@ -85,7 +85,7 @@ export default async function Page({
 
                 <div className="md:w-4/12">
                   <h5 className="md:mb-2 mb-0 text-white">Tech Stack</h5>
-                  <p>{work.stack}</p>
+                  <p>{work.stacks.join(", ")}</p>
                 </div>
 
                 <div className="md:w-2/12">

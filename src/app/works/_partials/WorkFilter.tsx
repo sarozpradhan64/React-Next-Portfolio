@@ -6,6 +6,7 @@ import Link from "next/link";
 import { Work } from "@/types/work";
 import RevealOnScroll from "@/components/Reveal";
 import { strTitle } from "@/utils/helpers/stringHelper";
+import Badge from "@/components/Badge";
 
 interface FilterButtonProps {
   filter: string;
@@ -14,25 +15,40 @@ interface FilterButtonProps {
 }
 
 // Work filter buttons
-function FilterButton({ filter, active, onClick }: FilterButtonProps) {
+function FilterButton({
+  filter,
+  active,
+  onClick,
+}: Readonly<FilterButtonProps>) {
   return (
-    <li
+    <button
+      type="button"
       className={`mx-3 md:mb-2 mb-4 cursor-pointer ${
         active === filter ? "active" : "text-white"
       }`}
       onClick={() => onClick(filter)}
     >
       {filter === "all" ? "All Projects" : strTitle(filter)}
-    </li>
+    </button>
   );
 }
 
 // each work card item
-function WorkItem({ work }: { work: Work }) {
+function WorkItem({ work }: { readonly work: Work }) {
+  const colors: string[] = [
+    "red",
+    "yellow",
+    "green",
+    "blue",
+    "indigo",
+    "purple",
+    "pink",
+  ];
+
   return (
     <RevealOnScroll className="portfolio-item" revealGroupName="work-card">
       <div
-        className="portfolio-img rounded relative"
+        className="portfolio-img rounded-xl relative"
         style={{ height: "250px" }}
       >
         <Image
@@ -42,20 +58,32 @@ function WorkItem({ work }: { work: Work }) {
           fill
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
         />
-        <div className="portfolio-btn absolute inset-0 flex flex-col items-center justify-center bg-black bg-opacity-50 opacity-0 hover:opacity-100 transition-opacity duration-300">
+
+        <div className="portfolio-btn z-[100] rounded-xl absolute inset-0 flex flex-col items-center justify-center bg-black bg-opacity-50 opacity-0 hover:opacity-100 transition-opacity duration-300">
           <Link href={`/works/${work.slug}`}>
-            <h4 className="portfolio-hover-title text-white text-center">
+            <h4 className="portfolio-hover-title text-white text-center hover:underline">
               {work.title}
             </h4>
-            <p className="text-center text-white">View Details</p>
           </Link>
         </div>
+        <div className="absolute z-50 bottom-2 left-2">
+          <h4 className="text-white mb-2">{work.title}</h4>
+          <div className="space-x-2">
+            {work.stacks.map((stack, index) => (
+              <Badge key={index} color={colors[index]}>
+                {stack}
+              </Badge>
+            ))}
+          </div>
+        </div>
+
+        <div className="absolute inset-0 z-10 bg-gradient-to-t from-gray-900 via-gray-900/40"></div>
       </div>
     </RevealOnScroll>
   );
 }
 
-export default function WorkFilter({ works }: { works: Work[] }) {
+export default function WorkFilter({ works }: { readonly works: Work[] }) {
   const [active, setActive] = useState("all");
 
   const handleFilter = useCallback((filterValue: string) => {
@@ -85,17 +113,21 @@ export default function WorkFilter({ works }: { works: Work[] }) {
         </ul>
       </div>
 
-      {!works ? (
-        <h3 className="text-white">Error fetching data</h3>
-      ) : filteredWorks.length > 0 ? (
-        <div className="grid lg:grid-cols-3 md:grid-cols-2 md:gap-x-5 md:gap-5 gap-4">
-          {filteredWorks.map((work) => (
-            <WorkItem key={work.title} work={work} />
-          ))}
-        </div>
-      ) : (
-        <h3 className="text-white">No works yet</h3>
-      )}
+      {(() => {
+        if (!works) {
+          return <h3 className="text-white">Error fetching data</h3>;
+        } else if (filteredWorks.length > 0) {
+          return (
+            <div className="grid lg:grid-cols-3 md:grid-cols-2 md:gap-x-5 md:gap-5 gap-4">
+              {filteredWorks.map((work) => (
+                <WorkItem key={work.title} work={work} />
+              ))}
+            </div>
+          );
+        } else {
+          return <h3 className="text-white">No works yet</h3>;
+        }
+      })()}
     </>
   );
 }

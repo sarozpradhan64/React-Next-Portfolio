@@ -10,7 +10,7 @@ const workData = [
     description:
       "Employer dashboard built in Next.js where employers can purchase the plan, post the job, view the applicants and hire them.",
     role: "Fullstack Development",
-    stack: "Laravel, React, Next.js",
+    stacks: ["Laravel", "React", "Next.js"],
     is_featured: true,
   },
   {
@@ -24,7 +24,7 @@ const workData = [
     description:
       "A comprehensive application to manage the trainings and learnings. It also consists of LMS and online quiz/examination system.",
     role: "Team Lead",
-    stack: "Laravel, React, Next.js",
+    stacks: ["Laravel", "React", "Next.js"],
     is_featured: true,
   },
   {
@@ -38,7 +38,7 @@ const workData = [
     description:
       "An employee and assets management has never been simple with this latest HRMS application.",
     role: "Team Lead",
-    stack: "Laravel, React, Next.js",
+    stacks: ["Laravel", "React", "Next.js"],
     is_featured: true,
   },
   {
@@ -52,7 +52,7 @@ const workData = [
     description:
       "The Pace Infosys is a beacon of innovation and excellence in digital marketing and software development.",
     role: "Project Management",
-    stack: "Laravel, React, Next.js",
+    stacks: ["Laravel", "React", "Next.js"],
     is_featured: true,
   },
   {
@@ -66,7 +66,7 @@ const workData = [
     description:
       "Jobseeker mobile app to browse jobs and submit their applications.",
     role: "Backend Development",
-    stack: "Laravel, Rest API",
+    stacks: ["Laravel", "Rest API"],
     is_featured: true,
   },
   {
@@ -80,7 +80,7 @@ const workData = [
     description:
       "Kumari Job Pvt. Ltd. is Nepal's no.1 Job Portal and a Human Resource consulting firm providing one stop HR services along with leading job portal named www.kumarijob.com in Nepal since 2014.",
     role: "Backend Development",
-    stack: "Laravel, Rest API, Firebase",
+    stacks: ["Laravel", "Rest API", "Firebase"],
     is_featured: true,
   },
 
@@ -95,7 +95,7 @@ const workData = [
     description:
       "SAS is a distinguished consultancy firm all set to offer exceptional IELTS Classes. Study in Canada, Australia, The UK, and The USA.",
     role: "FullStack Development",
-    stack: "Laravel, Inertia.js, React.js",
+    stacks: ["Laravel", "Inertia.js", "React.js"],
     is_featured: false,
   },
   {
@@ -109,7 +109,7 @@ const workData = [
     description:
       "A training institute, a team of dedicated professionals who share a common love for crafting exceptional beverages and empowering individuals to thrive in the hospitality industry",
     role: "FullStack Development",
-    stack: "Django, Tailwind",
+    stacks: ["Django", "Tailwind"],
     is_featured: false,
   },
   {
@@ -123,7 +123,7 @@ const workData = [
     description:
       "Pasa HRMS is the inhouse software of Pasa International Pvt. Ltd. which is a manpower recruitment agency itself. In order to maintain documents of huge number of candidates, this system was built. ",
     role: "FullStack Development",
-    stack: "Laravel, Docker, VPS",
+    stacks: ["Laravel", "Docker", "VPS"],
     is_featured: true,
   },
 
@@ -138,7 +138,7 @@ const workData = [
     description:
       "Pasa International Pvt. Ltd. is a manpower recruitment agency located at Kupondole, Nepal. Pasa is one of the best consulting agency in the country.",
     role: "FullStack Development",
-    stack: "Laravel, Bootstrap",
+    stacks: ["Laravel", "Bootstrap"],
     is_featured: true,
   },
   {
@@ -152,7 +152,7 @@ const workData = [
     description:
       "Al-rimal Website is developed for the purpose of blogging to assist user with career tips and self growth blogs. Its website also list various job positions available in UAE",
     role: "Backend Development",
-    stack: "SEO, Analytics, Adsense, Django, DRF, Next.js, Tailwind",
+    stacks: ["Django", "DRF", "Next.js", "Tailwind", "SEO"],
     is_featured: false,
   },
   {
@@ -166,7 +166,7 @@ const workData = [
     description:
       "Good Neighbors Nepal (GNN) is a non-government organization, established in 2002 at Kathmandu",
     role: "Backend Development",
-    stack: "Django, Bootstrap",
+    stacks: ["Django", "Bootstrap"],
     is_featured: false,
   },
   {
@@ -177,9 +177,10 @@ const workData = [
     href: "https://pradhansaroj.com.np",
     source: null,
     image: "/img/works/portfolio.png",
-    description: "A Developer portfolio template built in Next.js with Typescript and Tailwind css.",
+    description:
+      "A Developer portfolio template built in Next.js with Typescript and Tailwind css.",
     role: "Personal Project",
-    stack: "React, Next.js, Tailwind",
+    stacks: ["React", "Next.js", "Tailwind"],
     is_featured: false,
   },
   {
@@ -193,7 +194,7 @@ const workData = [
     description:
       "Gyann Hub is a web application that consists of a quiz, notes, syllabus, old questions, and solutions. It is a comprehensive educational tool for students and educators. The quiz feature allows users to test their knowledge and understanding of various subjects, while the notes section provides a place for users to take and organize notes on specific topics. The syllabus feature gives users access to the curriculum for a particular course or subject, and the old questions and solutions section provides users with past exam questions and their corresponding solutions. This web application is a valuable resource for both students preparing for exams and educators looking to supplement their lesson plans and assignments.",
     role: "FullStack Development",
-    stack: "Django, Bootstrap, Jquery",
+    stacks: ["Django", "Bootstrap", "Jquery"],
     is_featured: false,
   },
   {
@@ -207,7 +208,7 @@ const workData = [
     description:
       "Blaze Codes is a blog application that allows users to create and publish blog posts, articles, and tutorials on a wide range of topics related to web development, programming, and the latest technology. It provides a simple and easy-to-use interface for creating and editing blog content, and allows users to customize the appearance of their blogs. With this application, users can share their knowledge and experience with the web development, programming, and technology communities, and engage with other users through comments and discussions. It is an ideal platform for developers, programmers, and tech enthusiasts to share their insights, ideas, and expertise with a global audience.",
     role: "Backend Development",
-    stack: "Django, React.js, Next.js, Tailwind",
+    stacks: ["Django", "React.js", "Next.js", "Tailwind"],
     is_featured: false,
   },
   {
@@ -221,7 +222,7 @@ const workData = [
     description:
       "It is a static todo listing app which is composed of local storage feature. Also it has filteration option according to complete and uncompleted task",
     role: "Frontend Development",
-    stack: "React",
+    stacks: ["React"],
     is_featured: false,
   },
 ];
