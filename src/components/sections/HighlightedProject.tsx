@@ -1,18 +1,24 @@
 import React from "react";
-import RevealOnScroll from "../Reveal";
-import Image from "next/image";
 import Link from "next/link";
+import RevealOnScroll from "../Reveal";
 import SectionTitle from "../SectionTitle";
 import { Work } from "@/types/work";
+import WorkCard from "../WorkCard";
+import { MoveRight } from "lucide-react";
 
-function HighlightedProject({ featuredWorks }: { featuredWorks: Work[] }) {
+function HighlightedProject({
+  featuredWorks,
+}: {
+  readonly featuredWorks: ReadonlyArray<Work>;
+}) {
   return (
     <div className="mt-32">
       <div className="flex items-end justify-between">
         <SectionTitle title={"Highlighted Projects !"} />
 
-        <Link href={"/works"} className="text-primary md:inline hidden">
+        <Link href={"/works"} className="text-secondary md:inline hidden">
           View More
+          <MoveRight className="inline ml-2" size={16} />
         </Link>
       </div>
 
@@ -21,39 +27,20 @@ function HighlightedProject({ featuredWorks }: { featuredWorks: Work[] }) {
         are some of the major listings:
       </p>
 
-      <div className="mt-8">
-        {featuredWorks && featuredWorks.length >= 1 ? (
-          <div
-            className={
-              "grid lg:grid-cols-3 md:grid-cols-2 md:gap-x-5 md:gap-5 gap-4"
-            }
+      <div
+        className={
+          "mt-8 grid lg:grid-cols-3 md:grid-cols-2 md:gap-x-5 md:gap-5 gap-4"
+        }
+      >
+        {featuredWorks.map((work, index) => (
+          <RevealOnScroll
+            key={index}
+            className="portfolio-item"
+            revealGroupName={"work-card"}
           >
-            {featuredWorks.map((work, index) => (
-              <RevealOnScroll
-                key={index}
-                className="portfolio-item"
-                revealGroupName={"work-card"}
-              >
-                <div className="portfolio-img rounded">
-                  <Image
-                    className="img-fluid object-cover"
-                    src={work.image}
-                    alt={work.title}
-                    fill
-                  />
-                  <div className="portfolio-btn relative">
-                    <Link href={`/works/${work.slug}`}>
-                      <h4 className="portfolio-hover-title">{work.title}</h4>
-                      <p className="text-center text-white">View Details</p>
-                    </Link>
-                  </div>
-                </div>
-              </RevealOnScroll>
-            ))}
-          </div>
-        ) : (
-          <h3 className="text-white">No works yet</h3>
-        )}
+            <WorkCard work={work} />
+          </RevealOnScroll>
+        ))}
       </div>
 
       <Link

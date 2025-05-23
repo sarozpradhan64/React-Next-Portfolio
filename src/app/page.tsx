@@ -1,4 +1,3 @@
-
 import FrontendLayout from "@/components/layouts/FrontendLayout";
 import Services from "@/components/sections/Services";
 import HighlightedProject from "@/components/sections/HighlightedProject";
@@ -15,11 +14,11 @@ export default async function Home() {
 
   return (
     <FrontendLayout>
-      <Hero/>
-      <About/>
+      <Hero />
+      <About />
       <Services />
       <Skills skills={skills} />
-      <HighlightedProject featuredWorks={featuredWorks} />
+      {featuredWorks && <HighlightedProject featuredWorks={featuredWorks} />}
     </FrontendLayout>
   );
 }
