@@ -5,7 +5,7 @@ const metas = {
     name: "Saroj Pradhan",
     email: "sarozpradhan64@gmail.com",
     whoAmI: "FullStack Developer",
-    about: `Mr. Saroj Pradhan is an experienced Software Developer with expertise in Laravel, Django, and React. Specializing in building scalable, high-performance web applications. Passionate about leveraging the latest technologies to deliver innovative and reliable solutions`,
+    about: `I am an experienced software developer with expertise in building scalable, high-performance applications. I am passionate about leveraging the latest technologies to deliver innovative and reliable solutions.`,
   },
   title: "Saroj Pradhan | Fullstack Developer: Python, Javascript, PHP",
   description:

@@ -6,6 +6,7 @@ import Skills from "@/components/sections/Skills";
 import workData from "@/data/workData";
 import skillsData from "@/data/skillData";
 import Hero from "@/components/sections/Hero";
+import About from "@/components/sections/About";
 
 export default async function Home() {
   const works = workData;
@@ -15,6 +16,7 @@ export default async function Home() {
   return (
     <FrontendLayout>
       <Hero/>
+      <About/>
       <Services />
       <Skills skills={skills} />
       <HighlightedProject featuredWorks={featuredWorks} />
