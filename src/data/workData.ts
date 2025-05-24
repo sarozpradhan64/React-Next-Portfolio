@@ -1,14 +1,14 @@
 const workData = [
   {
-    title: "Employer Dashboard",
-    slug: "employer-dashboard",
+    title: "Recruitment Management System",
+    slug: "recruitment-management-system",
     type: "software",
     year: 2024,
     href: "https://employer.kumarijob.com",
     source: null,
     image: "/img/works/employer.jpg",
     description:
-      "Employer dashboard built in Next.js where employers can purchase the plan, post the job, view the applicants and hire them.",
+      "Recruitment Management System is built in Next.js where employers can purchase the plan, post the job, view the applicants and hire them.",
     role: "Fullstack Development",
     stacks: ["Laravel", "React", "Next.js"],
     is_featured: true,
