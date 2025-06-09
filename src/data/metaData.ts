@@ -1,13 +1,13 @@
 const metas = {
-  google_analytics_id: "G-1618WEC7X4",
-  google_adsense_id: "ca-pub-7025574296219229",
+  google_analytics_id: process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS,
+  google_adsense_id: process.env.NEXT_PUBLIC_GOOGLE_ADSENSE,
   user: {
     name: "Saroj Pradhan",
     email: "sarozpradhan64@gmail.com",
-    whoAmI: "FullStack Developer",
+    whoAmI: "Software Engineer",
     about: `I am an experienced software developer with expertise in building scalable, high-performance applications. I am passionate about leveraging the latest technologies to deliver innovative and reliable solutions.`,
   },
-  title: "Saroj Pradhan | Fullstack Developer: Python, Javascript, PHP",
+  title: "Saroj Pradhan | Freelancer, Software Engineer, Web Developer",
   description:
     "Transform your business with Saroj Pradhan's expertise. Custom websites, apps & software tailored for growth. Innovative solutions, optimized performance.",
   photoPath: "/img/photo.webp",
