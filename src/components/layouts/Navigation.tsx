@@ -4,6 +4,7 @@ import React, { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 import data from "@/data/data";
 import { BriefcaseBusiness, House, Mail } from "lucide-react";
+import { ArrowTopRightOnSquareIcon } from "@heroicons/react/24/outline";
 
 const Navigation = () => {
   const links = [
@@ -11,26 +12,26 @@ const Navigation = () => {
       title: "home",
       href: "/",
       isExternal: false,
-      icon: <House className="w-4 inline me-4" />,
+      icon: <House className="w-4 inline md:me-4 me-2" />,
     },
 
     {
       title: "works",
       isExternal: false,
       href: "/works",
-      icon: <BriefcaseBusiness className="w-4 inline me-4" />,
-    },
-    {
-      title: "blogs",
-      isExternal: true,
-      href: "https://blazecodes.pradhansaroj.com.np/?utm_source=saroj-portfolio&utm_id=blazecodes-srz",
-      icon: <BriefcaseBusiness className="w-4 inline me-4" />,
+      icon: <BriefcaseBusiness className="w-4 inline md:me-4 me-2" />,
     },
     {
       title: "contact",
       isExternal: false,
       href: "/contact",
-      icon: <Mail className="w-4 inline me-4" />,
+      icon: <Mail className="w-4 inline md:me-4 me-2" />,
+    },
+    {
+      title: "blogs",
+      isExternal: true,
+      href: "https://blazecodes.pradhansaroj.com.np/?utm_source=saroj-portfolio&utm_id=blazecodes-srz",
+      icon: <BriefcaseBusiness className="w-4 inline md:me-4 me-2" />,
     },
   ];
   const pathname = usePathname();
@@ -90,7 +91,10 @@ const Navigation = () => {
                         : ""
                     } nav-item text-white px-3 py-2  mx-2`}
                   >
-                    {link.title.toUpperCase()}
+                    {link.title.toUpperCase()}{" "}
+                    {link.isExternal && (
+                      <ArrowTopRightOnSquareIcon className="h-4 w-4 inline mb-1 ml-1" />
+                    )}
                   </Link>
                 ))}
               </div>
@@ -117,9 +121,14 @@ const Navigation = () => {
                           : ""
                       } mobile-nav-item text-white flex justify-center items-center py-4`}
           >
-            <div className="me-1">{link.icon}</div>
+            <div>{link.icon}</div>
 
-            <span style={{ fontSize: "12px" }}>{link.title.toUpperCase()}</span>
+            <span style={{ fontSize: "12px" }}>
+              {link.title.toUpperCase()}{" "}
+              {link.isExternal && (
+                <ArrowTopRightOnSquareIcon className="h-3 w-3 inline mb-1" />
+              )}
+            </span>
           </Link>
         ))}
       </div>
