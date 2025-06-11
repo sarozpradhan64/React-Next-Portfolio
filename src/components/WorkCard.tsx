@@ -1,20 +1,10 @@
-import { Work } from "@/types/work";
-import Image from "next/image";
-import Link from "next/link";
 import React from "react";
+import Link from "next/link";
+import Image from "next/image";
+import { Work } from "@/types/work";
 import Badge from "./Badge";
 
 const WorkCard = ({ work }: { work: Work }) => {
-  const colors: string[] = [
-    "red",
-    "yellow",
-    "green",
-    "blue",
-    "indigo",
-    "purple",
-    "pink",
-  ];
-
   return (
     <div
       className="portfolio-img rounded-xl relative"
@@ -39,7 +29,7 @@ const WorkCard = ({ work }: { work: Work }) => {
         <h4 className="text-white mb-2">{work.title}</h4>
         <div className="space-x-2">
           {work.stacks.map((stack, index) => (
-            <Badge key={index} color={colors[index]}>
+            <Badge key={index} color={"gray"}>
               {stack}
             </Badge>
           ))}
