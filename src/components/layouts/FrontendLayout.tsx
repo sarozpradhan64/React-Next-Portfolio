@@ -6,7 +6,6 @@ import { strTitle } from "@/utils/helpers/stringHelper";
 import {
   ChevronRight,
   Copyright,
-  Facebook,
   Github,
   Instagram,
   Linkedin,
@@ -28,13 +27,8 @@ const FrontendLayout: React.FC<FrontendLayoutProps> = ({ children, title }) => {
     },
     {
       title: "linkedin",
-      href: "https://www.linkedin.com/in/saroj-pradhan-4628831a1/",
+      href: "https://www.linkedin.com/in/saroj-pradhan-np/",
       icon: <Linkedin className="w-4" />,
-    },
-    {
-      title: "facebook",
-      href: "https://facebook.com/srz.prdhn",
-      icon: <Facebook className="w-4" />,
     },
     {
       title: "instagram",
