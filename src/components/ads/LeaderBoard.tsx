@@ -29,8 +29,7 @@ const LeaderBoard = () => {
           >
             <img
               src="https://babal.host/img/affiliate/320x50MobileLeaderboard.png"
-              width="320"
-              height="50"
+              width="400"
               className="rounded-md shadow-sm"
             />
           </a>
