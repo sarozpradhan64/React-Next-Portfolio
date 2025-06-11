@@ -1,40 +1,42 @@
 "use client";
-import Link from "next/link";
+
 import React, { useEffect, useState } from "react";
+import Link from "next/link";
 import { usePathname } from "next/navigation";
-import data from "@/data/data";
 import { BriefcaseBusiness, House, Mail } from "lucide-react";
 import { ArrowTopRightOnSquareIcon } from "@heroicons/react/24/outline";
 
-const Navigation = () => {
-  const links = [
-    {
-      title: "home",
-      href: "/",
-      isExternal: false,
-      icon: <House className="w-4 inline md:me-4 me-2" />,
-    },
+const links = [
+  {
+    title: "home",
+    href: "/",
+    isExternal: false,
+    icon: <House className="w-4 inline md:me-4 me-2" />,
+  },
 
-    {
-      title: "works",
-      isExternal: false,
-      href: "/works",
-      icon: <BriefcaseBusiness className="w-4 inline md:me-4 me-2" />,
-    },
-    {
-      title: "contact",
-      isExternal: false,
-      href: "/contact",
-      icon: <Mail className="w-4 inline md:me-4 me-2" />,
-    },
-    {
-      title: "blogs",
-      isExternal: true,
-      href: "https://blazecodes.pradhansaroj.com.np/?utm_source=saroj-portfolio&utm_id=blazecodes-srz",
-      icon: <BriefcaseBusiness className="w-4 inline md:me-4 me-2" />,
-    },
-  ];
+  {
+    title: "works",
+    isExternal: false,
+    href: "/works",
+    icon: <BriefcaseBusiness className="w-4 inline md:me-4 me-2" />,
+  },
+  {
+    title: "contact",
+    isExternal: false,
+    href: "/contact",
+    icon: <Mail className="w-4 inline md:me-4 me-2" />,
+  },
+  {
+    title: "blogs",
+    isExternal: true,
+    href: "https://blazecodes.pradhansaroj.com.np/?utm_source=saroj-portfolio&utm_id=blazecodes-srz",
+    icon: <BriefcaseBusiness className="w-4 inline md:me-4 me-2" />,
+  },
+];
+
+const Navigation = () => {
   const pathname = usePathname();
+  const isHomePage = pathname === "/";
 
   const [isSticky, setSticky] = useState(false);
 
@@ -43,7 +45,9 @@ const Navigation = () => {
     window.scrollTo({ top: 0 });
 
     const handleScroll = () => {
-      if (window.scrollY > 500) {
+      const scrollUntil = isHomePage ? 500 : 0;
+
+      if (window.scrollY > scrollUntil) {
         setSticky(true);
       } else {
         setSticky(false);
@@ -52,7 +56,6 @@ const Navigation = () => {
 
     window.addEventListener("scroll", handleScroll);
 
-    // remove event listener when the component is unmounted
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
@@ -62,10 +65,12 @@ const Navigation = () => {
     <>
       <div
         className={`${
-          isSticky ? "sticky shadow-sm" : ""
+          isSticky ? "sticky" : ""
         }  md:block hidden navigation_wrapper`}
       >
-        <div className="container">
+        <div
+          className={`container ${isSticky ? "border-b border-gray-700" : ""}`}
+        >
           <nav className=" md:py-2 px-4 md:px-5 flex justify-between items-center  w-full">
             <div>
               <Link href={"/"}>
