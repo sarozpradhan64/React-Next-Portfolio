@@ -29,7 +29,7 @@ const links = [
   {
     title: "blogs",
     isExternal: true,
-    href: "https://blazecodes.pradhansaroj.com.np/?utm_source=saroj-portfolio&utm_id=blazecodes-srz",
+    href: "https://blazecodes.sarojpradhan.com.np/?utm_source=saroj-portfolio&utm_id=blazecodes-srz",
     icon: <BriefcaseBusiness className="w-4 inline md:me-4 me-2" />,
   },
 ];

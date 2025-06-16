@@ -174,7 +174,7 @@ const workData = [
     slug: "developer-portfolio",
     type: "open source",
     year: 2023,
-    href: "https://pradhansaroj.com.np",
+    href: "https://sarojpradhan.com.np",
     source: null,
     image: "/img/works/portfolio.png",
     description:
@@ -202,13 +202,13 @@ const workData = [
     slug: "blazecodes",
     type: "website",
     year: 2022,
-    href: "https://blazecodes.pradhansaroj.com.np",
+    href: "https://blazecodes.sarojpradhan.com.np",
     source: null,
     image: "/img/works/blazecodes.png",
     description:
       "Blaze Codes is a blog application that allows users to create and publish blog posts, articles, and tutorials on a wide range of topics related to web development, programming, and the latest technology. It provides a simple and easy-to-use interface for creating and editing blog content, and allows users to customize the appearance of their blogs. With this application, users can share their knowledge and experience with the web development, programming, and technology communities, and engage with other users through comments and discussions. It is an ideal platform for developers, programmers, and tech enthusiasts to share their insights, ideas, and expertise with a global audience.",
     role: "Backend Development",
-    stacks: ["Django", "React.js", "Next.js", "Tailwind"],
+    stacks: ["Laravel", "React.js", "Inertia.js", "Tailwind"],
     is_featured: false,
   },
   {
