@@ -5,6 +5,7 @@ import Image from "next/image";
 import SectionTitle from "../SectionTitle";
 import Button from "../Button";
 import { Skill } from "@/types/skill";
+import { ChevronDownIcon } from "@heroicons/react/24/outline";
 
 const Skills = ({ skills }: { skills: Skill[] }) => {
   const [loadMore, setLoadMore] = useState(false);
@@ -15,7 +16,7 @@ const Skills = ({ skills }: { skills: Skill[] }) => {
 
   return (
     <div className="mt-32">
-      <SectionTitle title="My Skills !" />
+      <SectionTitle title="Tech Stack" />
       <div className="grid lg:grid-cols-6 md:grid-cols-4 grid-cols-2 gap-4">
         {displayedSkills.map((skill) => (
           <div
@@ -40,7 +41,8 @@ const Skills = ({ skills }: { skills: Skill[] }) => {
 
       <div className="mt-12 flex justify-center">
         {!loadMore && (
-          <Button color="primary" onClick={() => setLoadMore(!loadMore)}>
+          <Button color="transparent" onClick={() => setLoadMore(!loadMore)}>
+            <ChevronDownIcon className="h-5 w-5 me-2" />
             Load More
           </Button>
         )}

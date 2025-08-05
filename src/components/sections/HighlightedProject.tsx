@@ -14,7 +14,7 @@ function HighlightedProject({
   return (
     <div className="mt-32">
       <div className="flex items-end justify-between">
-        <SectionTitle title={"Highlighted Projects !"} />
+        <SectionTitle title={"Projects"} />
 
         <Link href={"/works"} className="text-secondary md:inline hidden">
           View More
