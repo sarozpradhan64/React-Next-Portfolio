@@ -10,7 +10,7 @@ const About = () => {
   return (
     <div className="mt-32 grid md:grid-cols-2 gap-5">
         <div>
-          <SectionTitle title={"About Saroj Pradhan !"} />
+          <SectionTitle title={"About Me"} />
 
           <p className="mb-4 tracking-wide leading-relaxed">
             {metas.user.about}

@@ -8,7 +8,7 @@ export default function Services() {
   const services = data.services;
   return (
     <div className="mt-32">
-      <SectionTitle title={"My Services !"} />
+      <SectionTitle title={"Services"} />
       <p className="text-justify">
         Whether you&apos;re looking to build a new website, develop a mobile
         app, improve your online visibility with digital marketing, or need help
