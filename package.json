@@ -16,7 +16,7 @@
     "@types/react": "^19.0.4",
     "class-variance-authority": "^0.7.1",
     "lucide-react": "^0.471.1",
-    "next": "15.3.3",
+    "next": "15.5.7",
     "react": "19.0.0",
     "react-dom": "19.0.0",
     "sharp": "^0.33.4",
