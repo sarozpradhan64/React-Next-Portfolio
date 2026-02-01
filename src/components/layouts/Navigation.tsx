@@ -26,12 +26,12 @@ const links = [
     href: "/contact",
     icon: <Mail className="w-4 inline md:me-4 me-2" />,
   },
-  {
-    title: "blogs",
-    isExternal: true,
-    href: "https://blazecodes.sarojpradhan.com.np/?utm_source=saroj-portfolio&utm_id=blazecodes-srz",
-    icon: <BriefcaseBusiness className="w-4 inline md:me-4 me-2" />,
-  },
+  // {
+  //   title: "blogs",
+  //   isExternal: true,
+  //   href: "https://blazecodes.sarojpradhan.com.np/?utm_source=saroj-portfolio&utm_id=blazecodes-srz",
+  //   icon: <BriefcaseBusiness className="w-4 inline md:me-4 me-2" />,
+  // },
 ];
 
 const Navigation = () => {
