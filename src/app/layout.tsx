@@ -4,6 +4,8 @@ import { GoogleAnalytics } from "@next/third-parties/google";
 import { Metadata } from "next";
 import { Poppins, Righteous } from "next/font/google";
 
+import { ActiveProvider } from "@/context/ActiveContext";
+
 const poppins = Poppins({
   subsets: ["latin"],
   weight: ["300", "400", "500", "600", "700"],
@@ -35,7 +37,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${poppins.variable} ${righteous.variable}`}>
-      <body>{children}</body>
+      <body>
+        <ActiveProvider>
+          {children}
+        </ActiveProvider>
+      </body>
       <GoogleAnalytics gaId={metas.google_analytics_id ?? ""} />
     </html>
   );
