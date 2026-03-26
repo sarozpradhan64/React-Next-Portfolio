@@ -2,19 +2,26 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --primary: #6244c5;
-  --secondary: #f5a14d;
-  --light: #fafafb;
-  --dark: #12141d;
-}
+@layer base {
+  :root {
+    --primary: #6244c5;
+    --secondary: #f5a14d;
+    --dark: #020617;
+    --dark-lighter: #0f172a;
+    --light: #f8fafc;
+  }
 
-body {
-  background-color: var(--dark) !important;
-  font-family: var(--font-poppins);
-}
-p {
-  @apply text-gray-400;
+  body {
+    @apply bg-dark text-light font-poppins antialiased selection:bg-primary/30;
+  }
+
+  p {
+    @apply text-slate-400 leading-relaxed;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply text-white font-semibold;
+  }
 }
 a {
   text-decoration: none;
@@ -25,143 +32,33 @@ img {
 }
 /* custom scrollbar  */
 ::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
+  width: 6px;
+  height: 6px;
 }
 
-/* Track */
 ::-webkit-scrollbar-track {
-  background: rgb(17, 24, 39);
+  @apply bg-dark;
 }
 
-/* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #607197;
-  border-radius: 10px;
+  @apply bg-slate-700 rounded-full hover:bg-slate-600 transition-colors;
 }
 
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-  background: #314163;
-}
-
-/* Set the initial opacity to 0 and transition to 0.5 seconds */
+/* Simplify helpers - prefer tailwind classes in components */
 .reveal-on-scroll {
-  opacity: 0;
-  transform: translateY(50px);
-  transition: all 0.5s ease-in-out;
+  @apply opacity-0 translate-y-10 transition-all duration-700 ease-out;
 }
 
-/* When the element becomes visible, change the opacity to 1 */
 .reveal-on-scroll.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.reveal-on-scroll.hidden {
-  opacity: 0;
-  transition: all 0.5s ease-in-out;
-}
-
-.back-to-top {
-  position: fixed;
-  display: none;
-  right: 40px;
-  bottom: 80px;
-  z-index: 99;
-}
-
-.container {
-  width: 100%;
-  margin-right: auto;
-  margin-left: auto;
-  padding-right: 16px;
-  padding-left: 16px;
-}
-
-@media (min-width: 540px) {
-  .container {
-    max-width: 540px;
-  }
-}
-
-@media (min-width: 720px) {
-  .container {
-    max-width: 720px;
-  }
-}
-
-@media (min-width: 960px) {
-  .container {
-    max-width: 960px;
-  }
-}
-
-@media (min-width: 1140px) {
-  .container {
-    max-width: 1140px;
-  }
-}
-
-@media (min-width: 1320px) {
-  .container {
-    max-width: 1320px;
-  }
+  @apply opacity-100 translate-y-0;
 }
 
 .btn-spinner {
-  border: 3px solid #f3f3f3;
-  border-radius: 50%;
-  border-top: 3px solid var(--secondary);
-  width: 20px;
-  height: 20px;
-  -webkit-animation: spin 1s linear infinite; /* Safari */
-  animation: spin 1s linear infinite;
+  @apply w-5 h-5 border-2 border-slate-200 border-t-secondary rounded-full animate-spin;
 }
 
-/* Safari */
-@-webkit-keyframes spin {
-  0% {
-    -webkit-transform: rotate(0deg);
-  }
-  100% {
-    -webkit-transform: rotate(360deg);
-  }
-}
-
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
-/* custom bg color  */
-.bg-primary {
-  background-color: #6244c5 !important;
-}
-.bg-secondary {
-  background-color: #bd8204 !important;
-}
-.bg-success {
-  background-color: #198754 !important;
-}
-.bg-info {
-  background-color: #0dcaf0 !important;
-}
-.bg-warning {
-  background-color: #ffc107 !important;
-}
-.bg-danger {
-  background-color: #dc3545 !important;
-}
-.bg-light {
-  background-color: #fafafb !important;
-}
-.bg-dark {
-  background-color: #12141d !important;
+.bg-premium {
+  @apply bg-premium-gradient;
 }
 
 /*** Button ***/
@@ -205,8 +102,7 @@ img {
 }
 
 .logo-title {
-  font-family: var(--font-righteous), cursive !important;
-  font-size: 40px;
+  @apply font-righteous text-[40px] !important;
 }
 
 .typed-cursor {

@@ -21,15 +21,18 @@ function FilterButton({
   active,
   onClick,
 }: Readonly<FilterButtonProps>) {
+  const isActive = active === filter;
   return (
     <button
       type="button"
-      className={`mx-3 md:mb-2 mb-4 cursor-pointer ${
-        active === filter ? "active" : "text-white"
+      className={`px-6 py-2 rounded-full text-sm font-bold tracking-wide transition-all duration-300 ${
+        isActive 
+          ? "bg-primary text-white shadow-premium ring-2 ring-primary/20" 
+          : "bg-white/5 text-slate-400 hover:text-white hover:bg-white/10"
       }`}
       onClick={() => onClick(filter)}
     >
-      {filter === "all" ? "All Projects" : strTitle(filter)}
+      {filter === "all" ? "All Projects" : strTitle(filter).toUpperCase()}
     </button>
   );
 }
@@ -55,9 +58,9 @@ export default function WorkFilter({ works }: { readonly works: Work[] }) {
 
   return (
     <>
-      <div className="mb-12">
+      <div className="mb-16">
         <ul
-          className="md:flex md:justify-center list-inline mb-0"
+          className="flex flex-wrap items-center justify-center gap-4 list-none"
           id="portfolio-filters"
         >
           {["all", "software", "website", "mobile", "open source"].map(

@@ -65,77 +65,76 @@ const Navigation = () => {
     <>
       <div
         className={`${
-          isSticky ? "sticky" : ""
-        }  md:block hidden navigation_wrapper`}
+          isSticky 
+            ? "sticky top-0 bg-dark/80 backdrop-blur-md border-b border-white/10" 
+            : "relative bg-dark"
+        } md:block hidden z-50 transition-all duration-300`}
       >
-        <div
-          className={`container ${isSticky ? "border-b border-gray-700" : ""}`}
-        >
-          <nav className=" md:py-2 px-4 md:px-5 flex justify-between items-center  w-full">
+        <div className="container mx-auto">
+          <nav className="py-4 px-6 flex justify-between items-center w-full">
             <div>
-              <Link href={"/"}>
-                <h2 className="logo-title text-secondary">Srz</h2>
+              <Link href={"/"} className="group transition-transform duration-300 hover:scale-105 inline-block">
+                <h2 className="logo-title text-secondary group-hover:text-white transition-colors">Srz</h2>
               </Link>
             </div>
 
-            <div>
-              {/* nav */}
-              <div className="">
-                {links.map((link, index) => (
+            <div className="flex items-center space-x-6">
+              {links.map((link, index) => {
+                const isActive = link.title === "works"
+                  ? pathname === link.href || pathname.includes("/works/")
+                  : pathname === link.href;
+                
+                return (
                   <Link
                     href={link.href}
                     target={link.isExternal ? "_blank" : "_self"}
                     key={index}
-                    className={`${
-                      link.title === "works"
-                        ? pathname === link.href || pathname.includes("/works/")
-                          ? "active-nav-item"
-                          : ""
-                        : pathname === link.href
-                          ? "active-nav-item"
-                          : ""
-                    } nav-item text-white px-3 py-2  mx-2`}
+                    className={`
+                      relative py-2 text-sm font-medium tracking-wide transition-all duration-300
+                      ${isActive ? "text-secondary" : "text-slate-300 hover:text-white"}
+                      after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-[2px] 
+                      after:bg-secondary after:transform after:transition-transform after:duration-300
+                      ${isActive ? "after:scale-x-100" : "after:scale-x-0 hover:after:scale-x-100"}
+                    `}
                   >
-                    {link.title.toUpperCase()}{" "}
+                    {link.title.toUpperCase()}
                     {link.isExternal && (
-                      <ArrowTopRightOnSquareIcon className="h-4 w-4 inline mb-1 ml-1" />
+                      <ArrowTopRightOnSquareIcon className="h-3 w-3 inline mb-1 ml-1 opacity-70" />
                     )}
                   </Link>
-                ))}
-              </div>
+                );
+              })}
             </div>
           </nav>
         </div>
       </div>
 
       {/* mobile nav */}
-      <div className="md:hidden grid grid-cols-4 fixed left-0 right-0 z-50 bottom-0 bg-primary">
-        {links.map((link, index) => (
-          <Link
-            href={link.href}
-            key={index}
-            className={`
-                      ${
-                        link.title === "works"
-                          ? pathname === link.href ||
-                            pathname.includes("/works/")
-                            ? "active-mobile-nav-item"
-                            : ""
-                          : pathname === link.href
-                            ? "active-mobile-nav-item"
-                            : ""
-                      } mobile-nav-item text-white flex justify-center items-center py-4`}
-          >
-            <div>{link.icon}</div>
+      <div className="md:hidden fixed bottom-2 left-1/2 -translate-x-1/2 w-[90%] max-w-sm z-50">
+        <div className="bg-dark-lighter/90 backdrop-blur-xl border border-white/10 rounded-2xl grid grid-cols-4 p-2 shadow-2xl overflow-hidden">
+          {links.map((link, index) => {
+            const isActive = link.title === "works"
+              ? pathname === link.href || pathname.includes("/works/")
+              : pathname === link.href;
 
-            <span style={{ fontSize: "12px" }}>
-              {link.title.toUpperCase()}{" "}
-              {link.isExternal && (
-                <ArrowTopRightOnSquareIcon className="h-3 w-3 inline mb-1" />
-              )}
-            </span>
-          </Link>
-        ))}
+            return (
+              <Link
+                href={link.href}
+                key={index}
+                className={`flex flex-col items-center justify-center py-3 px-2 rounded-xl transition-all duration-300
+                  ${isActive ? "bg-primary text-white shadow-lg" : "text-slate-400 hover:text-slate-100"}
+                `}
+              >
+                <div className={`${isActive ? "scale-110" : ""} transition-transform duration-300`}>
+                  {link.icon}
+                </div>
+                <span className="text-[10px] font-bold mt-1">
+                  {link.title.toUpperCase()}
+                </span>
+              </Link>
+            );
+          })}
+        </div>
       </div>
       {/* mobile nav end  */}
     </>

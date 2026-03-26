@@ -12,24 +12,28 @@ function HighlightedProject({
   readonly featuredWorks: ReadonlyArray<Work>;
 }) {
   return (
-    <div className="mt-32">
-      <div className="flex items-end justify-between">
-        <SectionTitle title={"Projects"} />
+    <div className="py-24">
+      <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
+        <div className="flex-1">
+          <SectionTitle title={"Featured Projects"} />
+          <p className="text-slate-400 text-lg max-w-2xl leading-relaxed">
+            A selection of my heavy-lifting projects where I put my full focus on
+            architecture, performance, and user experience.
+          </p>
+        </div>
 
-        <Link href={"/works"} className="text-secondary md:inline hidden">
-          View More
-          <MoveRight className="inline ml-2" size={16} />
+        <Link 
+          href={"/works"} 
+          className="group flex items-center gap-2 text-secondary font-bold uppercase tracking-widest text-sm hover:text-white transition-colors"
+        >
+          Explore All Works
+          <MoveRight className="w-5 h-5 group-hover:translate-x-2 transition-transform" />
         </Link>
       </div>
 
-      <p className="text-justify">
-        Amongst many of my works and project that I put my footprint in, here
-        are some of the major listings:
-      </p>
-
       <div
         className={
-          "mt-8 grid lg:grid-cols-3 md:grid-cols-2 md:gap-x-5 md:gap-5 gap-4"
+          "grid lg:grid-cols-3 md:grid-cols-2 gap-8"
         }
       >
         {featuredWorks.map((work, index) => (
@@ -42,13 +46,6 @@ function HighlightedProject({
           </RevealOnScroll>
         ))}
       </div>
-
-      <Link
-        href={"/works"}
-        className="mt-8 text-center text-primary md:hidden block"
-      >
-        View More
-      </Link>
     </div>
   );
 }

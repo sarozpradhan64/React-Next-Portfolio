@@ -46,18 +46,15 @@ const FrontendLayout: React.FC<FrontendLayoutProps> = ({ children, title }) => {
         <Navigation />
         <LeaderBoard />
 
-        <div className="container">
+        <div className="container mx-auto px-6">
           {/* children content  */}
-          <div className="content-wrapper">
-            <div>
+          <div className="min-h-[80vh] py-12">
+            <div className="max-w-7xl mx-auto">
               {/*  page title  */}
               {title && (
-                <div className="mb-6">
-                  <h1 className="text-2xl mb-0 text-white">
-                    <ChevronRight
-                      className=" inline me-2 animate-bounce"
-                      size={32}
-                    />{" "}
+                <div className="mb-12">
+                  <h1 className="text-4xl md:text-5xl font-extrabold text-white flex items-center gap-4">
+                    <span className="w-2 h-12 bg-secondary rounded-full"></span>
                     {title}
                   </h1>
                 </div>
@@ -69,29 +66,30 @@ const FrontendLayout: React.FC<FrontendLayoutProps> = ({ children, title }) => {
           {/* children content end  */}
 
           {/* footer  */}
-          <div className="md:mt-32 mt-16 md:mb-0 mb-4 border-t border-gray-600"></div>
-          <div className="flex md:flex-row flex-col items-center justify-between text-white py-4 md:mb-0 mb-16">
-            <div className="text-center md:text-start mb-3 md:mb-0">
-              <Copyright className="inline w-4 me-1" /> {currentYear} |&nbsp;
-              <Link className="border-bottom text-secondary" href="/">
-                {metas.user.name}
-              </Link>
-            </div>
+          <div className="mt-24 mb-12 border-t border-white/10 pt-12">
+            <div className="flex flex-col md:flex-row items-center justify-between gap-8">
+              <div className="text-slate-400 font-medium text-center md:text-start">
+                <Copyright className="inline w-4 h-4 me-2" /> {currentYear} |&nbsp;
+                <Link className="text-secondary hover:text-white transition-colors" href="/">
+                  {metas.user.name}
+                </Link>
+              </div>
 
-            <div className="flex justify-center text-center gap-4 md:text-start my-3">
-              {socials.map((social, index) => (
-                <a
-                  key={index}
-                  rel="noreferrer"
-                  className="mx-1"
-                  href={social.href}
-                  target={"_blank"}
-                  title={strTitle(social.title)}
-                >
-                  {social.icon}
-                  <span className="sr-only">{social.title}</span>
-                </a>
-              ))}
+              <div className="flex items-center justify-center gap-6">
+                {socials.map((social, index) => (
+                  <a
+                    key={index}
+                    rel="noreferrer"
+                    className="p-3 bg-dark-lighter border border-white/5 rounded-xl text-slate-400 hover:text-white hover:border-secondary/50 transition-all duration-300"
+                    href={social.href}
+                    target={"_blank"}
+                    title={strTitle(social.title)}
+                  >
+                    {social.icon}
+                    <span className="sr-only">{social.title}</span>
+                  </a>
+                ))}
+              </div>
             </div>
           </div>
         </div>

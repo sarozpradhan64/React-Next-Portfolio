@@ -36,7 +36,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${poppins.variable} ${righteous.variable}`}>
       <body>{children}</body>
-      <GoogleAnalytics gaId={metas.google_analytics_id} />
+      <GoogleAnalytics gaId={metas.google_analytics_id ?? ""} />
     </html>
   );
 }
