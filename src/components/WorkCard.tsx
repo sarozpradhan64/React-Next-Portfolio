@@ -32,6 +32,11 @@ const WorkCard = ({ work }: { work: Work }) => {
 
       {/* Bottom Info */}
       <div className="absolute z-20 bottom-0 left-0 right-0 p-6 transform transition-transform duration-500 group-hover:-translate-y-2">
+        {work.company && (
+          <span className="text-[10px] text-secondary font-bold tracking-widest uppercase mb-1 block opacity-80">
+            {work.company}
+          </span>
+        )}
         <h4 className="text-xl font-bold text-white mb-2 leading-tight">
           {work.title}
         </h4>
