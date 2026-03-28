@@ -26,12 +26,12 @@ const links = [
     href: "/contact",
     icon: <Mail className="w-4 inline md:me-4 me-2" />,
   },
-  // {
-  //   title: "blogs",
-  //   isExternal: true,
-  //   href: "https://blazecodes.sarojpradhan.com.np/?utm_source=saroj-portfolio&utm_id=blazecodes-srz",
-  //   icon: <BriefcaseBusiness className="w-4 inline md:me-4 me-2" />,
-  // },
+  {
+    title: "blogs",
+    isExternal: true,
+    href: "https://blazecodes.sarojpradhan.com.np/?utm_source=saroj-portfolio&utm_id=blazecodes-srz",
+    icon: <BriefcaseBusiness className="w-4 inline md:me-4 me-2" />,
+  },
 ];
 
 const Navigation = () => {
@@ -92,8 +92,8 @@ const Navigation = () => {
                           ? "active-nav-item"
                           : ""
                         : pathname === link.href
-                        ? "active-nav-item"
-                        : ""
+                          ? "active-nav-item"
+                          : ""
                     } nav-item text-white px-3 py-2  mx-2`}
                   >
                     {link.title.toUpperCase()}{" "}
@@ -122,8 +122,8 @@ const Navigation = () => {
                             ? "active-mobile-nav-item"
                             : ""
                           : pathname === link.href
-                          ? "active-mobile-nav-item"
-                          : ""
+                            ? "active-mobile-nav-item"
+                            : ""
                       } mobile-nav-item text-white flex justify-center items-center py-4`}
           >
             <div>{link.icon}</div>
