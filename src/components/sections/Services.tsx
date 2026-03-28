@@ -7,42 +7,42 @@ import SectionTitle from "../SectionTitle";
 export default function Services() {
   const services = data.services;
   return (
-    <div className="mt-32">
-      <SectionTitle title={"Services"} />
-      <p className="text-justify">
-        Whether you&apos;re looking to build a new website, develop a mobile
-        app, improve your online visibility with digital marketing, or need help
-        with any other aspect of your online presence, we have the skills and
-        expertise to get the job done right. Explore my services to learn more
-        about what i can do for you, and feel free to contact me if you have any
-        questions or would like to discuss your project.
-      </p>
+    <div className="py-24">
+      <div className="max-w-3xl mb-16 text-center mx-auto">
+        <SectionTitle title={"Services"} />
+        <p className="text-lg text-slate-400 leading-relaxed">
+          From concept to deployment, I provide comprehensive digital solutions 
+          leveraging modern stacks to help you achieve your business goals.
+        </p>
+      </div>
 
-      <div className="w-full flex justify-center items-center">
-        <div className="mt-8 grid md:grid-cols-2 md:gap-6 gap-4">
-          {services.map((service, index) => (
-            <div key={index}>
-              <RevealOnScroll
-                className={"service-card"}
-                revealGroupName={"service-card"}
-              >
-                <div className="bg-[#1C1F26] sm:p-4 p-2 flex flex-row  md:gap-4 gap-2  rounded-md border border-transparent hover:border-gray-600">
-                  <div className="md:w-1/5 sm:h-auto h-[60px] w-[30%] relative">
-                    <Image src={service.thumbnail} fill alt={service.title} />
-                  </div>
-                  <div className="md:w-4/5 w-[70%]">
-                    <h5 className="sm:text-md text-sm text-white sm:mb-2 mb-1">
-                      {service.title}
-                    </h5>
-                    <p className="text-sm md:leading-6 select-none">
-                      {service.description}
-                    </p>
-                  </div>
-                </div>
-              </RevealOnScroll>
+      <div className="grid md:grid-cols-2 gap-8">
+        {services.map((service, index) => (
+          <RevealOnScroll
+            key={index}
+            className={"h-full"}
+            revealGroupName={"service-card"}
+          >
+            <div className="h-full bg-dark-lighter p-8 rounded-3xl border border-white/5 hover:border-secondary/30 transition-all duration-300 flex flex-col sm:flex-row gap-6 group shadow-premium hover:shadow-premium-hover">
+              <div className="w-16 h-16 shrink-0 relative p-3 bg-primary/10 rounded-2xl border border-primary/20 group-hover:bg-primary/20 transition-colors">
+                <Image 
+                  src={service.thumbnail} 
+                  fill 
+                  alt={service.title} 
+                  className="p-3 object-contain"
+                />
+              </div>
+              <div>
+                <h5 className="text-xl font-bold text-white mb-3 group-hover:text-secondary transition-colors">
+                  {service.title}
+                </h5>
+                <p className="text-slate-400 leading-relaxed">
+                  {service.description}
+                </p>
+              </div>
             </div>
-          ))}
-        </div>
+          </RevealOnScroll>
+        ))}
       </div>
     </div>
   );

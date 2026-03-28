@@ -2,8 +2,7 @@
 
 import React, { useContext, useState } from "react";
 import { usePathname } from "next/navigation";
-import { XCircleIcon } from "@heroicons/react/24/solid";
-import { ActiveContext } from "../../context/ActiveContext"; // Adjust the import path as needed
+import { ActiveContext } from "../../context/ActiveContext"; 
 import { XMarkIcon } from "@heroicons/react/24/outline";
 
 const LeaderBoard = () => {
@@ -13,26 +12,31 @@ const LeaderBoard = () => {
 
   return (
     <>
-      {activeState?.leaderboard && pathname.includes("/contact") && (
-        <div className="fixed left-[50%] -translate-x-[50%] md:bottom-6 bottom-20 z-50">
-          <div
-            className="w-5 h-5 hover:scale-125 bg-red-400 absolute -right-2 -top-2 cursor-pointer rounded-full p-1 flex justify-center items-center"
-            onClick={() => hide("leaderboard")}
-          >
-            <XMarkIcon className="w-4 h-4" />
-          </div>
+      {activeState?.leaderboard && pathname !== "/" && (
+        <div className="fixed left-1/2 -translate-x-1/2 bottom-20 md:bottom-8 z-[60] w-[95%] max-w-[400px]">
+          <div className="relative bg-slate-950/60 backdrop-blur-md border border-white/10 p-2 rounded-2xl shadow-2xl">
+            {/* Close Button */}
+            <button
+              className="absolute -top-3 -right-3 w-8 h-8 bg-slate-900 border border-white/10 text-slate-400 hover:text-white hover:bg-red-500/80 rounded-full flex items-center justify-center shadow-lg transition-all duration-300 z-[70]"
+              onClick={() => hide("leaderboard")}
+              aria-label="Close Ad"
+            >
+              <XMarkIcon className="w-5 h-5" />
+            </button>
 
-          <a
-            href="https://clients.babal.host/aff.php?aff=700&gocart=true"
-            rel="noreferrer"
-            target="_blank"
-          >
-            <img
-              src="https://babal.host/img/affiliate/320x50MobileLeaderboard.png"
-              width="400"
-              className="rounded-md shadow-sm"
-            />
-          </a>
+            <a
+              href="https://clients.babal.host/aff.php?aff=700&gocart=true"
+              rel="noreferrer"
+              target="_blank"
+              className="block overflow-hidden rounded-xl"
+            >
+              <img
+                src="https://babal.host/img/affiliate/320x50MobileLeaderboard.png"
+                alt="Affiliate Banner"
+                className="w-full h-auto object-cover"
+              />
+            </a>
+          </div>
         </div>
       )}
     </>

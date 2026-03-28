@@ -11,4 +11,5 @@ export interface Work {
   role: string;
   stacks: string[];
   is_featured: boolean;
+  company?: string;
 }
