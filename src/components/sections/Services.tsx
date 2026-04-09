@@ -1,4 +1,3 @@
-import Image from "next/image";
 import React from "react";
 import data from "@/data/data";
 import RevealOnScroll from "../Reveal";
@@ -24,13 +23,8 @@ export default function Services() {
             revealGroupName={"service-card"}
           >
             <div className="h-full bg-dark-lighter p-8 rounded-3xl border border-white/5 hover:border-secondary/30 transition-all duration-300 flex flex-col sm:flex-row gap-6 group shadow-premium hover:shadow-premium-hover">
-              <div className="w-16 h-16 shrink-0 relative p-3 bg-primary/10 rounded-2xl border border-primary/20 group-hover:bg-primary/20 transition-colors">
-                <Image 
-                  src={service.thumbnail} 
-                  fill 
-                  alt={service.title} 
-                  className="p-3 object-contain"
-                />
+              <div className="w-16 h-16 shrink-0 flex items-center justify-center p-4 bg-primary/10 rounded-2xl border border-primary/20 group-hover:bg-primary/20 transition-colors">
+                <service.icon className="w-full h-full text-secondary group-hover:scale-110 transition-transform duration-300" />
               </div>
               <div>
                 <h5 className="text-xl font-bold text-white mb-3 group-hover:text-secondary transition-colors">
