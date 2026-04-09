@@ -13,7 +13,7 @@ const Hero = () => {
         </h3>
         <h1 className="text-5xl md:text-7xl lg:text-8xl mb-6 text-white font-extrabold leading-none">
           {metas.user.name} <br />
-          <span className="text-3xl md:text-4xl lg:text-5xl inline-block mt-4 bg-gradient-to-r from-secondary to-orange-400 bg-clip-text text-transparent font-bold">
+          <span className="text-3xl pb-6 md:text-4xl lg:text-5xl inline-block mt-4 bg-gradient-to-r from-secondary to-orange-400 bg-clip-text text-transparent font-bold">
             {metas.user.whoAmI}
           </span>
         </h1>
