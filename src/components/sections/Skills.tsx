@@ -17,7 +17,7 @@ const Skills = ({ skills }: { skills: Skill[] }) => {
   return (
     <div className="py-24">
       <div className="text-center mb-16">
-        <SectionTitle title="Tech Stack" />
+        <SectionTitle title="Tech Stack" position="center" />
         <p className="text-slate-400 text-lg">Tools and technologies I use to bring ideas to life</p>
       </div>
 

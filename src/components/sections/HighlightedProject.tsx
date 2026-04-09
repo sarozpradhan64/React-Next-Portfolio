@@ -17,8 +17,7 @@ function HighlightedProject({
         <div className="flex-1">
           <SectionTitle title={"Featured Projects"} />
           <p className="text-slate-400 text-lg max-w-2xl leading-relaxed">
-            A selection of my heavy-lifting projects where I put my full focus on
-            architecture, performance, and user experience.
+            A curated selection of the Projects i have worked on.
           </p>
         </div>
 

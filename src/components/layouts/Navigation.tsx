@@ -65,25 +65,31 @@ const Navigation = () => {
     <>
       <div
         className={`${
-          isSticky 
-            ? "sticky top-0 bg-dark/80 backdrop-blur-md border-b border-white/10" 
+          isSticky
+            ? "sticky top-0 backdrop-blur-md border-b border-white/10"
             : "relative bg-dark"
-        } md:block hidden z-50 transition-all duration-300`}
+        } md:block hidden z-50`}
       >
         <div className="container mx-auto">
           <nav className="py-4 px-6 flex justify-between items-center w-full">
             <div>
-              <Link href={"/"} className="group transition-transform duration-300 hover:scale-105 inline-block">
-                <h2 className="logo-title text-secondary group-hover:text-white transition-colors">Srz</h2>
+              <Link
+                href={"/"}
+                className="group transition-transform duration-300 hover:scale-105 inline-block"
+              >
+                <h2 className="logo-title text-secondary group-hover:text-white transition-colors">
+                  Srz
+                </h2>
               </Link>
             </div>
 
             <div className="flex items-center space-x-6">
               {links.map((link, index) => {
-                const isActive = link.title === "works"
-                  ? pathname === link.href || pathname.includes("/works/")
-                  : pathname === link.href;
-                
+                const isActive =
+                  link.title === "works"
+                    ? pathname === link.href || pathname.includes("/works/")
+                    : pathname === link.href;
+
                 return (
                   <Link
                     href={link.href}
@@ -113,9 +119,10 @@ const Navigation = () => {
       <div className="md:hidden fixed bottom-2 left-1/2 -translate-x-1/2 w-[90%] max-w-sm z-50">
         <div className="bg-dark-lighter/90 backdrop-blur-xl border border-white/10 rounded-2xl grid grid-cols-4 p-2 shadow-2xl overflow-hidden">
           {links.map((link, index) => {
-            const isActive = link.title === "works"
-              ? pathname === link.href || pathname.includes("/works/")
-              : pathname === link.href;
+            const isActive =
+              link.title === "works"
+                ? pathname === link.href || pathname.includes("/works/")
+                : pathname === link.href;
 
             return (
               <Link
@@ -125,7 +132,9 @@ const Navigation = () => {
                   ${isActive ? "bg-primary text-white shadow-lg" : "text-slate-400 hover:text-slate-100"}
                 `}
               >
-                <div className={`${isActive ? "scale-110" : ""} transition-transform duration-300`}>
+                <div
+                  className={`${isActive ? "scale-110" : ""} transition-transform duration-300`}
+                >
                   {link.icon}
                 </div>
                 <span className="text-[10px] font-bold mt-1">
