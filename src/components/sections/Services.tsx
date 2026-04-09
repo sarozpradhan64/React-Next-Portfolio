@@ -8,7 +8,7 @@ export default function Services() {
   return (
     <div className="py-24">
       <div className="max-w-3xl mb-16 text-center mx-auto">
-        <SectionTitle title={"Services"} />
+        <SectionTitle title={"Services"} position="center" />
         <p className="text-lg text-slate-400 leading-relaxed">
           From concept to deployment, I provide comprehensive digital solutions 
           leveraging modern stacks to help you achieve your business goals.
