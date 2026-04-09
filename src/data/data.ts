@@ -1,38 +1,37 @@
-import { Code2, Server, Search, Smartphone } from "lucide-react";
+import { Code2, Server, Search, Smartphone, Sparkles } from "lucide-react";
 
 const data = {
   services: [
     {
-      title: "Web Development",
-      slug: "web-development",
+      title: "AI & LLM Integration",
+      slug: "ai-llm-integration",
+      icon: Sparkles,
+      description:
+        "I integrate advanced Artificial Intelligence and Large Language Models into existing systems to automate processes and enhance intelligence.",
+    },
+    {
+      title: "Software Development",
+      slug: "software-development",
       icon: Code2,
       description:
-        "Create a site to represent your brand, inform customers, and provide a user-friendly experience.",
+        "I build custom software solutions tailored to your business needs, from web applications to enterprise systems.",
     },
 
-    {
-      title: "Web Hosting",
-      slug: "web-hosting",
-      icon: Server,
-      description:
-        "Complete web hosting with deployment, backups, and robust hardware for optimal performance.",
-    },
     {
       title: "Search Engine Optimization",
       slug: "seo",
       icon: Search,
       description:
-        "Optimize websites to rank higher on SERPs, increasing organic traffic and improving visibility.",
+        "I optimize websites to rank higher on SERPs, increasing organic traffic and improving visibility.",
     },
     {
       title: "Mobile App",
       slug: "mobile-app",
       icon: Smartphone,
       description:
-        "Develop cross-platform apps with React Native for iOS and Android using a single codebase.",
+        "I develop cross-platform mobile apps for iOS and Android using React Native, ensuring a seamless user experience.",
     },
   ],
 };
 
 export default data;
-
