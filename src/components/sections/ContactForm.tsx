@@ -3,10 +3,7 @@
 
 import React, { FormEvent, useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
-import {
-  CheckCircleIcon,
-  ExclamationCircleIcon,
-} from "@heroicons/react/20/solid";
+import { CheckCircleIcon } from "lucide-react";
 
 export default function ContactForm() {
   const form = useRef<HTMLFormElement | null>(null);
@@ -196,7 +193,7 @@ export default function ContactForm() {
             </div>
           ) : (
             <div className="mt-4 text-red-600">
-              <ExclamationCircleIcon className="h-6 inline me-1" />{" "}
+              {/* <ExclamationCircleIcon className="h-6 inline me-1" />{" "} */}
               {message?.message}
             </div>
           )}

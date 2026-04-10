@@ -2,8 +2,8 @@
 
 import React, { useContext, useState } from "react";
 import { usePathname } from "next/navigation";
-import { ActiveContext } from "../../context/ActiveContext"; 
-import { XMarkIcon } from "@heroicons/react/24/outline";
+import { ActiveContext } from "../../context/ActiveContext";
+import { X } from "lucide-react";
 
 const LeaderBoard = () => {
   const pathname = usePathname();
@@ -21,7 +21,7 @@ const LeaderBoard = () => {
               onClick={() => hide("leaderboard")}
               aria-label="Close Ad"
             >
-              <XMarkIcon className="w-5 h-5" />
+              <X className="w-5 h-5" />
             </button>
 
             <a
