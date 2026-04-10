@@ -3,7 +3,13 @@
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { BriefcaseBusiness, House, Mail, BookOpen, ExternalLink } from "lucide-react";
+import {
+  BriefcaseBusiness,
+  House,
+  Mail,
+  BookOpen,
+  ExternalLink,
+} from "lucide-react";
 
 const links = [
   {
@@ -12,7 +18,6 @@ const links = [
     isExternal: false,
     icon: <House className="w-4 inline md:me-4 me-2" />,
   },
-
   {
     title: "works",
     isExternal: false,
@@ -20,16 +25,16 @@ const links = [
     icon: <BriefcaseBusiness className="w-4 inline md:me-4 me-2" />,
   },
   {
-    title: "contact",
-    isExternal: false,
-    href: "/contact",
-    icon: <Mail className="w-4 inline md:me-4 me-2" />,
-  },
-  {
     title: "blogs",
     isExternal: false,
     href: "/blogs",
     icon: <BookOpen className="w-4 inline md:me-4 me-2" />,
+  },
+  {
+    title: "contact",
+    isExternal: false,
+    href: "/contact",
+    icon: <Mail className="w-4 inline md:me-4 me-2" />,
   },
 ];
 
