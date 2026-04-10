@@ -3,8 +3,7 @@
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { BriefcaseBusiness, House, Mail } from "lucide-react";
-import { ArrowTopRightOnSquareIcon } from "@heroicons/react/24/outline";
+import { BriefcaseBusiness, House, Mail, BookOpen, ExternalLink } from "lucide-react";
 
 const links = [
   {
@@ -28,9 +27,9 @@ const links = [
   },
   {
     title: "blogs",
-    isExternal: true,
-    href: "https://blazecodes.sarojpradhan.com.np/?utm_source=saroj-portfolio&utm_id=blazecodes-srz",
-    icon: <BriefcaseBusiness className="w-4 inline md:me-4 me-2" />,
+    isExternal: false,
+    href: "/blogs",
+    icon: <BookOpen className="w-4 inline md:me-4 me-2" />,
   },
 ];
 
@@ -105,7 +104,7 @@ const Navigation = () => {
                   >
                     {link.title.toUpperCase()}
                     {link.isExternal && (
-                      <ArrowTopRightOnSquareIcon className="h-3 w-3 inline mb-1 ml-1 opacity-70" />
+                      <ExternalLink className="h-3 w-3 inline mb-1 ml-1 opacity-70" />
                     )}
                   </Link>
                 );

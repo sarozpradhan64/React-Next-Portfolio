@@ -5,7 +5,7 @@ import Image from "next/image";
 import SectionTitle from "../SectionTitle";
 import Button from "../Button";
 import { Skill } from "@/types/skill";
-import { ChevronDownIcon } from "@heroicons/react/24/outline";
+import { ChevronsDownIcon } from "lucide-react";
 
 const Skills = ({ skills }: { skills: Skill[] }) => {
   const [loadMore, setLoadMore] = useState(false);
@@ -47,7 +47,7 @@ const Skills = ({ skills }: { skills: Skill[] }) => {
       <div className="mt-16 flex justify-center">
         {!loadMore && (
           <Button color="transparent" outline="light" onClick={() => setLoadMore(!loadMore)} className="group">
-            <ChevronDownIcon className="h-5 w-5 me-2 group-hover:translate-y-1 transition-transform" />
+            <ChevronsDownIcon className="h-5 w-5 me-2 group-hover:translate-y-1 transition-transform" />
             LOAD MORE
           </Button>
         )}
