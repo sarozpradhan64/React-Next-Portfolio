@@ -1,5 +1,5 @@
 import FrontendLayout from "@/components/layouts/FrontendLayout";
-import BlogCard from "@/components/BlogCard";
+import BlogCard from "@/components/cards/BlogCard";
 import { BlogPost } from "@/types/blog";
 import { Metadata } from "next";
 import metas from "@/data/metaData";
@@ -10,24 +10,7 @@ export const metadata: Metadata = {
   description: "Read my latest thoughts, tutorials, and insights on software development and technology.",
 };
 
-async function getBlogs(): Promise<BlogPost[]> {
-  const apiUrl = process.env.NEXT_PUBLIC_BLOG_API_URL;
-  if (!apiUrl) {
-    console.warn("NEXT_PUBLIC_BLOG_API_URL is not defined");
-    return [];
-  }
-
-  try {
-    const res = await fetch(apiUrl, { next: { revalidate: 3600 } });
-    if (!res.ok) {
-      throw new Error(`Failed to fetch blogs: ${res.statusText}`);
-    }
-    return res.json();
-  } catch (error) {
-    console.error("Error fetching blogs:", error);
-    return [];
-  }
-}
+import { getBlogs } from "@/utils/blog";
 
 export default async function BlogsPage() {
   const blogs = await getBlogs();

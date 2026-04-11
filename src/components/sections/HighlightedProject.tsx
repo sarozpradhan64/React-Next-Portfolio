@@ -1,10 +1,10 @@
 import React from "react";
-import Link from "next/link";
 import RevealOnScroll from "../Reveal";
 import SectionTitle from "../SectionTitle";
 import { Work } from "@/types/work";
-import WorkCard from "../WorkCard";
-import { MoveRight } from "lucide-react";
+import WorkCard from "../cards/WorkCard";
+import ViewAllLink from "../elements/ViewAllLink";
+
 
 function HighlightedProject({
   featuredWorks,
@@ -21,20 +21,10 @@ function HighlightedProject({
           </p>
         </div>
 
-        <Link 
-          href={"/works"} 
-          className="group flex items-center gap-2 text-secondary font-bold uppercase tracking-widest text-sm hover:text-white transition-colors"
-        >
-          Explore All Works
-          <MoveRight className="w-5 h-5 group-hover:translate-x-2 transition-transform" />
-        </Link>
+        <ViewAllLink href="/works">Explore All Works</ViewAllLink>
       </div>
 
-      <div
-        className={
-          "grid lg:grid-cols-3 md:grid-cols-2 gap-8"
-        }
-      >
+      <div className={"grid lg:grid-cols-3 md:grid-cols-2 gap-8"}>
         {featuredWorks.map((work, index) => (
           <RevealOnScroll
             key={index}

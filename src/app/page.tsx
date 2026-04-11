@@ -6,11 +6,14 @@ import workData from "@/data/workData";
 import skillsData from "@/data/skillData";
 import Hero from "@/components/sections/Hero";
 import About from "@/components/sections/About";
+import LatestBlogs from "@/components/sections/LatestBlogs";
+import { getBlogs } from "@/utils/blog";
 
 export default async function Home() {
   const works = workData;
   const skills = skillsData;
   const featuredWorks = works.filter((item) => item.is_featured === true);
+  const blogs = await getBlogs();
 
   return (
     <FrontendLayout>
@@ -18,7 +21,8 @@ export default async function Home() {
       <About />
       <Services />
       <Skills skills={skills} />
-      {featuredWorks && <HighlightedProject featuredWorks={featuredWorks} />}
+      {featuredWorks && <HighlightedProject featuredWorks={featuredWorks.slice(0, 6)} />}
+      <LatestBlogs blogs={blogs} />
     </FrontendLayout>
   );
 }

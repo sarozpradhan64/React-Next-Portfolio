@@ -2,11 +2,30 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { BlogPost } from "@/types/blog";
-import Badge from "./Badge";
+import Badge from "../Badge";
 import { ExternalLink } from "lucide-react";
 
+const BlogDetailLink = ({
+  blog,
+  children,
+}: {
+  blog: BlogPost;
+  children: React.ReactNode;
+}) => {
+  if (blog.detail.startsWith("http")) {
+    return (
+      <Link href={blog.detail} target="_blank" rel="noopener noreferrer">
+        {children}
+      </Link>
+    );
+  }
+  return <>{children}</>;
+};
+
 const BlogCard = ({ blog }: { blog: BlogPost }) => {
-  const imageUrl = blog.thumbnail_path || "https://images.unsplash.com/photo-1499750310107-5fef28a66643?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80";
+  const imageUrl =
+    blog.thumbnail_path ||
+    "https://images.unsplash.com/photo-1499750310107-5fef28a66643?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80";
 
   return (
     <div className="group rounded-3xl overflow-hidden bg-dark-lighter border border-white/5 shadow-premium transition-all duration-500 hover:-translate-y-2 hover:shadow-premium-hover flex flex-col h-full">
@@ -28,18 +47,15 @@ const BlogCard = ({ blog }: { blog: BlogPost }) => {
           <Badge color="blue">{blog.post_category.title}</Badge>
         </div>
         <h4 className="text-lg md:text-xl font-bold text-white mb-4 leading-tight group-hover:text-secondary transition-colors line-clamp-2">
-          {blog.title}
+          <BlogDetailLink blog={blog}>{blog.title}</BlogDetailLink>
         </h4>
         <div className="mt-auto pt-4 border-t border-white/5">
-          <Link 
-            href={blog.detail} 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="text-slate-400 hover:text-white text-sm font-semibold flex items-center gap-2 transition-colors group/link"
-          >
-            Read Full Article 
-            <ExternalLink className="h-4 w-4 transition-transform duration-300 group-hover/link:translate-x-1" />
-          </Link>
+          <BlogDetailLink blog={blog}>
+            <span className="text-slate-400 hover:text-white text-sm font-semibold flex items-center gap-2 transition-colors group/link">
+              Read Full Article
+              <ExternalLink className="h-4 w-4 transition-transform duration-300 group-hover/link:translate-x-1" />
+            </span>
+          </BlogDetailLink>
         </div>
       </div>
     </div>
