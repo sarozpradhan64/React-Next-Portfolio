@@ -1,5 +1,6 @@
 ## React | Next.js | Portfolio : [Demo](https://sarojpradhan.com.np)
-![image](https://github.com/user-attachments/assets/db718e4a-71bc-4c80-8127-5fdb803fadee)
+<img width="2561" height="1347" alt="image" src="https://github.com/user-attachments/assets/e9c6714a-d5c5-4cc0-bc1b-5808fd6a9c18" />
+
 
 
 ### Setup
