@@ -7,7 +7,7 @@ import { Work } from "@/types/work";
 import RevealOnScroll from "@/components/Reveal";
 import { strTitle } from "@/utils/helpers/stringHelper";
 import Badge from "@/components/Badge";
-import WorkCard from "@/components/WorkCard";
+import WorkCard from "@/components/cards/WorkCard";
 
 interface FilterButtonProps {
   filter: string;
@@ -26,8 +26,8 @@ function FilterButton({
     <button
       type="button"
       className={`px-6 py-2 rounded-full text-sm font-bold tracking-wide transition-all duration-300 ${
-        isActive 
-          ? "bg-primary text-white shadow-premium ring-2 ring-primary/20" 
+        isActive
+          ? "bg-primary text-white shadow-premium ring-2 ring-primary/20"
           : "bg-white/5 text-slate-400 hover:text-white hover:bg-white/10"
       }`}
       onClick={() => onClick(filter)}
@@ -71,7 +71,7 @@ export default function WorkFilter({ works }: { readonly works: Work[] }) {
                 active={active}
                 onClick={handleFilter}
               />
-            )
+            ),
           )}
         </ul>
       </div>
