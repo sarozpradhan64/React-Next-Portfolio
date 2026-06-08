@@ -37,10 +37,7 @@ const Hero = () => {
 
       <div className="flex-1 flex justify-center lg:justify-end">
         <div className="relative w-72 h-72 md:w-96 md:h-96 lg:w-[450px] lg:h-[450px]">
-          {/* Animated background elements */}
-          <div className="absolute -inset-4 bg-primary/20 blur-3xl rounded-full animate-pulse"></div>
-          <div className="absolute inset-0 bg-gradient-to-br from-primary/40 to-secondary/40 rounded-full rotate-6 scale-105"></div>
-          
+
           <div className="relative w-full h-full rounded-full overflow-hidden border-4 border-white/10 shadow-2xl">
             <Image
               src={metas.photoPath}

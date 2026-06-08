@@ -33,7 +33,7 @@ const About = () => {
 
         <div className="order-1 lg:order-2">
           <div className="relative group">
-            <div className="absolute -inset-4 bg-gradient-to-r from-primary/20 to-secondary/20 blur-2xl rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+
             <div className="grid grid-cols-2 gap-4 relative">
               <div className="pt-12">
                 <Image
