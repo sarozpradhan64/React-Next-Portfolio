@@ -10,7 +10,7 @@ import {
   Instagram,
   Linkedin,
 } from "lucide-react";
-import LeaderBoard from "../ads/LeaderBoard";
+// import LeaderBoard from "../ads/LeaderBoard";
 
 interface FrontendLayoutProps {
   title?: string;
@@ -42,7 +42,7 @@ const FrontendLayout: React.FC<FrontendLayoutProps> = ({ children, title }) => {
   return (
     <>
       <Navigation />
-      <LeaderBoard />
+      {/* <LeaderBoard /> */}
 
       <div className="container mx-auto px-6">
         {/* children content  */}

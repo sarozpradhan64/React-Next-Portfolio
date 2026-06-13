@@ -5,6 +5,7 @@ import { Work } from "@/types/work";
 import RevealOnScroll from "@/components/Reveal";
 import { strTitle } from "@/utils/helpers/stringHelper";
 import WorkCard from "@/components/cards/WorkCard";
+import { TECH_CATEGORIES } from "@/data/workData";
 
 interface FilterButtonProps {
   filter: string;
@@ -89,27 +90,67 @@ export default function WorkFilter({ works }: { readonly works: Work[] }) {
     return matchType && matchTech;
   });
 
+  const getTechCategory = (tech: string) => {
+    for (const [category, techs] of Object.entries(TECH_CATEGORIES)) {
+      if (techs.includes(tech)) return category;
+    }
+    return "Other";
+  };
+
+  const groupedTechs = allTechs.reduce((acc, tech) => {
+    const category = getTechCategory(tech);
+    if (!acc[category]) acc[category] = [];
+    acc[category].push(tech);
+    return acc;
+  }, {} as Record<string, string[]>);
+
+
+  const categoryOrder = ["Frontend", "Backend", "Tools & Others", "Other"];
+  const sortedCategories = Object.keys(groupedTechs).sort(
+    (a, b) => categoryOrder.indexOf(a) - categoryOrder.indexOf(b)
+  );
+
+  const activeTechCount = filteredWorks.length;
+
   return (
     <div className="flex flex-col lg:flex-row gap-12">
       <aside className="hidden lg:block lg:w-1/4">
         <div className="lg:sticky lg:top-24 space-y-10">
           <div>
-            <p className="text-slate-500 text-[10px] font-black uppercase tracking-[0.2em] mb-4">
-              Filter by Technology
-            </p>
-            <ul className="space-y-1 list-none" id="portfolio-tech-filters">
-              <TechFilterButton
-                filter="all"
-                active={activeTech}
-                onClick={handleTechFilter}
-              />
-              {allTechs.map((tech) => (
+            <div className="flex items-center gap-2 mb-4">
+              <p className="text-slate-500 text-[10px] font-black uppercase tracking-[0.2em] m-0">
+                Filter by Technology
+              </p>
+              <span className="bg-primary/20 text-secondary px-2 py-0.5 rounded-full text-[10px] font-bold">
+                {activeTechCount}
+              </span>
+            </div>
+            
+            <ul className="space-y-6 list-none" id="portfolio-tech-filters">
+              <li>
                 <TechFilterButton
-                  key={tech}
-                  filter={tech}
+                  filter="all"
                   active={activeTech}
                   onClick={handleTechFilter}
                 />
+              </li>
+              
+              {sortedCategories.map((category) => (
+                <li key={category}>
+                  <p className="text-slate-600 text-[10px] font-bold uppercase tracking-wider mb-2 ml-4">
+                    {category}
+                  </p>
+                  <ul className="space-y-1 list-none">
+                    {groupedTechs[category].map((tech) => (
+                      <TechFilterButton
+                        key={tech}
+                        filter={tech}
+                        active={activeTech}
+                        onClick={handleTechFilter}
+                      />
+                    ))}
+                  </ul>
+                </li>
               ))}
             </ul>
           </div>

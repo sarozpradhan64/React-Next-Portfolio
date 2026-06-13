@@ -27,7 +27,7 @@ module.exports = {
       },
       boxShadow: {
         'premium': '0 10px 30px -10px rgba(0, 0, 0, 0.5)',
-        'premium-hover': '0 20px 40px -15px rgba(98, 68, 197, 0.3)',
+        'premium-hover': '0 20px 40px -15px rgba(0, 0, 0, 0.7)',
       },
       fontFamily: {
         poppins: ["var(--font-poppins)", "sans-serif"],
