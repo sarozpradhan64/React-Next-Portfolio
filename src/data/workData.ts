@@ -1,3 +1,9 @@
+export const TECH_CATEGORIES: Record<string, string[]> = {
+  Frontend: ["React", "React.js", "Next.js", "Tailwind", "Bootstrap", "Inertia.js", "Jquery"],
+  Backend: ["Laravel", "Django", "DRF", "Rest API"],
+  "Tools & Others": ["Docker", "VPS", "Firebase", "SEO"],
+};
+
 const workData = [
   {
     title: "Recruitment Management System",
