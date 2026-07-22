@@ -1,15 +1,5 @@
 const skillData = [
   {
-    path: "/img/skills/HTML5.png",
-    title: "HTML5",
-    link: "https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5",
-  },
-  {
-    path: "/img/skills/CSS3.png",
-    title: "CSS3",
-    link: "https://www.w3.org/Style/CSS/",
-  },
-  {
     path: "/img/skills/js.png",
     title: "JavaScript",
     link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
