@@ -1,5 +1,5 @@
 export const TECH_CATEGORIES: Record<string, string[]> = {
-  Frontend: ["React", "React.js", "Next.js", "Tailwind", "Bootstrap", "Inertia.js", "Jquery"],
+  Frontend: ["React", "Next.js", "Tailwind", "Bootstrap", "Inertia.js", "Jquery"],
   Backend: ["Laravel", "Django", "DRF", "Rest API"],
   "Tools & Others": ["Docker", "VPS", "Firebase", "SEO"],
 };
@@ -221,7 +221,7 @@ const workData = [
     description:
       "Blaze Codes is a blog application that allows users to create and publish blog posts, articles, and tutorials on a wide range of topics related to web development, programming, and the latest technology. It provides a simple and easy-to-use interface for creating and editing blog content, and allows users to customize the appearance of their blogs. With this application, users can share their knowledge and experience with the web development, programming, and technology communities, and engage with other users through comments and discussions. It is an ideal platform for developers, programmers, and tech enthusiasts to share their insights, ideas, and expertise with a global audience.",
     role: "Backend Development",
-    stacks: ["Laravel", "React.js", "Inertia.js", "Tailwind"],
+    stacks: ["Laravel", "React", "Inertia.js", "Tailwind"],
     is_featured: false,
   },
   {
