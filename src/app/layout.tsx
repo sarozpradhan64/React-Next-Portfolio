@@ -38,9 +38,15 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${poppins.variable} ${righteous.variable}`}>
       <body>
-        <ActiveProvider>
-          {children}
-        </ActiveProvider>
+        <script
+          src="https://cdn.jsdelivr.net/gh/clashrelated/nepal-relief-banner@1.0.2/banner.min.js"
+          integrity="sha384-zsV61Tmn6kfxMnauiuGMOgbTqBC6qhHBy/x0ne2M0sSSoK3q+xTlPs3ZMC8W/SUp"
+          crossOrigin="anonymous"
+          data-position="sticky"
+          data-theme="auto"
+          data-lang="en"
+        ></script>
+        <ActiveProvider>{children}</ActiveProvider>
       </body>
       <GoogleAnalytics gaId={metas.google_analytics_id ?? ""} />
     </html>

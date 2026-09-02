@@ -70,7 +70,7 @@ const Navigation = () => {
       <div
         className={`${
           isSticky
-            ? "sticky top-0 backdrop-blur-md border-b border-white/10"
+            ? "sticky top-8 backdrop-blur-md border-b border-white/10"
             : "relative bg-dark"
         } md:block hidden z-50`}
       >
